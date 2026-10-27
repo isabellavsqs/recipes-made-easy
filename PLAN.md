@@ -1,16 +1,13 @@
 # PLAN.md: Weekly Cooking Companion
 
-Items marked **(confirm)** are proposals for you to confirm or change before submitting. The professor asked for specific decisions, so please make each one your own.
-
 ## 1. Pitch
 
-"I'm building a personalized recipe website because I struggle to plan what to cook during the week while respecting my diet, my budget and the ingredients I like or dislike." I expect to use it about 3 to 4 times per week. It is also for anyone with the same pain points (busy students and professionals, people on a budget, people with dietary restrictions), which is why sign up and login are required.
+I'm building a personalized recipe website because I struggle to plan what to cook during the week while respecting my diet, my budget and the ingredients I like or dislike.
+I expect to use it about 3 to 4 times per week. It is also for anyone with the same pain points (busy students and professionals, people on a budget, people with dietary restrictions), which is why sign up and login are required.
 
 Core idea: the user's profile (diet, allergies, dislikes, appliances, budget) is saved once and checked BEFORE any recipe is recommended.
 
 ## 2. Features
-
-Format: "As a ___, I want ___, so that ___." Numbered in build order.
 
 **Spine features** (course requirements)
 
@@ -149,8 +146,6 @@ Given a user who has starred exactly three recipes, when the user opens the dash
 * **Bugs found:** if the agent got something wrong and I caught it, document in the pull request what happened, how I noticed and how I fixed it.
 
 ## 5. Technologies
-
-All **(confirm)**:
 
 * **Coding agent:** Claude Code, because it can build and run the project from my plan and iterate on errors.
 * **Frontend and backend:** Next.js (React), because one framework covers the pages and the server logic. The product is a website, not a mobile app: it will be responsive so it looks and works well when opened in a phone browser, without the added backend complexity of a native app.
