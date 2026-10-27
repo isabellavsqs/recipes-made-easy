@@ -26,3 +26,15 @@ Issue: #6 · Branch: `feature/auth` · Agent: Claude Code
 - **Email confirmation:** I first kept it on, then turned it off after the agent explained the email limits (reality log #12 and #14).
 - **Next.js 16 surprise:** the new project template turns on "Cache Components", which makes every page that reads the login cookie need extra loading boundaries. The agent turned it off, because every page here depends on the logged-in user anyway.
 - **Next.js 16 rename:** "middleware" is now called "proxy" (`src/proxy.ts`).
+
+## How it was checked
+
+**Prompt 3**
+> 2 steps done
+
+**Agent response (summary):** After I turned off "Confirm email" and ran `001_users.sql` in the Supabase SQL Editor, the agent tested the flow:
+
+- Two test accounts each got their own row in `users`. Each could read only their own row, and a logged-out request saw none (Row Level Security works).
+- Through the real forms: blank fields and a 3-character password show friendly messages, a valid sign up lands on `/home`, and a logged-in user opening `/login` is sent to `/home`.
+- Log out returns to `/login`, after which `/home` redirects to `/login` again.
+- A wrong password, or an email with no account, shows "That email and password don't match." Logging back in works.
