@@ -1,0 +1,25 @@
+# Reality Log
+
+A running record of every change from the original `PLAN.md`: what changed, who decided, and why.
+It is the raw material for the "Plan vs. Reality" table at the end of `PLAN.md` and for Reflection 1.
+
+"Who decided" uses: **Me** (my own call), **Agent → Me** (the agent raised it, I made the decision), **Agent** (the agent did it and I went along).
+
+## 2026-10-27: Decisions before building
+
+| # | Plan item | Original plan | Reality / decision | Who decided | Why |
+|---|---|---|---|---|---|
+| 1 | 3. Database / 4. Tests: recipe visibility | Seed recipes are "shared read only", but Test 1 expects User B to see "an empty list" | Split into two views: **My Recipes** (only recipes I created; this is what Test 1 checks) and **Browse** (the shared recipe library). Stars, search and dashboard work across both. | Agent → Me | The plan contradicted itself: with shared seed recipes, User B's list could never be empty. |
+| 2 | 5. Technologies: database | "PostgreSQL through Supabase (or SQLite if a simpler local setup is preferred)" | **Supabase** (PostgreSQL). SQLite dropped. | Agent → Me | Vercel can't keep a SQLite file between requests, so SQLite would only work locally. |
+| 3 | 3. Database: `users.password_hash` | `users` table has a `password_hash` column | Supabase Auth stores credentials in its own `auth.users` table. Our `users` table mirrors each account (id, email, created_at) without a password column. | Agent → Me (follows from #2) | We never handle passwords ourselves. That is more secure and is the reason Supabase Auth was chosen. |
+| 4 | 6. Design: "large food photos" | Photo source not specified | **Free stock photos (Unsplash).** | Agent → Me | Photos from recipe websites have the same copyright issue as copied instructions. |
+| 5 | 2. Feature 9: meal prep plan | Generation method not specified | **Rule-based generator** (filter by allergies/diet → fit time and budget → rank by goals). No AI. | Agent → Me | Predictable, free, and testable. |
+| 6 | 2. Feature 11: Instagram import | Paste caption → Claude API converts it into fields | **Cut** (backlogged). | Me | It needs a paid Claude API key, which I don't want. It was already first on my cut list. Features 8–10 still cover the 3 required extra features. |
+| 7 | 5. Technologies: recipe data | 100 recipes: my 5 + 95 from the internet | **Start with 30 internet recipes** plus my 5. Expand later if time allows. | Me | Time: I want to finish the build today. Tagging 95 recipes correctly is the slowest and most error-prone part. |
+| 8 | Process: repo history | Nothing committed directly to `main` | Two early commits (`f40ab5f` Create PLAN.md, `608946d` Delete PLAN.md) went straight to `main` while I set up the repo. **Kept as is**, not rewritten. | Me | Rewriting history would need a force push and would break PR #3's record. Being transparent is better. |
+| 9 | Process: `PLAN.md` edit | Plan merged in PR #3 | PR #4 removed leftover "(confirm)" drafting notes and split one line. No content decisions changed. Merged before any feature PR. | Me | The notes were drafting comments, not part of the plan. |
+| 10 | Process: prompt logs | `prompts/<feature>.md` with key prompts | Each prompt log also includes a short summary of the agent's response and any problems or bugs. | Me | Gives evidence for Reflection 1 ("quote where it went sideways"). |
+| 11 | Timeline | Due Nov 4 | Goal: finish the build on Oct 27, stranger test on Oct 28. | Me | Leaves buffer for fixes and the reflection. |
+| 12 | 2. Feature 1: sign up | "Create their own account… then log in" (email confirmation not mentioned) | **Email confirmation stays on.** A new user must click the link in their inbox before the first login. | Me (agent suggested turning it off) | Real accounts should prove they own their email. Cost: the Demo Day live sign up needs an inbox I can open on the spot. |
+| 13 | Process: PR #4 had no Issue | Every PR links an Issue | Opened Issue #5 after the fact, linked it in PR #4's description ("Closes #5"), and closed it. | Agent → Me | The grading checks that every merged PR has a linked Issue. |
+| 14 | 2. Feature 1: sign up (revisits #12) | Email confirmation on (decision #12) | **Reversed: email confirmation off for now.** Users can log in right after signing up. Backlogged: turn it back on later with a custom SMTP sender. | Me (after the agent flagged a limit) | Supabase's built-in email sender only delivers to project team members and a few emails per hour, so the friend test and the Demo Day live sign up would get stuck. |
