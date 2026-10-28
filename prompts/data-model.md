@@ -28,3 +28,14 @@ It also wrote `schema.md` with a diagram and a "Plan vs. what was built" table.
   - A can't star the same recipe twice, or save a 4th goal
   - Seed recipes are visible to everyone; profiles are created automatically
 - **Plan vs. reality:** composite primary keys on link tables, `diet_tags` as a list, and new `created_at` and photo columns on recipes (reality log #15–#19).
+
+## Running it on Supabase and the first deploy
+
+**Prompt 2**
+> done. also supabase code ran
+
+**Agent response (summary):** I had set up Vercel and run `002_data_model.sql` in the Supabase SQL Editor. The agent tested both:
+
+- **Live site:** the first deploy returned "Internal Server Error" on every page. The cause was that the Supabase settings weren't in the build: Next.js bakes `NEXT_PUBLIC_` values in at build time, so saving them in Vercel isn't enough without a redeploy. After I checked the variables and clicked **Redeploy**, sign up, log out and log in all worked on the live URL.
+- **Vercel warning:** Vercel flagged `NEXT_PUBLIC_` variables as possibly secret. The agent explained that the Supabase URL and *publishable* key are meant to be public (Row Level Security is what protects the data), so I chose "Config". The Supabase *secret* key must never be public.
+- **Real database:** with two test accounts, the agent checked: 5 goals, 9 allergies and 4 appliances readable when logged in (nothing when logged out); A's profile was created automatically; B can't see, edit, delete or star A's recipe, or create one in A's name; A can't star twice or save a 4th goal. The test rows were deleted afterwards.
