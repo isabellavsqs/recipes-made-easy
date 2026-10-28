@@ -14,7 +14,12 @@ export async function SiteHeader() {
 
         {user ? (
           <div className="flex items-center gap-3 text-sm">
-            <span className="hidden text-muted sm:inline">{user.email}</span>
+            <nav className="flex items-center gap-3 font-medium">
+              <Link href="/recipes" className="hover:text-primary">
+                My Recipes
+              </Link>
+            </nav>
+            <span className="hidden text-muted md:inline">{user.email}</span>
             <form action={logOut}>
               <button
                 type="submit"
