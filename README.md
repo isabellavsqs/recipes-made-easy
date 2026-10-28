@@ -2,7 +2,9 @@
 
 A personalized recipe website for busy students and professionals: save recipes, plan the week's meal prep and get suggestions that respect your diet, allergies, dislikes and budget.
 
-> Work in progress. See [PLAN.md](PLAN.md) for the full plan.
+**Live app:** https://recipes-made-easy-vercel.vercel.app/
+
+> Work in progress. See [PLAN.md](PLAN.md) for the full plan and [schema.md](schema.md) for the database.
 
 ## Tech stack
 
