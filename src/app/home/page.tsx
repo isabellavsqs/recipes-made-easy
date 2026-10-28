@@ -9,7 +9,7 @@ export default async function HomePage() {
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
-      <h1 className="mb-2 font-serif text-3xl">Hi, {user.email}</h1>
+      <h1 className="mb-2 break-words font-serif text-3xl">Hi, {user.email}</h1>
       <p className="mb-8 text-muted">What are we cooking this week?</p>
       <Link
         href="/recipes"

@@ -1,12 +1,10 @@
 import "server-only";
 import { requireUser } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
+import type { RecipeInput } from "@/lib/recipe-validation";
 
 // Every function here starts from the logged-in user. Row Level Security in
 // the database is the second safety net (see schema.md).
-
-export const COST_BRACKETS = ["$", "$$", "$$$"] as const;
-export const DIET_TAGS = ["vegan", "vegetarian", "pescatarian"] as const;
 
 export type Option = { id: number; name: string };
 
@@ -39,21 +37,6 @@ export type Recipe = RecipeSummary & {
   allergens: Option[];
   appliances: Option[];
   isMine: boolean;
-};
-
-// What the recipe form sends to saveRecipe().
-export type RecipeInput = {
-  title: string;
-  cuisine: string | null;
-  instructions: string;
-  prep_minutes: number | null;
-  cook_minutes: number | null;
-  base_servings: number;
-  cost_bracket: string | null;
-  diet_tags: string[];
-  ingredients: RecipeIngredient[];
-  allergenIds: number[];
-  applianceIds: number[];
 };
 
 const SUMMARY_COLUMNS =
@@ -133,7 +116,7 @@ export async function getFormOptions(): Promise<{
 }
 
 // Creates a new recipe (no id) or updates one of the user's own recipes.
-// Returns the recipe id.
+// The input must already have passed validateRecipe(). Returns the recipe id.
 export async function saveRecipe(
   input: RecipeInput,
   recipeId?: number,

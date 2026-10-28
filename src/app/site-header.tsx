@@ -8,14 +8,14 @@ export async function SiteHeader() {
   return (
     <header className="border-b border-line bg-white/70">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-4 py-3">
-        <Link href={user ? "/home" : "/"} className="font-serif text-xl">
+        <Link href={user ? "/home" : "/"} className="whitespace-nowrap font-serif text-lg sm:text-xl">
           Recipes Made Easy
         </Link>
 
         {user ? (
           <div className="flex items-center gap-3 text-sm">
             <nav className="flex items-center gap-3 font-medium">
-              <Link href="/recipes" className="hover:text-primary">
+              <Link href="/recipes" className="whitespace-nowrap hover:text-primary">
                 My Recipes
               </Link>
             </nav>
@@ -23,7 +23,7 @@ export async function SiteHeader() {
             <form action={logOut}>
               <button
                 type="submit"
-                className="rounded-full border border-line px-3 py-1.5 font-medium transition hover:border-primary"
+                className="whitespace-nowrap rounded-full border border-line px-3 py-1.5 font-medium transition hover:border-primary"
               >
                 Log out
               </button>

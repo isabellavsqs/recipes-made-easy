@@ -2,63 +2,49 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { deleteRecipe, saveRecipe } from "@/lib/recipes";
 import {
-  COST_BRACKETS,
-  DIET_TAGS,
-  deleteRecipe,
-  saveRecipe,
-  type RecipeInput,
-} from "@/lib/recipes";
+  validateRecipe,
+  type RecipeErrors,
+  type RecipeFormValues,
+} from "@/lib/recipe-validation";
 
-export type RecipeFormState = { error?: string };
+export type RecipeFormState = {
+  error?: string;
+  errors?: RecipeErrors;
+  // What was submitted, so the form can show it again after an error.
+  values?: RecipeFormValues;
+};
 
 function text(formData: FormData, key: string): string {
-  return String(formData.get(key) ?? "").trim();
+  return String(formData.get(key) ?? "");
 }
 
-function optionalText(formData: FormData, key: string): string | null {
-  return text(formData, key) || null;
+function all(formData: FormData, key: string): string[] {
+  return formData.getAll(key).map(String);
 }
 
-function optionalNumber(formData: FormData, key: string): number | null {
-  const value = text(formData, key);
-  return value === "" ? null : Number(value);
-}
-
-function ids(formData: FormData, key: string): number[] {
-  return formData.getAll(key).map(Number);
-}
-
-function readRecipeForm(formData: FormData): RecipeInput {
-  const names = formData.getAll("ingredient_name").map((v) => String(v).trim());
-  const quantities = formData.getAll("ingredient_quantity").map((v) => String(v).trim());
-  const units = formData.getAll("ingredient_unit").map((v) => String(v).trim());
-
-  const ingredients = names
-    .map((name, i) => ({
-      name,
-      quantity: quantities[i] ? Number(quantities[i]) : null,
-      unit: units[i] || null,
-    }))
-    .filter((ingredient) => ingredient.name !== "");
-
-  const cost = text(formData, "cost_bracket");
+function readRecipeForm(formData: FormData): RecipeFormValues {
+  const names = all(formData, "ingredient_name");
+  const quantities = all(formData, "ingredient_quantity");
+  const units = all(formData, "ingredient_unit");
 
   return {
     title: text(formData, "title"),
-    cuisine: optionalText(formData, "cuisine"),
+    cuisine: text(formData, "cuisine"),
     instructions: text(formData, "instructions"),
-    prep_minutes: optionalNumber(formData, "prep_minutes"),
-    cook_minutes: optionalNumber(formData, "cook_minutes"),
-    base_servings: Number(text(formData, "base_servings")),
-    cost_bracket: (COST_BRACKETS as readonly string[]).includes(cost) ? cost : null,
-    diet_tags: formData
-      .getAll("diet_tags")
-      .map(String)
-      .filter((tag) => (DIET_TAGS as readonly string[]).includes(tag)),
-    ingredients,
-    allergenIds: ids(formData, "allergen_ids"),
-    applianceIds: ids(formData, "appliance_ids"),
+    prep_minutes: text(formData, "prep_minutes"),
+    cook_minutes: text(formData, "cook_minutes"),
+    base_servings: text(formData, "base_servings"),
+    cost_bracket: text(formData, "cost_bracket"),
+    diet_tags: all(formData, "diet_tags"),
+    ingredients: names.map((name, i) => ({
+      name,
+      quantity: quantities[i] ?? "",
+      unit: units[i] ?? "",
+    })),
+    allergenIds: all(formData, "allergen_ids").map(Number),
+    applianceIds: all(formData, "appliance_ids").map(Number),
   };
 }
 
@@ -66,12 +52,25 @@ async function save(
   formData: FormData,
   recipeId?: number,
 ): Promise<RecipeFormState> {
+  const values = readRecipeForm(formData);
+  const result = validateRecipe(values);
+  if (!result.ok) {
+    return {
+      error: "Some details are missing. Please check the highlighted fields.",
+      errors: result.errors,
+      values,
+    };
+  }
+
   let id: number;
   try {
-    id = await saveRecipe(readRecipeForm(formData), recipeId);
+    id = await saveRecipe(result.value, recipeId);
   } catch (error) {
     console.error("Saving recipe failed:", error);
-    return { error: "Something went wrong while saving. Please try again." };
+    return {
+      error: "Something went wrong while saving. Please try again.",
+      values,
+    };
   }
   revalidatePath("/recipes");
   redirect(`/recipes/${id}`);

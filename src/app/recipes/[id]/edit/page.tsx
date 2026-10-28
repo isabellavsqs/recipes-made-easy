@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import type { RecipeFormValues } from "@/lib/recipe-validation";
 import { getFormOptions, getRecipe } from "@/lib/recipes";
 import { updateRecipeAction } from "../../actions";
-import { RecipeForm, type RecipeFormValues } from "../../recipe-form";
+import { RecipeForm } from "../../recipe-form";
 
 export const metadata: Metadata = { title: "Edit recipe · Recipes Made Easy" };
 
