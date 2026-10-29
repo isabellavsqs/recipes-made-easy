@@ -1,8 +1,9 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { deleteRecipe, saveRecipe } from "@/lib/recipes";
+import { starRecipe, unstarRecipe } from "@/lib/stars";
 import {
   validateRecipe,
   type RecipeErrors,
@@ -95,4 +96,16 @@ export async function deleteRecipeAction(recipeId: number) {
   await deleteRecipe(recipeId);
   revalidatePath("/recipes");
   redirect("/recipes");
+}
+
+// Stars or unstars a recipe. `star` is the state the user sees after their
+// click (not "flip it"), so the saved star always matches the screen.
+export async function setStarAction(recipeId: number, star: boolean) {
+  if (star) {
+    if (!(await starRecipe(recipeId))) notFound();
+  } else {
+    await unstarRecipe(recipeId);
+  }
+  // Refresh the list, the starred view and the recipe pages.
+  revalidatePath("/recipes", "layout");
 }

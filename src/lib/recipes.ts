@@ -39,7 +39,7 @@ export type Recipe = RecipeSummary & {
   isMine: boolean;
 };
 
-const SUMMARY_COLUMNS =
+export const SUMMARY_COLUMNS =
   "id, title, cuisine, prep_minutes, cook_minutes, base_servings, cost_bracket, diet_tags, image_url, created_at";
 
 // "My Recipes": only recipes this user created, never the shared library.
