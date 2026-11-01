@@ -56,6 +56,20 @@ export async function listMyRecipes(): Promise<RecipeSummary[]> {
   return data;
 }
 
+// "Browse": the shared library of recipes collected from the internet.
+export async function listLibraryRecipes(): Promise<RecipeSummary[]> {
+  await requireUser();
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("recipes")
+    .select(SUMMARY_COLUMNS)
+    .eq("source_type", "seed")
+    .order("title");
+
+  if (error) throw error;
+  return data;
+}
+
 // One recipe with its ingredients, allergens and appliances, or null if it
 // doesn't exist or this user isn't allowed to see it.
 export async function getRecipe(id: number): Promise<Recipe | null> {
@@ -70,6 +84,7 @@ export async function getRecipe(id: number): Promise<Recipe | null> {
        recipe_appliances (appliances (id, name))`,
     )
     .eq("id", id)
+    .order("position", { referencedTable: "recipe_ingredients" })
     .maybeSingle();
 
   if (error) throw error;
@@ -187,6 +202,7 @@ export async function saveRecipe(
         ingredient_id: ingredientId,
         quantity: ingredient.quantity,
         unit: ingredient.unit,
+        position: seen.size, // keeps the order from the form
       },
     ];
   });

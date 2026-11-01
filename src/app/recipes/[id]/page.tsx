@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getRecipe } from "@/lib/recipes";
 import { isStarred } from "@/lib/stars";
 import { deleteRecipeAction, setStarAction } from "../actions";
-import { totalMinutes } from "../recipe-card";
+import { formatQuantity, totalMinutes } from "../recipe-card";
 import { RecipeImage } from "../recipe-image";
 import { StarButton } from "../star-button";
 import { DeleteRecipeButton } from "./delete-recipe-button";
@@ -30,10 +30,10 @@ export default async function RecipePage(props: PageProps<"/recipes/[id]">) {
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
       <Link
-        href={recipe.isMine ? "/recipes" : "/home"}
+        href={recipe.isMine ? "/recipes" : "/browse"}
         className="mb-6 inline-block text-sm font-medium text-muted hover:text-foreground"
       >
-        ← {recipe.isMine ? "My Recipes" : "Back"}
+        ← {recipe.isMine ? "My Recipes" : "Browse"}
       </Link>
 
       <article className="overflow-hidden rounded-2xl border border-line bg-white">
@@ -94,7 +94,7 @@ export default async function RecipePage(props: PageProps<"/recipes/[id]">) {
                 {recipe.ingredients.map((ingredient) => (
                   <li key={ingredient.name}>
                     {ingredient.quantity !== null && (
-                      <span className="font-medium">{ingredient.quantity} </span>
+                      <span className="font-medium">{formatQuantity(ingredient.quantity)} </span>
                     )}
                     {ingredient.unit && <span className="font-medium">{ingredient.unit} </span>}
                     {ingredient.name}
@@ -132,7 +132,7 @@ export default async function RecipePage(props: PageProps<"/recipes/[id]">) {
               <a href={recipe.source_url} className="underline" target="_blank" rel="noreferrer">
                 the original recipe
               </a>
-              {recipe.image_credit && <> · Photo: {recipe.image_credit}</>}
+              {recipe.image_credit && <> · {recipe.image_credit}</>}
             </p>
           )}
         </div>

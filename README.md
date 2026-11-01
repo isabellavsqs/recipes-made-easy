@@ -27,6 +27,7 @@ A personalized recipe website for busy students and professionals: save recipes,
    NEXT_PUBLIC_SUPABASE_ANON_KEY=<your publishable key>
    ```
 4. In the Supabase SQL Editor, run each file in [`supabase/migrations/`](supabase/migrations/) in order.
+   `003_recipe_library.sql` loads the 30 shared recipes. It's generated from [`supabase/seed/library.json`](supabase/seed/library.json): after changing the JSON, run `node scripts/build-library-sql.mjs` and run the new SQL again (it skips rows that already exist).
 5. Start the app:
    ```bash
    npm run dev

@@ -8,6 +8,19 @@ export function totalMinutes(recipe: Pick<RecipeSummary, "prep_minutes" | "cook_
   return (recipe.prep_minutes ?? 0) + (recipe.cook_minutes ?? 0);
 }
 
+// 1.5 -> "1 1/2", 0.33 -> "1/3"; amounts without a common fraction stay decimals.
+const FRACTIONS: [number, string][] = [
+  [1 / 8, "1/8"], [1 / 4, "1/4"], [1 / 3, "1/3"], [1 / 2, "1/2"], [2 / 3, "2/3"], [3 / 4, "3/4"],
+];
+export function formatQuantity(quantity: number) {
+  const whole = Math.floor(quantity);
+  const rest = quantity - whole;
+  if (rest < 0.01) return String(whole);
+  const fraction = FRACTIONS.find(([value]) => Math.abs(value - rest) < 0.02)?.[1];
+  if (!fraction) return String(Math.round(quantity * 100) / 100);
+  return whole ? `${whole} ${fraction}` : fraction;
+}
+
 export function RecipeCard({
   recipe,
   starred,

@@ -7,7 +7,7 @@ export async function SiteHeader() {
 
   return (
     <header className="border-b border-line bg-white/70">
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-4 py-3">
+      <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-3">
         <Link href={user ? "/home" : "/"} className="whitespace-nowrap font-serif text-lg sm:text-xl">
           Recipes Made Easy
         </Link>
@@ -15,6 +15,9 @@ export async function SiteHeader() {
         {user ? (
           <div className="flex items-center gap-3 text-sm">
             <nav className="flex items-center gap-3 font-medium">
+              <Link href="/browse" className="whitespace-nowrap hover:text-primary">
+                Browse
+              </Link>
               <Link href="/recipes" className="whitespace-nowrap hover:text-primary">
                 My Recipes
               </Link>
