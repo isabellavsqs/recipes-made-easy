@@ -21,6 +21,9 @@ export async function SiteHeader() {
               <Link href="/recipes" className="whitespace-nowrap hover:text-primary">
                 My Recipes
               </Link>
+              <Link href="/dashboard" className="whitespace-nowrap hover:text-primary">
+                Dashboard
+              </Link>
             </nav>
             <span className="hidden text-muted md:inline">{user.email}</span>
             <form action={logOut}>
