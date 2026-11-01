@@ -1,20 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { listMyRecipes } from "@/lib/recipes";
+import { cuisinesOf, findRecipes, isFiltered, parseRecipeQuery } from "@/lib/recipe-search";
 import { getStarredIds, listStarredRecipes } from "@/lib/stars";
 import { setStarAction } from "./actions";
+import { NoMatches, ResultCount } from "./no-matches";
 import { RecipeCard } from "./recipe-card";
+import { RecipeFilters } from "./recipe-filters";
 
 export const metadata: Metadata = { title: "My Recipes · Recipes Made Easy" };
 
 export default async function MyRecipesPage(props: PageProps<"/recipes">) {
-  const { view } = await props.searchParams;
-  const showStarred = view === "starred";
+  const params = await props.searchParams;
+  const showStarred = params.view === "starred";
+  const query = parseRecipeQuery(params);
+  const hidden: Record<string, string> = showStarred ? { view: "starred" } : {};
 
-  const [recipes, starredIds] = await Promise.all([
+  const [allRecipes, starredIds] = await Promise.all([
     showStarred ? listStarredRecipes() : listMyRecipes(),
     getStarredIds(),
   ]);
+  const recipes = findRecipes(allRecipes, query);
+  const filtered = isFiltered(query);
 
   return (
     <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10">
@@ -37,7 +44,22 @@ export default async function MyRecipesPage(props: PageProps<"/recipes">) {
         </Tab>
       </nav>
 
-      {recipes.length === 0 ? (
+      {allRecipes.length > 0 && (
+        <RecipeFilters
+          key={JSON.stringify(query) + showStarred}
+          action="/recipes"
+          query={query}
+          cuisines={cuisinesOf(allRecipes)}
+          defaultSortLabel={showStarred ? "Recently starred" : "Newest first"}
+          hidden={hidden}
+          filtered={filtered}
+        />
+      )}
+      {filtered && recipes.length > 0 && <ResultCount shown={recipes.length} total={allRecipes.length} />}
+
+      {allRecipes.length > 0 && recipes.length === 0 ? (
+        <NoMatches clearHref={showStarred ? "/recipes?view=starred" : "/recipes"} />
+      ) : recipes.length === 0 ? (
         showStarred ? (
           <EmptyState
             title="No starred recipes yet"

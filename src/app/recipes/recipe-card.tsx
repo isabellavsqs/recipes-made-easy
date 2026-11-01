@@ -1,12 +1,8 @@
 import Link from "next/link";
 import type { RecipeSummary } from "@/lib/recipes";
+import { totalTime } from "@/lib/recipe-search";
 import { RecipeImage } from "./recipe-image";
 import { StarButton } from "./star-button";
-
-export function totalMinutes(recipe: Pick<RecipeSummary, "prep_minutes" | "cook_minutes">) {
-  if (recipe.prep_minutes === null && recipe.cook_minutes === null) return null;
-  return (recipe.prep_minutes ?? 0) + (recipe.cook_minutes ?? 0);
-}
 
 // 1.5 -> "1 1/2", 0.33 -> "1/3"; amounts without a common fraction stay decimals.
 const FRACTIONS: [number, string][] = [
@@ -30,7 +26,7 @@ export function RecipeCard({
   starred: boolean;
   starAction: (star: boolean) => Promise<void>;
 }) {
-  const minutes = totalMinutes(recipe);
+  const minutes = totalTime(recipe);
 
   // The star sits on top of the photo, outside the link, so clicking it
   // doesn't open the recipe.

@@ -42,32 +42,46 @@ export type Recipe = RecipeSummary & {
 export const SUMMARY_COLUMNS =
   "id, title, cuisine, prep_minutes, cook_minutes, base_servings, cost_bracket, diet_tags, image_url, created_at";
 
+// A recipe in a list: the summary plus its ingredient names, so the list can
+// be searched by ingredient (feature 6).
+export type RecipeListItem = RecipeSummary & { ingredientNames: string[] };
+
+export const LIST_COLUMNS = `${SUMMARY_COLUMNS}, recipe_ingredients (ingredients (name))`;
+
+type ListRow = RecipeSummary & { recipe_ingredients: { ingredients: { name: string } }[] };
+
+// See getRecipe(): Supabase can't tell each link points to one ingredient.
+export function toListItem(row: unknown): RecipeListItem {
+  const { recipe_ingredients, ...recipe } = row as ListRow;
+  return { ...recipe, ingredientNames: recipe_ingredients.map((ri) => ri.ingredients.name) };
+}
+
 // "My Recipes": only recipes this user created, never the shared library.
-export async function listMyRecipes(): Promise<RecipeSummary[]> {
+export async function listMyRecipes(): Promise<RecipeListItem[]> {
   const user = await requireUser();
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("recipes")
-    .select(SUMMARY_COLUMNS)
+    .select(LIST_COLUMNS)
     .eq("created_by_user_id", user.id)
     .order("created_at", { ascending: false });
 
   if (error) throw error;
-  return data;
+  return data.map(toListItem);
 }
 
 // "Browse": the shared library of recipes collected from the internet.
-export async function listLibraryRecipes(): Promise<RecipeSummary[]> {
+export async function listLibraryRecipes(): Promise<RecipeListItem[]> {
   await requireUser();
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("recipes")
-    .select(SUMMARY_COLUMNS)
+    .select(LIST_COLUMNS)
     .eq("source_type", "seed")
     .order("title");
 
   if (error) throw error;
-  return data;
+  return data.map(toListItem);
 }
 
 // One recipe with its ingredients, allergens and appliances, or null if it

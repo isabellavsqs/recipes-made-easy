@@ -1,7 +1,7 @@
 import "server-only";
 import { requireUser } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
-import { SUMMARY_COLUMNS, type RecipeSummary } from "@/lib/recipes";
+import { LIST_COLUMNS, toListItem, type RecipeListItem } from "@/lib/recipes";
 
 // Stars live in one table for everyone: each row means "this user starred
 // this recipe". Every query filters by the logged-in user (and RLS checks
@@ -32,20 +32,20 @@ export async function isStarred(recipeId: number): Promise<boolean> {
 }
 
 // The "Starred" view: recipes this user starred, most recently starred first.
-export async function listStarredRecipes(): Promise<RecipeSummary[]> {
+export async function listStarredRecipes(): Promise<RecipeListItem[]> {
   const user = await requireUser();
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("stars")
-    .select(`starred_at, recipes (${SUMMARY_COLUMNS})`)
+    .select(`starred_at, recipes (${LIST_COLUMNS})`)
     .eq("user_id", user.id)
     .order("starred_at", { ascending: false });
   if (error) throw error;
 
   // See getRecipe(): Supabase can't tell each star points to one recipe.
-  return (data as unknown as { recipes: RecipeSummary | null }[])
-    .map((star) => star.recipes)
-    .filter((recipe): recipe is RecipeSummary => recipe !== null);
+  return (data as unknown as { recipes: unknown }[])
+    .filter((star) => star.recipes !== null)
+    .map((star) => toListItem(star.recipes));
 }
 
 // Starring twice does nothing (the pair user + recipe is unique).

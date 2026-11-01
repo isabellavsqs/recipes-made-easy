@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { getRecipe } from "@/lib/recipes";
 import { isStarred } from "@/lib/stars";
 import { deleteRecipeAction, setStarAction } from "../actions";
-import { formatQuantity, totalMinutes } from "../recipe-card";
+import { totalTime } from "@/lib/recipe-search";
+import { formatQuantity } from "../recipe-card";
 import { RecipeImage } from "../recipe-image";
 import { StarButton } from "../star-button";
 import { DeleteRecipeButton } from "./delete-recipe-button";
@@ -17,7 +18,7 @@ export default async function RecipePage(props: PageProps<"/recipes/[id]">) {
   if (!recipe) notFound();
   const starred = await isStarred(recipe.id);
 
-  const minutes = totalMinutes(recipe);
+  const minutes = totalTime(recipe);
   const facts = [
     recipe.cuisine && { label: "Cuisine", value: recipe.cuisine },
     { label: "Servings", value: String(recipe.base_servings) },
