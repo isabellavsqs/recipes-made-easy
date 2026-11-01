@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getRecipe } from "@/lib/recipes";
-import { deleteRecipeAction } from "../actions";
+import { isStarred } from "@/lib/stars";
+import { deleteRecipeAction, setStarAction } from "../actions";
 import { totalMinutes } from "../recipe-card";
 import { RecipeImage } from "../recipe-image";
+import { StarButton } from "../star-button";
 import { DeleteRecipeButton } from "./delete-recipe-button";
 
 export const metadata: Metadata = { title: "Recipe · Recipes Made Easy" };
@@ -13,6 +15,7 @@ export default async function RecipePage(props: PageProps<"/recipes/[id]">) {
   const { id } = await props.params;
   const recipe = Number.isInteger(Number(id)) ? await getRecipe(Number(id)) : null;
   if (!recipe) notFound();
+  const starred = await isStarred(recipe.id);
 
   const minutes = totalMinutes(recipe);
   const facts = [
@@ -39,20 +42,27 @@ export default async function RecipePage(props: PageProps<"/recipes/[id]">) {
         <div className="p-6 sm:p-8">
           <div className="mb-4 flex flex-wrap items-start justify-between gap-4">
             <h1 className="font-serif text-3xl leading-tight sm:text-4xl">{recipe.title}</h1>
-            {recipe.isMine && (
-              <div className="flex gap-2">
-                <Link
-                  href={`/recipes/${recipe.id}/edit`}
-                  className="rounded-full border border-line px-4 py-1.5 text-sm font-medium transition hover:border-primary"
-                >
-                  Edit
-                </Link>
-                <DeleteRecipeButton
-                  title={recipe.title}
-                  action={deleteRecipeAction.bind(null, recipe.id)}
-                />
-              </div>
-            )}
+            <div className="flex gap-2">
+              <StarButton
+                title={recipe.title}
+                starred={starred}
+                action={setStarAction.bind(null, recipe.id)}
+              />
+              {recipe.isMine && (
+                <>
+                  <Link
+                    href={`/recipes/${recipe.id}/edit`}
+                    className="rounded-full border border-line px-4 py-1.5 text-sm font-medium transition hover:border-primary"
+                  >
+                    Edit
+                  </Link>
+                  <DeleteRecipeButton
+                    title={recipe.title}
+                    action={deleteRecipeAction.bind(null, recipe.id)}
+                  />
+                </>
+              )}
+            </div>
           </div>
 
           {recipe.diet_tags.length > 0 && (
