@@ -117,7 +117,7 @@ Each row says "this user has this goal / allergy / appliance / dislike". The PK 
 
 | Table | Columns |
 |---|---|
-| recipe_ingredients | recipe_id (FK → recipes), ingredient_id (FK → ingredients), quantity (number), unit (text) |
+| recipe_ingredients | recipe_id (FK → recipes), ingredient_id (FK → ingredients), quantity (number), unit (text), position (number: the order the ingredient is listed in, added in `004`) |
 | recipe_allergen_tags | recipe_id (FK → recipes), allergy_id (FK → allergies) |
 | recipe_appliances | recipe_id (FK → recipes), appliance_id (FK → appliances) |
 
