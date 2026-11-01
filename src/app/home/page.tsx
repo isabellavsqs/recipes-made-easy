@@ -26,6 +26,13 @@ export default async function HomePage() {
           <h2 className="mb-1 font-serif text-xl">My Recipes</h2>
           <p className="text-muted">Add, view, edit and delete the recipes you cook.</p>
         </Link>
+        <Link
+          href="/dashboard"
+          className="block rounded-2xl border border-line bg-white p-6 transition hover:border-primary"
+        >
+          <h2 className="mb-1 font-serif text-xl">Dashboard</h2>
+          <p className="text-muted">Your recipes, stars and meal plans at a glance.</p>
+        </Link>
       </div>
     </main>
   );
