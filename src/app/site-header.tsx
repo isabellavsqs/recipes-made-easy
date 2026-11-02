@@ -3,7 +3,9 @@ import { getCurrentUser } from "@/lib/auth";
 import { logOut } from "@/app/auth/actions";
 
 export async function SiteHeader() {
-  const user = await getCurrentUser();
+  // If Supabase can't be reached, show the logged-out header rather than
+  // breaking every page; the page itself shows the error.
+  const user = await getCurrentUser().catch(() => null);
 
   return (
     <header className="border-b border-line bg-white/70">

@@ -1,4 +1,5 @@
 import "server-only";
+import { isAuthRetryableFetchError } from "@supabase/supabase-js";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
@@ -13,7 +14,12 @@ export async function getCurrentUser(): Promise<CurrentUser | null> {
   const supabase = await createClient();
   const {
     data: { user },
+    error,
   } = await supabase.auth.getUser();
+
+  // Supabase couldn't be reached: show an error page (the user can retry)
+  // instead of treating them as logged out.
+  if (error && isAuthRetryableFetchError(error)) throw error;
 
   if (!user) return null;
   return { id: user.id, email: user.email ?? "" };
