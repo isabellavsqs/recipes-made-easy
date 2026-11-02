@@ -27,6 +27,12 @@ export default async function SuggestPage(props: PageProps<"/suggest">) {
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
+      {/* Just finished the questionnaire and chose to start here. */}
+      {params.welcome && (
+        <p role="status" className="mb-6 rounded-lg bg-primary/10 px-4 py-3 text-primary">
+          You&apos;re all set: your answers are saved. Tell us what&apos;s in your fridge to find your first recipe.
+        </p>
+      )}
       <h1 className="mb-2 font-serif text-3xl">What can I cook?</h1>
       <p className="mb-8 text-muted">
         Tell us what you already have and we&apos;ll find a recipe that uses it, so less goes to waste.

@@ -9,11 +9,17 @@ export const metadata: Metadata = { title: "Meal Prep · Recipes Made Easy" };
 
 const dateFormat = new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric" });
 
-export default async function MealPrepPage() {
-  const [profile, plans] = await Promise.all([getProfile(), listMealPlans()]);
+export default async function MealPrepPage(props: PageProps<"/meal-prep">) {
+  const [params, profile, plans] = await Promise.all([props.searchParams, getProfile(), listMealPlans()]);
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
+      {/* Just finished the questionnaire and chose to start here. */}
+      {params.welcome && (
+        <p role="status" className="mb-6 rounded-lg bg-primary/10 px-4 py-3 text-primary">
+          You&apos;re all set: your answers are saved. Let&apos;s make your first meal prep plan.
+        </p>
+      )}
       <h1 className="mb-2 font-serif text-3xl">Meal prep</h1>
       <p className="mb-8 text-muted">
         Cook once, eat well all week. Tell us how much you need and how long you can cook, and
