@@ -179,3 +179,26 @@ Given a user who has starred exactly three recipes, when the user opens the dash
   * Allergen mistakes: tagging recipes manually can be wrong, so the app must show a disclaimer that users should verify ingredients.
   * Cost estimates by bracket are approximations, not real prices.
   * Collecting 95 recipes from the internet and tagging them correctly takes time and can introduce errors (duplicates, wrong allergen or diet tags, broken sources). I will have the agent work in batches and I will manually review the allergen tags.
+
+## 8. Plan vs. Reality
+
+Added on Nov 1, after building. Sections 1 to 7 above are the original plan, unchanged. The details, with who decided each change, are in [`notes/reality-log.md`](notes/reality-log.md) (the "Log" column points to its rows).
+
+| Planned feature | Shipped / Changed / Cut | Status | Learning | What changed and why | Log |
+|---|---|---|---|---|---|
+| 1. Sign up and login | Changed | Done (email confirmation backlogged) | A free service's limits can decide a feature for you. | Email confirmation is off, because Supabase's free email sender only reaches a few addresses per hour. | 2, 3, 13 |
+| 2. Data model | Changed | Done | The database can enforce rules itself, so a bug in the app can't break them. | No password column (Supabase Auth keeps it), pair-of-ids keys, a position column for ingredient order, max 3 goals checked by the database. | 4, 5 |
+| Shared recipes (§3 privacy rule) | Changed | Done | Reading the plan against the tests found a contradiction before any code was written. | My Recipes shows only my recipes and a new Browse page shows the shared library, so Test 1's "empty list" is possible. | 1 |
+| 3. Create, read, update, delete | Shipped | Done | Small extras (allergen tags on my own recipes) matter when other features depend on them. | As planned, plus allergen and appliance tags in the form. | 11 |
+| 4. Validation | Changed | Done | The fields in the plan weren't enough: numbers and duplicates also needed rules. | More rules than planned (servings 1–100, whole minutes, no duplicate ingredients), and the form keeps what was typed. | 11 |
+| 5. Stars | Changed | Done | The navigation plan decided where the starred view lives. | The starred view is a tab inside My Recipes, as the five tabs in §6 suggest. | 1 |
+| 6. Find things | Changed | Done | Words like "cook time" need a precise meaning. | Time means prep + cook; search and filters also work on Browse and Starred. | 1, 12 |
+| 7. Dashboard | Changed | Done | A chart needs enough data on day one to be useful. | The cuisine chart counts my recipes plus my starred ones, with a table view. | 12 |
+| Recipe data: 100 recipes | Changed | Done (30); the other 65 backlogged | Collecting and tagging data takes longer than building pages. | 30 internet recipes plus my 5, with rewritten instructions and allergens tagged on the safe side. | 6, 7 |
+| 8. Onboarding questionnaire | Changed | Done | Questions should feed later features. | A 7th question (budget) that fills the meal prep form; allergies and diet hide recipes on Browse. | 5, 14 |
+| 9. Meal prep plan | Shipped | Done | Rules I can explain are easier to test than AI. | Rule-based: the time is for the whole cooking session, recipes are scaled to whole or half batches, plus a shopping list. | 15 |
+| 10. Single recipe suggestion | Shipped | Done | "Use what I have" needed three tries to rank well. | Ranks recipes by how much of the fridge they use, and lists what to buy. | 15 |
+| 11. Instagram recipe import | Cut | Backlogged | Cutting early kept the other features on time. | Needs a paid AI key; it was first on my cut list. | 15 |
+| Tests (§4) | Changed | Done | The database's own protection made my "what would break it" sentences wrong. | Playwright tests through real pages; Test 2's red run uses a different mistake. | 13 |
+| Hosting: deploy on every merge (§5) | Changed | Done | "It looks fine" isn't proof that the latest version is live. | Vercel watched a copy of my repo for 5 days; reconnected on Nov 1. | 9 |
+| Allergen disclaimer (§7) | Not built | Backlogged | Risks in a plan need their own task, or they get forgotten. | The app doesn't yet tell users to check ingredients for allergens. | 16 |
