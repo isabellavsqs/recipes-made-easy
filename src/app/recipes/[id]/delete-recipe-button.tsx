@@ -3,13 +3,15 @@
 import { useRef } from "react";
 import { useFormStatus } from "react-dom";
 
-// "Are you sure?" dialog before a recipe is deleted.
+// "Are you sure?" dialog before a recipe (or a meal plan) is deleted.
 export function DeleteRecipeButton({
   title,
   action,
+  kind = "recipe",
 }: {
   title: string;
   action: () => Promise<void>;
+  kind?: string;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -29,7 +31,7 @@ export function DeleteRecipeButton({
         className="m-auto w-[calc(100%-2rem)] max-w-sm rounded-2xl bg-white p-6 text-foreground shadow-xl backdrop:bg-black/40"
       >
         <h2 id="delete-title" className="mb-2 font-serif text-xl">
-          Delete this recipe?
+          Delete this {kind}?
         </h2>
         <p className="mb-6 text-muted">
           Are you sure you want to delete <strong className="text-foreground">{title}</strong>?
