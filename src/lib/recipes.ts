@@ -43,17 +43,25 @@ export const SUMMARY_COLUMNS =
   "id, title, cuisine, prep_minutes, cook_minutes, base_servings, cost_bracket, diet_tags, image_url, created_at";
 
 // A recipe in a list: the summary plus its ingredient names, so the list can
-// be searched by ingredient (feature 6).
-export type RecipeListItem = RecipeSummary & { ingredientNames: string[] };
+// be searched by ingredient (feature 6), and its allergens, so recipes that
+// don't fit the user's profile can be hidden (feature 8).
+export type RecipeListItem = RecipeSummary & { ingredientNames: string[]; allergenIds: number[] };
 
-export const LIST_COLUMNS = `${SUMMARY_COLUMNS}, recipe_ingredients (ingredients (name))`;
+export const LIST_COLUMNS = `${SUMMARY_COLUMNS}, recipe_ingredients (ingredients (name)), recipe_allergen_tags (allergy_id)`;
 
-type ListRow = RecipeSummary & { recipe_ingredients: { ingredients: { name: string } }[] };
+type ListRow = RecipeSummary & {
+  recipe_ingredients: { ingredients: { name: string } }[];
+  recipe_allergen_tags: { allergy_id: number }[];
+};
 
 // See getRecipe(): Supabase can't tell each link points to one ingredient.
 export function toListItem(row: unknown): RecipeListItem {
-  const { recipe_ingredients, ...recipe } = row as ListRow;
-  return { ...recipe, ingredientNames: recipe_ingredients.map((ri) => ri.ingredients.name) };
+  const { recipe_ingredients, recipe_allergen_tags, ...recipe } = row as ListRow;
+  return {
+    ...recipe,
+    ingredientNames: recipe_ingredients.map((ri) => ri.ingredients.name),
+    allergenIds: recipe_allergen_tags.map((tag) => tag.allergy_id),
+  };
 }
 
 // "My Recipes": only recipes this user created, never the shared library.
@@ -242,7 +250,7 @@ export async function saveRecipe(
 
 // Maps each ingredient name (lowercased) to an ingredient id, reusing a
 // shared or existing custom ingredient and creating custom ones for new names.
-async function findOrCreateIngredients(
+export async function findOrCreateIngredients(
   names: string[],
   userId: string,
 ): Promise<Map<string, number>> {

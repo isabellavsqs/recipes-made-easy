@@ -2,6 +2,13 @@ import Link from "next/link";
 import { getCurrentUser } from "@/lib/auth";
 import { logOut } from "@/app/auth/actions";
 
+const NAV_LINKS = [
+  ["/browse", "Browse"],
+  ["/recipes", "My Recipes"],
+  ["/dashboard", "Dashboard"],
+  ["/profile", "Profile"],
+] as const;
+
 export async function SiteHeader() {
   // If Supabase can't be reached, show the logged-out header rather than
   // breaking every page; the page itself shows the error.
@@ -15,28 +22,27 @@ export async function SiteHeader() {
         </Link>
 
         {user ? (
-          <div className="flex items-center gap-3 text-sm">
-            <nav className="flex items-center gap-3 font-medium">
-              <Link href="/browse" className="whitespace-nowrap hover:text-primary">
-                Browse
-              </Link>
-              <Link href="/recipes" className="whitespace-nowrap hover:text-primary">
-                My Recipes
-              </Link>
-              <Link href="/dashboard" className="whitespace-nowrap hover:text-primary">
-                Dashboard
-              </Link>
+          <>
+            {/* On phones the links get their own row (swipe if they don't fit). */}
+            <nav className="order-3 flex w-full items-center gap-4 overflow-x-auto text-sm font-medium sm:order-none sm:ml-auto sm:w-auto sm:gap-3">
+              {NAV_LINKS.map(([href, label]) => (
+                <Link key={href} href={href} className="whitespace-nowrap hover:text-primary">
+                  {label}
+                </Link>
+              ))}
             </nav>
-            <span className="hidden text-muted md:inline">{user.email}</span>
-            <form action={logOut}>
-              <button
-                type="submit"
-                className="whitespace-nowrap rounded-full border border-line px-3 py-1.5 font-medium transition hover:border-primary"
-              >
-                Log out
-              </button>
-            </form>
-          </div>
+            <div className="flex items-center gap-3 text-sm">
+              <span className="hidden text-muted lg:inline">{user.email}</span>
+              <form action={logOut}>
+                <button
+                  type="submit"
+                  className="whitespace-nowrap rounded-full border border-line px-3 py-1.5 font-medium transition hover:border-primary"
+                >
+                  Log out
+                </button>
+              </form>
+            </div>
+          </>
         ) : (
           <nav className="flex items-center gap-3 text-sm font-medium">
             <Link href="/login" className="hover:text-primary">

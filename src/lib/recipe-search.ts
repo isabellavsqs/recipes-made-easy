@@ -139,3 +139,14 @@ export function cuisinesOf(recipes: SearchableRecipe[]): string[] {
   }
   return [...byKey.values()].sort((a, b) => a.localeCompare(b));
 }
+
+// PLAN.md rules: allergies and diet are hard filters, so a recipe that
+// contains one of the user's allergens, or doesn't fit their diet, is never
+// shown. (Dislikes are soft and only affect suggestions.)
+export function fitsProfile(
+  recipe: Pick<SearchableRecipe, "diet_tags"> & { allergenIds: number[] },
+  profile: { diet: Diet | "none"; allergyIds: number[] },
+): boolean {
+  if (profile.diet !== "none" && !fitsDiet(recipe.diet_tags, profile.diet)) return false;
+  return !recipe.allergenIds.some((id) => profile.allergyIds.includes(id));
+}

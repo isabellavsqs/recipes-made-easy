@@ -1,16 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { requireUser } from "@/lib/auth";
+import { getProfile } from "@/lib/profile";
 
 export const metadata: Metadata = { title: "Home · Recipes Made Easy" };
 
 export default async function HomePage() {
-  const user = await requireUser();
+  const [user, profile] = await Promise.all([requireUser(), getProfile()]);
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
       <h1 className="mb-2 break-words font-serif text-3xl">Hi, {user.email}</h1>
       <p className="mb-8 text-muted">What are we cooking this week?</p>
+      {!profile.onboardingCompleted && (
+        <Link
+          href="/onboarding"
+          className="mb-4 block rounded-2xl border border-primary bg-primary/5 p-6 transition hover:bg-primary/10"
+        >
+          <h2 className="mb-1 font-serif text-xl">Tell us about you</h2>
+          <p className="text-muted">
+            A minute of questions (diet, allergies, goals) so we only show recipes that fit you. →
+          </p>
+        </Link>
+      )}
       <div className="grid gap-4 sm:grid-cols-2">
         <Link
           href="/browse"

@@ -70,7 +70,7 @@ Created empty on sign up, then filled in by the onboarding questionnaire.
 ### Lookup lists: goals, allergies, appliances
 Same list for everyone, read-only. Each has `id` (number, PK) and `name` (text, unique).
 
-- **goals:** Save money, Save time, Eat healthier, Eat more protein, Improve cooking skills
+- **goals:** Save money, Save time, Eat healthier, Improve cooking skills ("Eat more protein" was removed in `005`)
 - **allergies:** the 9 major US allergens (Milk, Eggs, Fish, Shellfish, Tree nuts, Peanuts, Wheat, Soy, Sesame)
 - **appliances:** Stove, Oven, Microwave, Air fryer
 
