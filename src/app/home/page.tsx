@@ -25,6 +25,15 @@ export default async function HomePage() {
       )}
       <div className="grid gap-4 sm:grid-cols-2">
         <Link
+          href="/meal-prep"
+          className={`block rounded-2xl border bg-white p-6 transition hover:border-primary ${
+            profile.startPreference === "meal prep" ? "border-primary" : "border-line"
+          }`}
+        >
+          <h2 className="mb-1 font-serif text-xl">Meal prep</h2>
+          <p className="text-muted">Get a plan for the week, scaled, with a shopping list.</p>
+        </Link>
+        <Link
           href="/browse"
           className="block rounded-2xl border border-line bg-white p-6 transition hover:border-primary"
         >

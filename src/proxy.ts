@@ -2,7 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 // Pages that only logged-in users can open.
-const PROTECTED_PATHS = ["/home", "/recipes", "/browse", "/dashboard", "/onboarding", "/profile"];
+const PROTECTED_PATHS = ["/home", "/recipes", "/browse", "/dashboard", "/onboarding", "/profile", "/meal-prep"];
 
 function matches(pathname: string, paths: string[]) {
   return paths.some((p) => pathname === p || pathname.startsWith(`${p}/`));

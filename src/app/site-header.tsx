@@ -3,6 +3,7 @@ import { getCurrentUser } from "@/lib/auth";
 import { logOut } from "@/app/auth/actions";
 
 const NAV_LINKS = [
+  ["/meal-prep", "Meal Prep"],
   ["/browse", "Browse"],
   ["/recipes", "My Recipes"],
   ["/dashboard", "Dashboard"],
