@@ -42,3 +42,7 @@ next-env.d.ts
 
 # my recipe drafts (notes, not app code)
 /manual_recipes/
+
+# Playwright test output
+/test-results/
+/playwright-report/

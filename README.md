@@ -11,6 +11,8 @@ A personalized recipe website for busy students and professionals: save recipes,
 - **Next.js 16** (React, TypeScript) for the pages and server logic
 - **Supabase** for the PostgreSQL database and sign up / login
 - **Tailwind CSS** for styling
+- **Recharts** for the dashboard chart
+- **Playwright** for the end-to-end tests
 - **Vercel** for hosting
 - Built with **Claude Code** (prompt logs in [`prompts/`](prompts/))
 
@@ -33,3 +35,18 @@ A personalized recipe website for busy students and professionals: save recipes,
    npm run dev
    ```
    Then open http://localhost:3000.
+
+## Run the tests
+
+The two tests in [`tests/`](tests/) (described in [PLAN.md](PLAN.md) §4) drive a real browser against the app:
+
+- **Test 1, data isolation** ([`data-isolation.spec.ts`](tests/data-isolation.spec.ts)): User B can't see User A's recipe, star or recipe page.
+- **Test 2, dashboard** ([`dashboard-starred.spec.ts`](tests/dashboard-starred.spec.ts)): after starring 3 recipes, the dashboard's "Starred recipes" shows 3.
+
+```bash
+npx playwright install chromium   # first time only
+npm test                          # starts the app if it isn't running
+npx playwright show-report        # optional: open the results in a browser
+```
+
+The tests use the Supabase project from `.env.local` and create new accounts named `test-…@example.com` on every run.

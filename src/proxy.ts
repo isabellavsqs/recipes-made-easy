@@ -3,8 +3,6 @@ import { NextResponse, type NextRequest } from "next/server";
 
 // Pages that only logged-in users can open.
 const PROTECTED_PATHS = ["/home", "/recipes", "/browse", "/dashboard"];
-// Pages that logged-in users don't need (they go straight to /home).
-const AUTH_PATHS = ["/login", "/signup"];
 
 function matches(pathname: string, paths: string[]) {
   return paths.some((p) => pathname === p || pathname.startsWith(`${p}/`));
@@ -43,12 +41,13 @@ export async function proxy(request: NextRequest) {
   const isLoggedIn = Boolean(data?.claims);
   const { pathname } = request.nextUrl;
 
-  let redirectTo: string | null = null;
-  if (!isLoggedIn && matches(pathname, PROTECTED_PATHS)) redirectTo = "/login";
-  if (isLoggedIn && matches(pathname, AUTH_PATHS)) redirectTo = "/home";
-
-  if (redirectTo) {
-    const redirect = NextResponse.redirect(new URL(redirectTo, request.url));
+  // Only "not logged in → /login" happens here. The opposite (logged in →
+  // skip /login) is decided by the login and signup pages themselves with the
+  // same server check every page uses. If this quick check and the pages
+  // disagreed (for example when Supabase can't be reached), the two redirects
+  // would send the browser back and forth forever.
+  if (!isLoggedIn && matches(pathname, PROTECTED_PATHS)) {
+    const redirect = NextResponse.redirect(new URL("/login", request.url));
     // Keep any refreshed session cookies on the redirect.
     response.cookies.getAll().forEach((cookie) => redirect.cookies.set(cookie));
     return redirect;
