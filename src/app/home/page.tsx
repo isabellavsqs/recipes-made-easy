@@ -34,6 +34,15 @@ export default async function HomePage() {
           <p className="text-muted">Get a plan for the week, scaled, with a shopping list.</p>
         </Link>
         <Link
+          href="/suggest"
+          className={`block rounded-2xl border bg-white p-6 transition hover:border-primary ${
+            profile.startPreference === "single recipe" ? "border-primary" : "border-line"
+          }`}
+        >
+          <h2 className="mb-1 font-serif text-xl">What can I cook?</h2>
+          <p className="text-muted">Find one recipe that uses what&apos;s already in your fridge.</p>
+        </Link>
+        <Link
           href="/browse"
           className="block rounded-2xl border border-line bg-white p-6 transition hover:border-primary"
         >
