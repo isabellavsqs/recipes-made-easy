@@ -1,10 +1,33 @@
 # Recipes Made Easy
 
-A personalized recipe website for busy students and professionals: save recipes, plan the week's meal prep and get suggestions that respect your diet, allergies, dislikes and budget.
+A personalized recipe website for busy students and professionals: save your own recipes, plan the week's meal prep and find out what to cook with what's already in your fridge. Your diet, allergies, dislikes, appliances and budget are saved once and checked before anything is recommended.
 
-**Live app:** https://recipes-made-easy-vercel.vercel.app/
+**Live app:** https://recipes-made-easy-vercel.vercel.app/ (sign up with any email; no confirmation email is sent)
 
-> Work in progress. See [PLAN.md](PLAN.md) for the full plan and [schema.md](schema.md) for the database.
+## What it does
+
+| Page | What you can do |
+|---|---|
+| **Sign up / Log in** | Create your own account. Everything you save is private to you. |
+| **Onboarding** (right after sign up) | 7 short questions: goals, diet, allergies, dislikes, appliances, budget and where to start. Change them later on **Profile**. |
+| **Meal Prep** | Pick servings, days, cooking time and budget, and get a plan: which recipes to cook, how much of each, which days they cover, plus one shopping list. Plans are saved. |
+| **Single Recipe** ("What can I cook?") | Type what's in your fridge and whether you can shop. You get "Our pick", other recipes ready to cook, and recipes that need a few extra items, with what to buy. |
+| **Browse** | The shared library of 30 recipes from around the world. Recipes with your allergens, or that don't fit your diet, are hidden. |
+| **My Recipes** | Add, view, edit and delete your own recipes (with checks for missing or wrong fields). Star any recipe and see them on the **Starred** tab. |
+| **Search and filters** | On Browse, My Recipes and Starred: search by name or ingredient, filter by cuisine, diet, cost and total time, and sort. |
+| **Dashboard** | Your recipes, starred recipes and meal plans, and a chart of your cookbook by cuisine. |
+
+Spices, oils, butter, salt and a few other staples are assumed to be in every kitchen, so they're never on the "to buy" lists.
+
+**Known limits:** allergen tags were added by hand, so always check the ingredients yourself (the app doesn't show this warning yet). Costs ($, $$, $$$) are rough brackets, not real prices. The Instagram import from the plan was cut.
+
+## Project documents
+
+- [PLAN.md](PLAN.md): the original plan, with a **Plan vs. Reality** table at the end (§8)
+- [schema.md](schema.md): the database tables, who can see what, and how they differ from the plan
+- [notes/reality-log.md](notes/reality-log.md): every change from the plan, with who decided and why
+- [prompts/](prompts/): the prompts I gave the coding agent for each feature, its answers and the bugs found
+- [docs/screenshots/](docs/screenshots/): screenshots of each feature and of the tests
 
 ## Tech stack
 
@@ -14,7 +37,7 @@ A personalized recipe website for busy students and professionals: save recipes,
 - **Recharts** for the dashboard chart
 - **Playwright** for the end-to-end tests
 - **Vercel** for hosting
-- Built with **Claude Code** (prompt logs in [`prompts/`](prompts/))
+- Built with **Claude Code**, one Issue → branch → pull request per feature
 
 ## Run it locally
 

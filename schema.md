@@ -160,5 +160,10 @@ Compared with PLAN.md §3, the agent built the tables as designed, with these di
 | "Primary keys are `id` in every table" | Many-to-many tables use the pair of FKs as PK | Stops the same pair from being saved twice, and no extra id is needed |
 | `recipes.diet_tags`: text | List of text | A recipe can be both vegan and vegetarian |
 | No date on recipes | `recipes.created_at` | Needed for the "newest first" sort |
-| No photo columns | `recipes.image_url`, `image_credit` | Unsplash photos (decision #4 in the reality log) |
+| No photo columns | `recipes.image_url`, `image_credit` | Unsplash photos (reality log #7) |
 | Max 3 goals (only in the features) | Enforced by the database | The rule holds even if the app has a bug |
+| `recipe_ingredients`: recipe, ingredient, quantity, unit | Also `position` (migration `004`) | Ingredients show in the order the recipe lists them, not alphabetically |
+| Goals given only as examples | 4 fixed goals in the `goals` table | The questionnaire needs a fixed list ("Eat more protein" removed in `005`) |
+| Fridge contents "not stored" (design note) | Not stored | The list only lives in the page address (`/suggest?have=…`) |
+
+The story behind each change, and who decided, is in [`notes/reality-log.md`](notes/reality-log.md).
