@@ -63,7 +63,8 @@ export async function signUp(
     };
   }
 
-  redirect("/home");
+  // New accounts start with the onboarding questionnaire (PLAN.md feature 8).
+  redirect("/onboarding");
 }
 
 export async function logIn(

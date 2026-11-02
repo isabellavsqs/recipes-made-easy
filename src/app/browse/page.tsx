@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { listLibraryRecipes } from "@/lib/recipes";
-import { cuisinesOf, findRecipes, isFiltered, parseRecipeQuery } from "@/lib/recipe-search";
+import Link from "next/link";
+import { getProfile } from "@/lib/profile";
+import { cuisinesOf, findRecipes, fitsProfile, isFiltered, parseRecipeQuery } from "@/lib/recipe-search";
 import { getStarredIds } from "@/lib/stars";
 import { setStarAction } from "../recipes/actions";
 import { NoMatches, ResultCount } from "../recipes/no-matches";
@@ -11,7 +13,16 @@ export const metadata: Metadata = { title: "Browse · Recipes Made Easy" };
 
 export default async function BrowsePage(props: PageProps<"/browse">) {
   const query = parseRecipeQuery(await props.searchParams);
-  const [allRecipes, starredIds] = await Promise.all([listLibraryRecipes(), getStarredIds()]);
+  const [library, starredIds, profile] = await Promise.all([
+    listLibraryRecipes(),
+    getStarredIds(),
+    getProfile(),
+  ]);
+  // Hard filters from the profile come first; search and filters work on what's left.
+  const allRecipes = library.filter((recipe) =>
+    fitsProfile(recipe, { diet: profile.diet, allergyIds: profile.allergies.map((a) => a.id) }),
+  );
+  const hiddenCount = library.length - allRecipes.length;
   const recipes = findRecipes(allRecipes, query);
   const filtered = isFiltered(query);
 
@@ -22,6 +33,15 @@ export default async function BrowsePage(props: PageProps<"/browse">) {
         {allRecipes.length > 0 && (
           <p className="text-muted">
             {allRecipes.length} recipes to get you started. Star the ones you want to keep close.
+          </p>
+        )}
+        {hiddenCount > 0 && (
+          <p className="mt-2 text-sm text-muted">
+            {hiddenCount} {hiddenCount === 1 ? "recipe is" : "recipes are"} hidden because{" "}
+            {hiddenCount === 1 ? "it doesn't" : "they don't"} fit your diet or allergies.{" "}
+            <Link href="/profile" className="font-medium text-primary underline-offset-2 hover:underline">
+              Change in Profile
+            </Link>
           </p>
         )}
       </div>
@@ -42,8 +62,17 @@ export default async function BrowsePage(props: PageProps<"/browse">) {
         <NoMatches clearHref="/browse" />
       ) : recipes.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-line bg-white px-6 py-16 text-center">
-          <p className="mb-2 font-serif text-xl">The recipe library is empty</p>
-          <p className="text-muted">Recipes will show up here once they&apos;re added.</p>
+          {hiddenCount > 0 ? (
+            <>
+              <p className="mb-2 font-serif text-xl">No library recipes fit your profile yet</p>
+              <p className="text-muted">Every recipe here has one of your allergens or doesn&apos;t fit your diet.</p>
+            </>
+          ) : (
+            <>
+              <p className="mb-2 font-serif text-xl">The recipe library is empty</p>
+              <p className="text-muted">Recipes will show up here once they&apos;re added.</p>
+            </>
+          )}
         </div>
       ) : (
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

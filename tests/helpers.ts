@@ -7,13 +7,14 @@ export function newEmail(label: string) {
   return `test-${label}-${Date.now()}-${Math.floor(Math.random() * 1000)}@example.com`;
 }
 
-// Creates an account through the real sign-up page and lands on /home.
+// Creates an account through the real sign-up page. New accounts land on
+// the onboarding questionnaire; the tests skip it.
 export async function signUp(page: Page, email: string) {
   await page.goto("/signup");
   await page.getByLabel("Email").fill(email);
   await page.getByLabel("Password").fill(PASSWORD);
   await page.locator("main").getByRole("button", { name: "Create account" }).click();
-  await expect(page).toHaveURL(/\/home$/);
+  await expect(page).toHaveURL(/\/onboarding$/);
 }
 
 // Clicks a star button and waits until the server has saved it (the star
