@@ -16,7 +16,7 @@ export default async function DashboardPage() {
       <p className="mb-8 text-muted">A quick look at your cooking.</p>
 
       <div className="mb-8 grid grid-cols-3 gap-2 sm:gap-4">
-        <StatTile label="My recipes" value={stats.myRecipes} href="/recipes" testId="stat-my-recipes" />
+        <StatTile label="Recipes I added" value={stats.myRecipes} href="/recipes" testId="stat-my-recipes" />
         <StatTile
           label="Starred recipes"
           value={stats.starred}

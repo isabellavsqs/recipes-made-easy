@@ -26,6 +26,11 @@ I opened the PR myself, with my edits to the "Learning" column in PLAN.md §8. T
 - My Recipes, All: 1 own recipe + 2 starred library recipes = 3 cards (the own recipe was also starred and appears once).
 - Both tests (`npm test`) pass. Test 1 still sees "No recipes yet" for User B, who has no recipes and no stars.
 
-## Note
+## Follow-up
 
-The dashboard's "My recipes" still counts only the recipes I added (5), while My Recipes, All now also lists my starred ones.
+The agent pointed out four things: PR #39 had no Issue; my validation "Learning" text had gone into the Shared recipes row of PLAN.md §8; the dashboard tile "My recipes" counted only the recipes I added (5), while My Recipes, All now listed 11; and reality log #6 said "Me" for the 30-recipe decision, although the agent had suggested it (prompts/recipe-library-size.md).
+
+**Prompt 2**
+> 1. no issue, I did not merge it yet for you to add the following changes 2. please bring the old text from shared recipe again and replace the current validation text with this text: "Checking that fields aren't blank wasn't enough: numbers and duplicates also needed rules (e.g., Servings must be a whole number from 1 to 100; Prep and cook time must be whole minutes; Amounts must be a number above 0, etc)". 3. yes rename it. 4. yes correct it
+
+**Agent response (summary):** The Shared recipes row has its original learning back, and the Validation row has my text. The dashboard tile is now **Recipes I added**. Reality log #6 now says **Agent → Me** for the 30 recipes.
