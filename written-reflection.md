@@ -4,19 +4,25 @@
 
 I had multiple gaps from my original PLAN.md (e.g., additional rules not accounted for in the ´recipes´ and ´ingredients´ table; cut Instagram import features; no e-mail authentication; no allergen pop-up disclaimer), but the biggest gap was not having 100 recipes in the original database (was cut to only 30).
 
-Line in my plan: “**Recipe data:** 100 recipes in total: the 5 I send plus 95 collected from the internet by the coding agent, with a variety of cuisines and ingredients available in the US.”
+The plan. [PLAN.md §5](https://github.com/isabellavsqs/recipes-made-easy/blob/main/PLAN.md) said: "Recipe data: 100 recipes in total: the 5 I send plus 95 collected from the internet by the coding agent, with a variety of cuisines and ingredients available in the US." The risk was already in #7: "Collecting 95 recipes from the internet and tagging them correctly takes time and can introduce errors." But the recipes weren't on my cut list, so the plan had no answer for that risk.
 
-PR where things changed: [https://github.com/isabellavsqs/recipes-made-easy/pull/20](https://github.com/isabellavsqs/recipes-made-easy/pull/20)
+What happened. On Oct 27, before any code was written, the agent asked me: "Do you also want to start with fewer internet recipes, say 30, and add more later?" I answered: "I´ll try to finish everything today and friend test tomorrow. yes let´s start with 30 recipes, we can expand later." The agent then asked "Tell me if you meant 30 in total", and I never answered. It was only settled on Nov 1, when I asked it to add "the 30 library recipes". The 30 recipes were added in [PR #20](https://github.com/isabellavsqs/recipes-made-easy/pull/20). The full conversation is in [prompts/recipe-library-size.md](https://github.com/isabellavsqs/recipes-made-easy/blob/main/prompts/recipe-library-size.md) ([PR #38](https://github.com/isabellavsqs/recipes-made-easy/pull/38)), and the change is [reality log #6](https://github.com/isabellavsqs/recipes-made-easy/blob/main/notes/reality-log.md).
 
-Quotes from the conversation with agent: [https://github.com/isabellavsqs/recipes-made-easy/pull/38](https://github.com/isabellavsqs/recipes-made-easy/pull/38)
+Who decided. The agent suggested it and I made the decision.
 
-The agent suggested the change and I went along. What it cost me: lower customer appeal, because the whole value proposition of the app is built on the recipe database. It´s very difficult to add one recipe one by one, so relying on the available options is extremely important.
+What it cost. Lower customer appeal, because the whole value proposition of the app is built on the recipe database. It´s very difficult to add recipes one by one, so relying on the available options is extremely important. Because allergies and diet are hard filters, a small library shrinks fast:
 
-If I would rewrite the section of the plan, this is how it would look like:
+- a vegetarian user sees 16 of 30 recipes
+- a vegetarian with a milk allergy sees 8
+- adding a wheat allergy leaves 6
 
-On Technologies:
+Six cuisines have only one recipe. In Single Dish, "can't shop" with salmon, broccolini and ramen finds nothing. And "we can expand later" never happened: 65 recipes are still backlogged. The one benefit: with 30 recipes, every allergen tag could be checked and tagged on the safe side.
 
-“**Recipe data:** 30 recipes in total, collected from the internet by the coding agent, with a variety of cuisines and ingredients available in the US.”
+How I would rewrite the plan. The total wasn't the real problem; the problem was that hard filters and a small library work against each other. On Technologies:
+
+"Recipe data: 35 recipes in total: the 5 I send plus 30 collected from the internet by the coding agent, with a variety of cuisines and ingredients available in the US. The 30 must include at least 10 vegetarian, 5 vegan and 5 wheat-free recipes, and at least 2 per cuisine, so every profile still sees enough choices. After the 10 features are done, add 10 recipes per week, starting with the profiles that see the fewest."
+
+And on Risks and cuts, add: "6. Recipe library size: start with 30 internet recipes instead of 95."
 
 ## 2. The stranger test
 
