@@ -5,6 +5,7 @@ import { getRecipe } from "@/lib/recipes";
 import { isStarred } from "@/lib/stars";
 import { deleteRecipeAction, setStarAction } from "../actions";
 import { totalTime } from "@/lib/recipe-search";
+import { COST_NOTE, costLabel } from "@/lib/recipe-validation";
 import { formatQuantity } from "../recipe-card";
 import { RecipeImage } from "../recipe-image";
 import { StarButton } from "../star-button";
@@ -25,7 +26,7 @@ export default async function RecipePage(props: PageProps<"/recipes/[id]">) {
     recipe.prep_minutes !== null && { label: "Prep", value: `${recipe.prep_minutes} min` },
     recipe.cook_minutes !== null && { label: "Cook", value: `${recipe.cook_minutes} min` },
     minutes !== null && { label: "Total", value: `${minutes} min` },
-    recipe.cost_bracket && { label: "Cost", value: recipe.cost_bracket },
+    recipe.cost_bracket && { label: `Cost ${COST_NOTE}`, value: costLabel(recipe.cost_bracket) },
   ].filter((fact): fact is { label: string; value: string } => Boolean(fact));
 
   return (

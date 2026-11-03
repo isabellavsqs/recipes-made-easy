@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { listMyRecipes } from "@/lib/recipes";
 import { cuisinesOf, findRecipes, isFiltered, parseRecipeQuery } from "@/lib/recipe-search";
-import { getStarredIds, listStarredRecipes } from "@/lib/stars";
+import { getStarredIds, listMyCookbook, listStarredRecipes } from "@/lib/stars";
 import { setStarAction } from "./actions";
 import { NoMatches, ResultCount } from "./no-matches";
 import { RecipeCard } from "./recipe-card";
@@ -17,7 +16,7 @@ export default async function MyRecipesPage(props: PageProps<"/recipes">) {
   const hidden: Record<string, string> = showStarred ? { view: "starred" } : {};
 
   const [allRecipes, starredIds] = await Promise.all([
-    showStarred ? listStarredRecipes() : listMyRecipes(),
+    showStarred ? listStarredRecipes() : listMyCookbook(),
     getStarredIds(),
   ]);
   const recipes = findRecipes(allRecipes, query);
@@ -35,6 +34,9 @@ export default async function MyRecipesPage(props: PageProps<"/recipes">) {
         </Link>
       </div>
 
+      <p className="mb-4 text-muted">
+        {showStarred ? "Recipes you starred." : "Recipes you added and recipes you starred."}
+      </p>
       <nav aria-label="Recipe views" className="mb-8 flex gap-2">
         <Tab href="/recipes" active={!showStarred}>
           All
@@ -70,7 +72,7 @@ export default async function MyRecipesPage(props: PageProps<"/recipes">) {
         ) : (
           <EmptyState
             title="No recipes yet"
-            text="Add a recipe you love cooking and it will show up here."
+            text="Add a recipe you love cooking, or star one on Browse, and it will show up here."
             href="/recipes/new"
             linkText="Add your first recipe"
           />

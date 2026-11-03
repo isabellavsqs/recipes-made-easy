@@ -2,6 +2,11 @@
 // Kept free of database code so it can be tested on its own.
 
 export const COST_BRACKETS = ["$", "$$", "$$$"] as const;
+// What each bracket means: a rough cost per meal, per person.
+const COST_RANGES: Record<string, string> = { $: "$0–5", $$: "$5–10", $$$: "more than $10" };
+export const COST_NOTE = "per meal, per person";
+// "$$" → "$$ · $5–10"
+export const costLabel = (cost: string) => (COST_RANGES[cost] ? `${cost} · ${COST_RANGES[cost]}` : cost);
 export const DIET_TAGS = ["vegan", "vegetarian", "pescatarian"] as const;
 
 export const MAX_SERVINGS = 100;

@@ -153,18 +153,19 @@ export function suggestRecipes<T extends SuggestRecipe>(
   const goalKey = (s: (typeof scored)[number]) =>
     (profile.goals.includes("Save time") ? (totalTime(s.recipe) ?? 999) : 0) +
     (profile.goals.includes("Save money") ? COST.indexOf(s.recipe.cost_bracket ?? "$$") * 30 : 0);
-  // Can shop: best use of the fridge first. Can't shop: fewest things to
-  // buy first. (Either way the missing items are listed, as PLAN.md asks.)
+  // Best use of the fridge first.
   const order = (a: (typeof scored)[number], b: (typeof scored)[number]) =>
-    (canShop ? b.fit - a.fit : a.toBuy.length - b.toBuy.length || b.fit - a.fit) ||
+    b.fit - a.fit ||
     a.dislikesFound.length - b.dislikesFound.length ||
     goalKey(a) - goalKey(b) ||
     a.recipe.title.localeCompare(b.recipe.title);
 
   // Only recipes that really use the fridge: its main ingredient, or at
-  // least 2 of its items (so garlic alone isn't enough).
+  // least 2 of its items (so garlic alone isn't enough). If the user can't
+  // shop, only recipes with nothing to buy, even if that leaves none.
   const useful = scored
     .filter((s) => s.usesProtein || s.using.length >= Math.min(2, fridge.length))
+    .filter((s) => canShop || s.toBuy.length === 0)
     .sort(order);
   const ready = useful.filter((s) => s.toBuy.length === 0);
   const needShopping = useful.filter((s) => s.toBuy.length > 0);

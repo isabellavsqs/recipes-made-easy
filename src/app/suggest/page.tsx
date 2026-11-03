@@ -7,7 +7,7 @@ import { cleanFridge, type Suggestion } from "@/lib/suggestion";
 import { RecipeImage } from "../recipes/recipe-image";
 import { FridgeForm } from "./fridge-form";
 
-export const metadata: Metadata = { title: "Single Recipe · Recipes Made Easy" };
+export const metadata: Metadata = { title: "Single Dish · Recipes Made Easy" };
 
 export default async function SuggestPage(props: PageProps<"/suggest">) {
   const params = await props.searchParams;
@@ -49,10 +49,14 @@ export default async function SuggestPage(props: PageProps<"/suggest">) {
 
       {result && !pick && (
         <div className="rounded-2xl border border-dashed border-line bg-white px-6 py-12 text-center" aria-live="polite">
-          <p className="mb-2 font-serif text-xl">No recipe uses these yet</p>
+          <p className="mb-2 font-serif text-xl">
+            {canShop ? "No recipe uses these yet" : "Nothing can be made with only what you have"}
+          </p>
           <p className="text-muted">
-            Try adding a few more things (a meat, a vegetable, rice or pasta), or check the spelling. Recipes
-            also have to fit your{" "}
+            {canShop
+              ? "Try adding a few more things (a meat, a vegetable, rice or pasta), or check the spelling."
+              : "Try adding more of what's in your fridge, or answer Yes to see recipes that need a few extra items."}{" "}
+            Recipes also have to fit your{" "}
             <Link href="/profile" className="font-medium text-primary underline-offset-2 hover:underline">
               profile
             </Link>
@@ -67,8 +71,8 @@ export default async function SuggestPage(props: PageProps<"/suggest">) {
             <h2 className="mb-1 font-serif text-2xl">Our pick</h2>
             {result!.ready.length === 0 && (
               <p className="mb-4 text-muted">
-                Nothing can be made with only what you have
-                {canShop ? ", so here's the best use of it with a few extra items." : ". You said you can't shop, so these need the fewest extra items."}
+                Nothing can be made with only what you have, so here&apos;s the best use of it with a few extra
+                items.
               </p>
             )}
             <SuggestionCard suggestion={pick} big />

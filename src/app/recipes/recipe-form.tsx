@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { startTransition, useActionState, useEffect, useRef, useState } from "react";
-import type { RecipeField, RecipeFormValues } from "@/lib/recipe-validation";
+import { COST_BRACKETS, COST_NOTE, costLabel, type RecipeField, type RecipeFormValues } from "@/lib/recipe-validation";
 import type { RecipeFormState } from "./actions";
 
 type Option = { id: number; name: string };
@@ -170,9 +170,9 @@ export function RecipeForm({
       </div>
 
       <fieldset className="flex flex-col gap-2">
-        <legend className="mb-1 text-sm font-medium">Cost</legend>
-        <div className="flex gap-2">
-          {["$", "$$", "$$$"].map((cost) => (
+        <legend className="mb-1 text-sm font-medium">Cost {COST_NOTE}</legend>
+        <div className="flex flex-wrap gap-2">
+          {COST_BRACKETS.map((cost) => (
             <label key={cost} className="cursor-pointer">
               <input
                 type="radio"
@@ -182,7 +182,7 @@ export function RecipeForm({
                 className="peer sr-only"
               />
               <span className="block rounded-full border border-line bg-white px-4 py-1.5 text-sm font-medium peer-checked:border-primary peer-checked:bg-primary peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-primary/30">
-                {cost}
+                {costLabel(cost)}
               </span>
             </label>
           ))}
