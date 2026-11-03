@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getMealPlan } from "@/lib/meal-plans";
 import { totalTime } from "@/lib/recipe-search";
+import { COST_NOTE, costLabel } from "@/lib/recipe-validation";
 import { DeleteRecipeButton } from "../../recipes/[id]/delete-recipe-button";
 import { formatQuantity } from "../../recipes/recipe-card";
 import { RecipeImage } from "../../recipes/recipe-image";
@@ -50,7 +51,7 @@ export default async function MealPlanPage(props: PageProps<"/meal-prep/[id]">) 
             {plan.days} {plan.days === 1 ? "day" : "days"} · {plan.servings}{" "}
             {plan.servings === 1 ? "serving" : "servings"} per meal
             {cooking > 0 && <> · about {formatMinutes(cooking)} of cooking</>}
-            {plan.budget && <> · up to {plan.budget}</>}
+            {plan.budget && <> · up to {costLabel(plan.budget)} {COST_NOTE}</>}
           </p>
         </div>
         <div className="flex flex-wrap items-start gap-2">

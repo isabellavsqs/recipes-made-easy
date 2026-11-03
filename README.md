@@ -11,15 +11,15 @@ A personalized recipe website for busy students and professionals: save your own
 | **Sign up / Log in** | Create your own account. Everything you save is private to you. |
 | **Onboarding** (right after sign up) | 7 short questions: goals, diet, allergies, dislikes, appliances, budget and where to start. Change them later on **Profile**. |
 | **Meal Prep** | Pick servings, days, cooking time and budget, and get a plan: which recipes to cook, how much of each, which days they cover, plus one shopping list. Plans are saved. |
-| **Single Recipe** ("What can I cook?") | Type what's in your fridge and whether you can shop. You get "Our pick", other recipes ready to cook, and recipes that need a few extra items, with what to buy. |
+| **Single Dish** ("What can I cook?") | Type what's in your fridge and whether you can shop. You get "Our pick" and other recipes ready to cook. If you can shop, also recipes that need a few extra items, with what to buy. |
 | **Browse** | The shared library of 30 recipes from around the world. Recipes with your allergens, or that don't fit your diet, are hidden. |
-| **My Recipes** | Add, view, edit and delete your own recipes (with checks for missing or wrong fields). Star any recipe and see them on the **Starred** tab. |
+| **My Recipes** | Add, view, edit and delete your own recipes (with checks for missing or wrong fields). **All** shows your recipes plus the ones you starred; **Starred** shows only starred ones. |
 | **Search and filters** | On Browse, My Recipes and Starred: search by name or ingredient, filter by cuisine, diet, cost and total time, and sort. |
 | **Dashboard** | Your recipes, starred recipes and meal plans, and a chart of your cookbook by cuisine. |
 
 Spices, oils, butter, salt and a few other staples are assumed to be in every kitchen, so they're never on the "to buy" lists.
 
-**Known limits:** allergen tags were added by hand, so always check the ingredients yourself (the app doesn't show this warning yet). Costs ($, $$, $$$) are rough brackets, not real prices. The Instagram import from the plan was cut.
+**Known limits:** allergen tags were added by hand, so always check the ingredients yourself (the app doesn't show this warning yet). Costs are rough brackets per meal, per person ($ is $0–5, $$ is $5–10, $$$ is more than $10), not real prices. The Instagram import from the plan was cut.
 
 ## Project documents
 

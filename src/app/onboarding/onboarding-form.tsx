@@ -2,6 +2,7 @@
 
 import { useActionState, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { MAX_DISLIKES, MAX_GOALS } from "@/lib/profile-validation";
+import { COST_BRACKETS, COST_NOTE, costLabel } from "@/lib/recipe-validation";
 import type { Profile, ProfileOptions } from "@/lib/profile";
 import type { OnboardingState } from "./actions";
 
@@ -214,20 +215,16 @@ export function OnboardingForm({
     },
     {
       title: "What's your usual budget?",
-      hint: "Per meal: $ is cheap, $$ is medium, $$$ is pricier.",
+      hint: `Roughly, ${COST_NOTE}.`,
       body: (
         <ChipList>
-          {[
-            ["$", "$ cheap"],
-            ["$$", "$$ medium"],
-            ["$$$", "$$$ pricier"],
-          ].map(([value, label]) => (
+          {COST_BRACKETS.map((value) => (
             <Chip
               key={value}
               type="radio"
               name="budget"
               value={value}
-              label={label}
+              label={costLabel(value)}
               defaultChecked={initial.budget === value}
             />
           ))}

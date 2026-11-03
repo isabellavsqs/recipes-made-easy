@@ -1,7 +1,7 @@
 import "server-only";
 import { requireUser } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
-import { LIST_COLUMNS, toListItem, type RecipeListItem } from "@/lib/recipes";
+import { LIST_COLUMNS, listMyRecipes, toListItem, type RecipeListItem } from "@/lib/recipes";
 
 // Stars live in one table for everyone: each row means "this user starred
 // this recipe". Every query filters by the logged-in user (and RLS checks
@@ -33,6 +33,22 @@ export async function isStarred(recipeId: number): Promise<boolean> {
 
 // The "Starred" view: recipes this user starred, most recently starred first.
 export async function listStarredRecipes(): Promise<RecipeListItem[]> {
+  return (await listStars()).map((star) => star.recipe);
+}
+
+// "All" in My Recipes: recipes I added plus recipes I starred, each once.
+// Newest first: my own by when I added them, the others by when I starred them.
+export async function listMyCookbook(): Promise<RecipeListItem[]> {
+  const [mine, stars] = await Promise.all([listMyRecipes(), listStars()]);
+  const added = new Map<number, { recipe: RecipeListItem; at: string }>();
+  for (const star of stars) added.set(star.recipe.id, { recipe: star.recipe, at: star.starredAt });
+  for (const recipe of mine) added.set(recipe.id, { recipe, at: recipe.created_at });
+  return [...added.values()]
+    .sort((a, b) => Date.parse(b.at) - Date.parse(a.at))
+    .map((entry) => entry.recipe);
+}
+
+async function listStars(): Promise<{ starredAt: string; recipe: RecipeListItem }[]> {
   const user = await requireUser();
   const supabase = await createClient();
   const { data, error } = await supabase
@@ -43,9 +59,9 @@ export async function listStarredRecipes(): Promise<RecipeListItem[]> {
   if (error) throw error;
 
   // See getRecipe(): Supabase can't tell each star points to one recipe.
-  return (data as unknown as { recipes: unknown }[])
+  return (data as unknown as { starred_at: string; recipes: unknown }[])
     .filter((star) => star.recipes !== null)
-    .map((star) => toListItem(star.recipes));
+    .map((star) => ({ starredAt: star.starred_at, recipe: toListItem(star.recipes) }));
 }
 
 // Starring twice does nothing (the pair user + recipe is unique).

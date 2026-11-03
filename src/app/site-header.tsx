@@ -4,7 +4,7 @@ import { logOut } from "@/app/auth/actions";
 
 const NAV_LINKS = [
   ["/meal-prep", "Meal Prep"],
-  ["/suggest", "Single Recipe"],
+  ["/suggest", "Single Dish"],
   ["/browse", "Browse"],
   ["/recipes", "My Recipes"],
   ["/dashboard", "Dashboard"],

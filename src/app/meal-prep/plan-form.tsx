@@ -1,6 +1,7 @@
 "use client";
 
 import { startTransition, useActionState } from "react";
+import { COST_BRACKETS, COST_NOTE, costLabel } from "@/lib/recipe-validation";
 import type { PlanFormState, PlanFormValues } from "./actions";
 
 const inputClass =
@@ -60,17 +61,13 @@ export function PlanForm({
             </label>
           </div>
           <fieldset className="flex flex-col gap-2">
-            <legend className="mb-1 text-sm font-medium">Budget per meal</legend>
+            <legend className="mb-1 text-sm font-medium">Budget {COST_NOTE}</legend>
             <div className="flex flex-wrap gap-2">
-              {[
-                ["$", "$ cheap"],
-                ["$$", "$$ medium"],
-                ["$$$", "$$$ pricier"],
-              ].map(([value, label]) => (
+              {COST_BRACKETS.map((value) => (
                 <label key={value} className="cursor-pointer">
                   <input type="radio" name="budget" value={value} defaultChecked={values.budget === value} className="peer sr-only" />
                   <span className="block rounded-full border border-line bg-white px-4 py-2 text-sm font-medium transition peer-checked:border-primary peer-checked:bg-primary peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-primary/30">
-                    {label}
+                    {costLabel(value)}
                   </span>
                 </label>
               ))}

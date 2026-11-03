@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef, useTransition } from "react";
 import type { RecipeQuery } from "@/lib/recipe-search";
+import { COST_BRACKETS, COST_NOTE, costLabel } from "@/lib/recipe-validation";
 
 // Search box, filters and sort for a recipe list. The choices live in the
 // URL (?q=chicken&diet=vegan), so the page can be reloaded or shared. Without
@@ -96,9 +97,11 @@ export function RecipeFilters({
         </Select>
         <Select onPick={apply} label="Cost" name="cost" value={query.cost}>
           <option value="">Any cost</option>
-          <option value="$">$ (cheap)</option>
-          <option value="$$">$$ (medium)</option>
-          <option value="$$$">$$$ (pricier)</option>
+          {COST_BRACKETS.map((cost) => (
+            <option key={cost} value={cost}>
+              {costLabel(cost)} {COST_NOTE}
+            </option>
+          ))}
         </Select>
         <Select onPick={apply} label="Total time" name="time" value={query.maxMinutes ? String(query.maxMinutes) : ""}>
           <option value="">Any time</option>
