@@ -26,6 +26,7 @@ Spices, oils, butter, salt and a few other staples are assumed to be in every ki
 - [PLAN.md](PLAN.md): the original plan, with a **Plan vs. Reality** table at the end (§8)
 - [schema.md](schema.md): the database tables, who can see what, and how they differ from the plan
 - [notes/reality-log.md](notes/reality-log.md): every change from the plan, with who decided and why
+- [written-reflection.md](written-reflection.md): my reflection on Plan vs. Reality and the stranger test
 - [prompts/](prompts/): the prompts I gave the coding agent for each feature, its answers and the bugs found
 - [docs/screenshots/](docs/screenshots/): screenshots of each feature and of the tests
 
