@@ -2,6 +2,12 @@
 
 A personalized recipe website for busy students and professionals: save your own recipes, plan the week's meal prep and find out what to cook with what's already in your fridge. Your diet, allergies, dislikes, appliances and budget are saved once and checked before anything is recommended.
 
+Team Members:
+Lead: [TEAM LEAD]
+Austin Schmid
+[TEAM MEMBER 3]
+[TEAM MEMBER 4]
+
 **Live app:** https://recipes-made-easy-vercel.vercel.app/ (sign up with any email; no confirmation email is sent)
 
 ## What it does
