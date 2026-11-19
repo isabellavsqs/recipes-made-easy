@@ -7,7 +7,7 @@ Lead: [TEAM LEAD]
 
 Austin Schmid
 
-[TEAM MEMBER 3]
+Karim Osman
 
 [TEAM MEMBER 4]
 
