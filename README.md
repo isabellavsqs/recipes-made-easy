@@ -3,7 +3,7 @@
 A personalized recipe website for busy students and professionals: save your own recipes, plan the week's meal prep and find out what to cook with what's already in your fridge. Your diet, allergies, dislikes, appliances and budget are saved once and checked before anything is recommended.
 
 ## Team Members:
-Lead: [TEAM LEAD]
+Lead: Isabella Vasques
 
 Austin Schmid
 
