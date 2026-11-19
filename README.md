@@ -4,8 +4,11 @@ A personalized recipe website for busy students and professionals: save your own
 
 ## Team Members:
 Lead: [TEAM LEAD]
+
 Austin Schmid
+
 [TEAM MEMBER 3]
+
 [TEAM MEMBER 4]
 
 **Live app:** https://recipes-made-easy-vercel.vercel.app/ (sign up with any email; no confirmation email is sent)
