@@ -23,16 +23,26 @@ We're adding **300 new recipes, nutrition facts, fridge photo recognition, hands
 
 ## 3. APIs
 
-| API                                                                              | Cost and key                                             | When we call it                                                    | What we send → what we get                                                                     | What the app does with it                                                                                           |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [TheMealDB](https://www.themealdb.com/api.php)                                    | Free test key `1` (development and educational use)    | Once, from an import script. Never while someone uses the app      | A letter → recipes with title, cuisine, category, ingredients, amounts, instructions and photo | Cleans the recipes and loads them as shared recipes, so Browse, search, filters, meal prep and Single Dish use them |
-| [USDA FoodData Central](https://fdc.nal.usda.gov/api-guide)                       | Free key, 1,000 requests per hour                        | Once per ingredient. The answer is saved, so it is not asked again | An ingredient name → calories, protein, carbs and fat per 100 g                                | Converts amounts to grams, adds them up, divides by servings and shows the result on the recipe page                |
-| [Gemini API](https://ai.google.dev/gemini-api/docs)                               | Free tier key. Google AI Studio shows our current limits | Each time a user uploads a fridge / pantry photo                  | Up to three photos and "list the food you see" → a list of ingredient names                  | Adds the names to the existing list on Single Dish. The user fixes the list before searching                        |
-| [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) | Free, built into the browser, no key                     | While hands-free mode is open                                      | Step text → spoken audio; the user's voice → text                                             | Reads the step and follows "next", "back", "repeat" and "stop"                                                      |
+Features 1 to 4 each start with an **API card** (a quick review of the service we would depend on), followed by the rules for building the feature. Feature 5 uses no API.
+
+### Feature 1: TheMealDB (Isabella)
+
+**API card**
+
+| Field | Our answer |
+| --- | --- |
+| **API and link to its docs** | TheMealDB, [themealdb.com/api.php](https://www.themealdb.com/api.php) |
+| **What it gives us** | Recipe title, cuisine or country, category, ingredients, amounts, instructions, photo and, for most recipes, a link to the original |
+| **How we use it** | A script asks for recipes letter by letter, cleans them and loads 300 as shared recipes. Browse, search, filters, Meal Prep and Single Dish then use them |
+| **Key needed?** | Yes, but it is the public test key `1`. No sign-up. It is meant for development and educational use |
+| **Free limit** | No published limit for the test key. We need fewer than 40 requests, once |
+| **Cost at 1,000 users** | $0, because users never call it: the 300 recipes are already in our database. If the app stopped being a class project, we would first check whether we need a paid supporter key |
+| **What we store vs. fetch fresh** | **Store:** all the recipe text and the photo URL. **Fetch fresh:** only the photo, which the browser loads from TheMealDB. We never re-fetch recipes |
+| **If it disappeared tomorrow** | All 300 recipes keep working. Photos show the colored panel with the first letter, which the app already uses for recipes without a photo. Isabella adds this fallback for photos that fail to load |
 
 **Why TheMealDB and not Spoonacular:** Spoonacular was our first choice, but [its terms](https://spoonacular.com/food-api/terms) only allow storing a recipe's id, title and image URL. Our search, allergy filter, nutrition and fridge features need stored ingredients. [TheMealDB's terms](https://www.themealdb.com/terms_of_use.php) allow copying and modifying what its API returns. Recipe pages credit TheMealDB and link to the original source when there is one.
 
-### Feature 1: TheMealDB (Isabella)
+**Feature rules**
 
 * **The mix of 300:** at least 10 cuisines, 100 vegetarian or vegan recipes and 150 with meat or fish. The other 50 can be either. No desserts, because Meal Prep and Single Dish would suggest them as meals. TheMealDB returned 791 recipes when we checked, enough for this mix.
 * **No new categories:** we keep the website's diets (vegetarian, vegan, pescatarian) and its 9 allergens. Dairy-free recipes are the ones without the Milk tag.
@@ -44,6 +54,21 @@ We're adding **300 new recipes, nutrition facts, fridge photo recognition, hands
 
 ### Feature 2: USDA FoodData Central (Bhavya)
 
+**API card**
+
+| Field | Our answer |
+| --- | --- |
+| **API and link to its docs** | USDA FoodData Central API, [fdc.nal.usda.gov/api-guide](https://fdc.nal.usda.gov/api-guide) |
+| **What it gives us** | Calories, protein, carbs and fat per 100 g of each ingredient. The data is in the public domain, and we credit USDA on the recipe page, as it asks |
+| **How we use it** | We send an ingredient name. The app converts the recipe's amounts to grams, adds everything up, divides by servings and shows the result on the recipe page |
+| **Key needed?** | Yes, free with a quick sign-up (`USDA_API_KEY`) |
+| **Free limit** | 1,000 requests per hour. Going over blocks the key for 1 hour |
+| **Cost at 1,000 users** | $0. Each ingredient is asked only once, so more users add few requests (only for their new ingredients) |
+| **What we store vs. fetch fresh** | **Store:** the nutrition of each ingredient and the result of each recipe. **Fetch fresh:** only ingredients we have never looked up. We never re-fetch |
+| **If it disappeared tomorrow** | Recipes still save, and all nutrition already saved stays. Recipes with a new ingredient say that nutrition is not available yet |
+
+**Feature rules**
+
 * **Recipes already in the database** (shared and users' own): a script calculates calories, protein, carbs and fat per serving. Isabella runs it, and it can be run again safely. **Users' own recipes:** also recalculated every time they are saved.
 * **Calories:** we prefer USDA's "SR Legacy" foods, because in our check "Foundation" foods had no value in the standard calories field. If calories are missing, we calculate them: protein × 4 + carbs × 4 + fat × 9.
 * **Staples:** oil, butter and other staples are ignored by the fridge feature, but they **do** count here.
@@ -52,6 +77,21 @@ We're adding **300 new recipes, nutrition facts, fridge photo recognition, hands
 
 ### Feature 3: Gemini API (Austin)
 
+**API card**
+
+| Field | Our answer |
+| --- | --- |
+| **API and link to its docs** | Gemini API, [ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs) |
+| **What it gives us** | A list of the food it sees in fridge or pantry photos |
+| **How we use it** | We send up to three photos and "list the food you see". The names join the existing list on Single Dish, and the user fixes the list before searching |
+| **Key needed?** | Yes, free from Google AI Studio (`GEMINI_API_KEY`) |
+| **Free limit** | Google does not publish fixed numbers. Our limits are shown in Google AI Studio, are shared by the whole app and reset every day at midnight Pacific time. Austin checks them before building |
+| **Cost at 1,000 users** | $0 while we stay on the free tier, but 1,000 users would probably go over its limit. Paid: **about $12 per month**. Estimate: 1,000 users × 4 searches per month × $0.003 per search (3 photos, about 6,000 tokens in and 500 out, at [gemini-3.5-flash-lite prices](https://ai.google.dev/gemini-api/docs/pricing): $0.30 in and $2.50 out per million tokens) |
+| **What we store vs. fetch fresh** | **Store:** nothing (neither the photos nor the list). **Fetch fresh:** every time a user sends photos |
+| **If it disappeared tomorrow** | Single Dish still works: users type their list, as they do today. The photo button shows a friendly message |
+
+**Feature rules**
+
 * **Photos:** up to three at a time, each shrunk in the browser (to 1 MB or less), sent through our server to Gemini and **never saved by our app**. Only logged-in users can send them.
 * **Privacy notice before uploading:** "Your photo is sent to Google, which may use it to improve its products. Be careful to keep people and personal information out of the picture. Crop the photo to show only food."
 * **List rules:** the existing rules still apply (no repeated items, maximum of 30).
@@ -59,6 +99,21 @@ We're adding **300 new recipes, nutrition facts, fridge photo recognition, hands
 * **Model:** the name is a setting (`GEMINI_MODEL`), starting with a free Flash model, so we can switch if limits change.
 
 ### Feature 4: Web Speech API (Karim)
+
+**API card**
+
+| Field | Our answer |
+| --- | --- |
+| **API and link to its docs** | Web Speech API, [developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) |
+| **What it gives us** | Reads text aloud and turns the user's voice into text |
+| **How we use it** | Hands-free mode reads each step and follows "next", "back", "repeat" and "stop" |
+| **Key needed?** | No. It is built into the browser |
+| **Free limit** | No published limit |
+| **Cost at 1,000 users** | $0. It runs in each user's browser, or in the browser maker's service |
+| **What we store vs. fetch fresh** | **Store:** nothing. **Fetch fresh:** speech and voice commands, each time hands-free mode is used |
+| **If it disappeared tomorrow** | Hands-free mode still shows one large step at a time, with its buttons. All recipes stay readable |
+
+**Feature rules**
 
 * **Screen:** a "Hands-free mode" button on every recipe page opens one large step at a time (each line of the instructions is one step). English only. On the last step, "next" says it is the last one.
 * **Buttons always work:** Next, Back, Repeat and Stop, because some browsers (such as Firefox) do not support voice recognition, and users can deny the microphone.
