@@ -2,7 +2,8 @@
 
 import Form from "next/form";
 import { useState, useSyncExternalStore } from "react";
-import { MAX_FRIDGE_ITEMS } from "@/lib/suggestion";
+import { cleanFridge, MAX_FRIDGE_ITEMS } from "@/lib/suggestion";
+import { PhotoScan } from "./photo-scan";
 
 // Common fresh things, one tap to add.
 const QUICK_PICKS = [
@@ -38,6 +39,14 @@ export function FridgeForm({
   function add(name: string) {
     const clean = name.trim();
     if (clean && !has(clean) && items.length < MAX_FRIDGE_ITEMS) setItems([...items, clean]);
+  }
+  // Foods found in photos join the list with the same rules as typing:
+  // no repeats ("tomatoes" = "tomato"), at most 30.
+  const [listFull, setListFull] = useState(false);
+  function addFromPhoto(foods: string[]) {
+    const next = cleanFridge([...items, ...foods]);
+    setListFull(next.length === MAX_FRIDGE_ITEMS && items.length + foods.length > MAX_FRIDGE_ITEMS);
+    setItems(next);
   }
 
   return (
@@ -82,6 +91,13 @@ export function FridgeForm({
                 ))}
               </datalist>
             </div>
+
+            <PhotoScan onFoods={addFromPhoto} />
+            {listFull && (
+              <p role="status" className="text-sm text-accent">
+                Your list holds up to {MAX_FRIDGE_ITEMS} items, so some foods from the photos weren&apos;t added.
+              </p>
+            )}
 
             {items.length > 0 && (
               <ul className="flex flex-wrap gap-2" aria-label="In your fridge">

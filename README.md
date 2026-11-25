@@ -20,11 +20,13 @@ Karim Osman
 | **Sign up / Log in** | Create your own account. Everything you save is private to you. |
 | **Onboarding** (right after sign up) | 7 short questions: goals, diet, allergies, dislikes, appliances, budget and where to start. Change them later on **Profile**. |
 | **Meal Prep** | Pick servings, days, cooking time and budget, and get a plan: which recipes to cook, how much of each, which days they cover, plus one shopping list. Plans are saved. |
-| **Single Dish** ("What can I cook?") | Type what's in your fridge and whether you can shop. You get "Our pick" and other recipes ready to cook. If you can shop, also recipes that need a few extra items, with what to buy. |
+| **Single Dish** ("What can I cook?") | Type what's in your fridge, or scan up to 3 fridge or pantry photos to fill the list for you, and say whether you can shop. You get "Our pick" and other recipes ready to cook. If you can shop, also recipes that need a few extra items, with what to buy. |
 | **Browse** | The shared library of 30 recipes from around the world. Recipes with your allergens, or that don't fit your diet, are hidden. |
 | **My Recipes** | Add, view, edit and delete your own recipes (with checks for missing or wrong fields). **All** shows your recipes plus the ones you starred; **Starred** shows only starred ones. |
 | **Search and filters** | On Browse, My Recipes and Starred: search by name or ingredient, filter by cuisine, diet, cost and total time, and sort. |
 | **Dashboard** | Your recipes, starred recipes and meal plans, and a chart of your cookbook by cuisine. |
+
+**Fridge photos:** photos are shrunk in your browser, sent through our server to Google's Gemini API, and never saved by the app. Google may use them to improve its products, so keep people and personal information out of the picture. Check the list before searching: Gemini can miss or misread items. If scanning is unavailable or the daily free limit is reached, you can still type your list.
 
 Spices, oils, butter, salt and a few other staples are assumed to be in every kitchen, so they're never on the "to buy" lists.
 
@@ -60,7 +62,10 @@ Spices, oils, butter, salt and a few other staples are assumed to be in every ki
    ```
    NEXT_PUBLIC_SUPABASE_URL=https://<your-project>.supabase.co
    NEXT_PUBLIC_SUPABASE_ANON_KEY=<your publishable key>
+   GEMINI_API_KEY=<your Gemini key, from Google AI Studio>
+   GEMINI_MODEL=gemini-3.5-flash-lite
    ```
+   The Gemini lines are only needed for fridge photo scanning. Keep `GEMINI_API_KEY` server-only: never commit it and never give it a `NEXT_PUBLIC_` prefix. On Vercel, add both under Settings → Environment Variables.
 4. In the Supabase SQL Editor, run each file in [`supabase/migrations/`](supabase/migrations/) in order.
    `003_recipe_library.sql` loads the 30 shared recipes. It's generated from [`supabase/seed/library.json`](supabase/seed/library.json): after changing the JSON, run `node scripts/build-library-sql.mjs` and run the new SQL again (it skips rows that already exist).
 5. Start the app:
@@ -71,10 +76,12 @@ Spices, oils, butter, salt and a few other staples are assumed to be in every ki
 
 ## Run the tests
 
-The two tests in [`tests/`](tests/) (described in [PLAN.md](PLAN.md) §4) drive a real browser against the app:
+The tests in [`tests/`](tests/) (described in [PLAN.md](PLAN.md) §4 and the team plan §5) drive a real browser against the app:
 
 - **Test 1, data isolation** ([`data-isolation.spec.ts`](tests/data-isolation.spec.ts)): User B can't see User A's recipe, star or recipe page.
 - **Test 2, dashboard** ([`dashboard-starred.spec.ts`](tests/dashboard-starred.spec.ts)): after starring 3 recipes, the dashboard's "Starred recipes" shows 3.
+- **Test 3, fridge photo** ([`fridge-photo.spec.ts`](tests/fridge-photo.spec.ts)): with "onion" already listed and a photo read as onion, chicken thighs and rice, removing rice and searching uses onion and chicken thighs once each. Gemini's answer is fixed inside the test, so it never calls Google or uses the free limit.
+- **Gemini server code** ([`gemini.spec.ts`](tests/gemini.spec.ts)): feeds the Gemini code fake answers (foods found, no food, blocked photo, daily limit, outage, garbled answer, no key) and checks the list or the friendly error it returns. It needs no browser, Supabase or Gemini key.
 
 ```bash
 npx playwright install chromium   # first time only
