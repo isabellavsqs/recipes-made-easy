@@ -1,0 +1,579 @@
+{
+ "52775": {
+  "servings": 4,
+  "prep": 20,
+  "cook": 55,
+  "cost": "$",
+  "appliances": [
+   "Stove",
+   "Oven"
+  ],
+  "steps": [
+   "Heat the oven to 350°F (180°C). Boil the diced carrot, onion and zucchini for 5 to 7 minutes, until soft. Add the lentils and simmer for about 20 minutes, stirring, until soft. Stir in some chopped cilantro.",
+   "Blanch the spinach for a minute or two and set it aside. Cook the lasagne sheets in the same pan, then drain them.",
+   "For the sauce, melt the vegan butter, stir in the flour, then gradually whisk in the soy milk with the mustard and vinegar. Cook, stirring, until smooth and thick.",
+   "Layer the lentils, spinach, lasagne sheets and sauce in a baking dish, finishing with sauce.",
+   "Bake for about 25 minutes."
+  ]
+ },
+ "52828": {
+  "servings": 4,
+  "prep": 80,
+  "cook": 25,
+  "cost": "$$",
+  "appliances": [
+   "Oven"
+  ],
+  "amounts": {
+   "cucumber": [
+    1,
+    null
+   ],
+   "peanuts": [
+    2,
+    "tbsp"
+   ],
+   "rice noodles": [
+    8,
+    "oz"
+   ],
+   "fresh mint": [
+    1,
+    "handful"
+   ]
+  },
+  "steps": [
+   "Slice the pork very thinly, about 1/8 inch. It's easier if you freeze it for a little while first.",
+   "Mix the minced garlic and shallots with the sugar, fish sauce, soy sauce, pepper and oil until the sugar dissolves. Marinate the pork in it for 1 hour, or overnight.",
+   "Heat the oven to 375°F (190°C). Bake the pork for 10 to 15 minutes, until almost cooked, then broil it until golden, turning halfway. Bake the egg rolls as the package says.",
+   "Meanwhile, cook the noodles as the package says and rinse them in cold water.",
+   "Fill bowls with the noodles, the pork, the sliced egg rolls, cucumber, mint and crushed peanuts."
+  ]
+ },
+ "52845": {
+  "servings": 4,
+  "prep": 20,
+  "cook": 50,
+  "cost": "$",
+  "appliances": [
+   "Stove",
+   "Oven"
+  ],
+  "steps": [
+   "Heat the oven to 350°F (180°C). Heat the oil in a large frying pan and cook the chopped onion for 8 to 10 minutes, until soft. Stir in the garlic, Worcestershire sauce and 2 tsp of the tomato paste and let it cool.",
+   "Mix the turkey, egg, breadcrumbs and onion mixture well and season. Shape it into a rectangular loaf in a large roasting pan.",
+   "Spread 1 tbsp of the barbecue sauce over the top and bake for 30 minutes.",
+   "Meanwhile, drain one can of beans only and mix both cans with the rest of the barbecue sauce and tomato paste. Season.",
+   "Spoon the beans around the meatloaf and bake for 15 minutes more, until it's cooked through and the beans are hot. Scatter with parsley and serve in slices."
+  ]
+ },
+ "52852": {
+  "servings": 4,
+  "prep": 10,
+  "cook": 20,
+  "cost": "$$",
+  "appliances": [
+   "Oven",
+   "Stove"
+  ],
+  "amounts": {
+   "vegetable oil": [
+    3,
+    "tbsp"
+   ]
+  },
+  "steps": [
+   "Heat the oven to 400°F (200°C). Toss the potatoes with 2 tsp of the olive oil and some seasoning and roast them on a large baking sheet for 20 minutes, stirring halfway, until crisp and cooked.",
+   "Meanwhile, put the eggs in a small pan of water, bring to a boil and simmer for 8 to 10 minutes. Cool them in cold water, peel and halve them.",
+   "In a large salad bowl, whisk the rest of the oils with the vinegar and capers and season.",
+   "Add the thinly sliced onion, the spinach, the drained tuna and the potatoes and toss gently. Top with the eggs and serve right away."
+  ]
+ },
+ "52863": {
+  "servings": 4,
+  "prep": 10,
+  "cook": 40,
+  "cost": "$",
+  "appliances": [
+   "Stove"
+  ],
+  "rename": {
+   "vegetable stock cube": "vegetable broth"
+  },
+  "amounts": {
+   "vegetable oil": [
+    1,
+    "tbsp"
+   ]
+  },
+  "steps": [
+   "Heat the oil in a large heavy pan and cook the chopped onion gently for 5 to 10 minutes, until soft.",
+   "Add the garlic, paprika, cumin, dried thyme and the chopped carrots, celery and peppers and cook for 5 minutes.",
+   "Add the chopped tomatoes, broth, sliced zucchini and thyme sprigs and cook for 20 to 25 minutes.",
+   "Remove the thyme sprigs, stir in the cooked lentils and bring back to a simmer. Serve with rice, mash or quinoa."
+  ]
+ },
+ "52867": {
+  "servings": 2,
+  "prep": 5,
+  "cook": 30,
+  "cost": "$",
+  "appliances": [
+   "Oven",
+   "Microwave"
+  ],
+  "steps": [
+   "Heat the oven to 400°F (200°C). Cook the roasted vegetables in a casserole dish for 15 minutes.",
+   "Add the drained beans and the tomatoes, season and cook for 10 to 15 minutes more, until piping hot.",
+   "Heat the grain pouch in the microwave for 1 minute and serve with the chili."
+  ]
+ },
+ "52948": {
+  "servings": 6,
+  "prep": 30,
+  "cook": 15,
+  "cost": "$",
+  "appliances": [
+   "Stove"
+  ],
+  "amounts": {
+   "garlic": [
+    3,
+    "cloves"
+   ]
+  },
+  "steps": [
+   "Mix the ground pork with the minced garlic and ginger, the soy sauce, sesame oil and the finely chopped carrots, celery and green onions.",
+   "Separate the wonton wrappers. Put a heaped teaspoon of filling in the middle of each.",
+   "Brush water along 2 edges, fold the wrapper into a triangle and press to seal. Pinch the two long points together.",
+   "Heat oil for deep-frying to 375°F (190°C) and fry 4 or 5 at a time until golden. Drain and serve with a dipping sauce."
+  ]
+ },
+ "52972": {
+  "servings": 4,
+  "prep": 10,
+  "cook": 45,
+  "cost": "$$",
+  "appliances": [
+   "Stove"
+  ],
+  "amounts": {
+   "lemon juice": [
+    0.5,
+    "lemon"
+   ]
+  },
+  "steps": [
+   "Brown the lamb in a casserole over high heat. Set it aside and pour off all but 1 tbsp of the fat.",
+   "Lower the heat to medium and cook the garlic, chopped onion and spinach for about 5 minutes, until the onion is translucent and the spinach wilted.",
+   "Return the lamb and add the tomato paste, cumin, harissa, broth, drained chickpeas, lemon juice, salt and pepper. Simmer over low heat for about 20 minutes.",
+   "Add the pasta and cook for about 15 minutes, until tender."
+  ]
+ },
+ "52975": {
+  "servings": 4,
+  "prep": 30,
+  "cook": 25,
+  "cost": "$$",
+  "appliances": [
+   "Stove",
+   "Oven"
+  ],
+  "amounts": {
+   "filo pastry": [
+    4,
+    "sheets"
+   ]
+  },
+  "steps": [
+   "Heat 2 tsp of the oil in a large saucepan and cook the sliced green onions over low heat for 3 minutes. Add the spinach, cover and cook for 2 to 3 minutes, until wilted. Drain and let it cool.",
+   "Cut 24 rounds about 5 inches (12.5 cm) wide from the filo, 6 from each sheet, and keep them covered.",
+   "Squeeze the spinach dry and mix it with the drained tuna, the beaten eggs, hot sauce, salt and pepper.",
+   "Heat the oven to 400°F (200°C). Stack 3 filo rounds, brushing each lightly with oil. Put a heaped tablespoon of filling in the middle, fold into a half-moon and twist the edges to seal. Make 8 in all.",
+   "Brush them with the rest of the oil and bake on a non-stick sheet for 12 to 15 minutes, until crisp and golden.",
+   "Mix the diced tomatoes and cucumber with the lemon juice and seasoning, and serve with the briks and the apricot jam."
+  ]
+ },
+ "53000": {
+  "servings": 8,
+  "prep": 45,
+  "cook": 150,
+  "cost": "$$",
+  "appliances": [
+   "Oven",
+   "Stove"
+  ],
+  "add": [
+   [
+    12,
+    "cups",
+    "vegetables"
+   ],
+   [
+    1,
+    "cup",
+    "milk"
+   ]
+  ],
+  "steps": [
+   "Heat the oven to 450°F (230°C). Bake the potatoes on a lined sheet for about 45 minutes, until tender. Peel them, press them through a ricer and stir in the butter, then the milk. Season.",
+   "Soak the dried mushrooms in 3 cups of hot water. Simmer the lentils with 1 garlic clove, 1 tsp of salt and 4 cups of water for 15 to 20 minutes, until tender but not mushy. Drain and discard the garlic.",
+   "Heat 3 tbsp of oil in a large heavy pot and cook the onions for about 12 minutes, until soft. Add the chopped garlic for 1 minute, then the tomato paste for 2 to 3 minutes, until caramelized.",
+   "Add the bay leaves and wine and scrape the pan. Add the mushrooms and pour in their liquid, leaving the grit behind. Simmer until reduced by half, about 10 minutes, then add the broth and reduce by half again, about 45 minutes.",
+   "Strain the sauce into a saucepan and bring to a boil. Stir in the cornstarch mixed with 2 tbsp of water and simmer for 5 minutes, until thick. Stir in the soy sauce and season.",
+   "Toss the chopped vegetables with 2 tbsp of oil, the rosemary, salt and pepper, and roast on 2 sheets for 20 to 25 minutes. Spread the lentils in a 3-quart baking dish, top with the vegetables and chopped herbs, pour the sauce over and cover with the potatoes. Bake for about 30 minutes and let it stand for 15 minutes."
+  ]
+ },
+ "53075": {
+  "servings": 4,
+  "prep": 20,
+  "cook": 25,
+  "cost": "$",
+  "appliances": [
+   "Stove"
+  ],
+  "steps": [
+   "Grill the eggplants over a gas flame or on a hot grill pan until the skins are almost black.",
+   "Let them cool a little and peel off the skin, keeping the stems on.",
+   "Beat the eggs with the salt in a wide bowl.",
+   "Flatten each eggplant on a board with a fork and dip it in the egg.",
+   "Heat the oil in a pan over medium heat and fry the eggplants for 3 to 4 minutes on each side, until the egg is cooked."
+  ]
+ },
+ "53106": {
+  "servings": 4,
+  "prep": 20,
+  "cook": 25,
+  "cost": "$$",
+  "appliances": [
+   "Oven",
+   "Stove"
+  ],
+  "steps": [
+   "Heat the oven to 400°F (200°C). Snap off the woody ends of the asparagus and lay it in a single layer in a baking pan with sides.",
+   "Halve the tomatoes and nestle them among the asparagus, season and drizzle with some of the olive oil. Roll up each bacon slice tightly and add it to the pan.",
+   "Drizzle the bacon with the honey and bake for 20 minutes, until the tomatoes are soft and the bacon crisp.",
+   "Meanwhile, boil the potatoes until tender. Whisk the vinegar, the rest of the oil, the mustard, salt and pepper in a large bowl.",
+   "Toss the arugula in half of the dressing and spread it on a platter. Halve the potatoes, toss them in the rest of the dressing and arrange them with the asparagus, tomatoes and bacon."
+  ]
+ },
+ "53189": {
+  "servings": 4,
+  "prep": 20,
+  "cook": 25,
+  "cost": "$",
+  "appliances": [
+   "Stove"
+  ],
+  "steps": [
+   "Peel and finely grate the potatoes, then squeeze out as much liquid as you can in a clean towel.",
+   "Mix them with the finely chopped onion, the minced garlic, eggs, flour, marjoram, salt and pepper into a thick batter.",
+   "Heat plenty of oil in a large frying pan over medium heat.",
+   "Spoon in portions of batter and flatten them into thin pancakes. Fry until golden and crisp on both sides.",
+   "Drain on paper towels and serve hot."
+  ]
+ },
+ "53225": {
+  "servings": 4,
+  "prep": 5,
+  "cook": 15,
+  "cost": "$",
+  "appliances": [
+   "Stove"
+  ],
+  "steps": [
+   "Heat the olive oil over medium heat and cook the diced onion until it softens.",
+   "Add the chopped tomato and cook for 4 to 5 minutes, then the allspice, a pinch of salt and the pepper.",
+   "Add the beaten eggs and stir for 2 minutes, then cover and cook for 5 to 6 minutes, until the top sets.",
+   "Spread the cheese over the top, cover for 1 minute more and serve."
+  ]
+ },
+ "53228": {
+  "servings": 2,
+  "prep": 5,
+  "cook": 15,
+  "cost": "$$",
+  "appliances": [
+   "Stove"
+  ],
+  "amounts": {
+   "fresh ginger": [
+    1,
+    "inch"
+   ],
+   "white rice": [
+    0.75,
+    "cup"
+   ],
+   "trout": [
+    2,
+    "fillets"
+   ]
+  },
+  "steps": [
+   "Cook the rice. Put the sugar in a large shallow pan with a small splash of water and heat gently, swirling, until it dissolves.",
+   "Turn up the heat and bubble the syrup until it's dark amber. Add the fish sauce, most of the sliced chili and ginger and 1 tbsp of water, and boil again until syrupy.",
+   "Add the fish skin side down and the halved bok choy cut side down. Cover and simmer for 4 to 5 minutes, until the fish is cooked and the bok choy has wilted.",
+   "Turn off the heat, squeeze over the lemon and scatter with the rest of the chili and ginger and the cilantro. Serve with rice."
+  ]
+ },
+ "53231": {
+  "servings": 4,
+  "prep": 20,
+  "cook": 180,
+  "cost": "$$$",
+  "appliances": [
+   "Stove",
+   "Oven"
+  ],
+  "amounts": {
+   "garlic": [
+    3,
+    "cloves"
+   ]
+  },
+  "steps": [
+   "Heat the oven to 325°F (160°C). Heat 1 tbsp of the oil in a heavy casserole, season the shanks and brown them 2 at a time on all sides, adding the rest of the oil for the second batch. Set them aside.",
+   "Fry the sliced onions briskly for 30 seconds, add the grated ginger, garlic and 1 chopped chili, lower the heat and cook for 1 minute.",
+   "Stir in 2 tsp of the sugar, then add the star anise, bruised lemongrass, stock, tomato paste and seasoning. Return the lamb and bring to a boil.",
+   "Cover and cook in the oven for 1 1/2 hours, then add the sweet potatoes, cut into chunks, and cook for 1 hour more, until the lamb is almost falling off the bone.",
+   "Stir in the fish sauce, the lime juice and the rest of the sugar. Scatter with the mint, basil and the other chili, sliced."
+  ]
+ },
+ "53232": {
+  "servings": 3,
+  "prep": 20,
+  "cook": 10,
+  "cost": "$$",
+  "appliances": [
+   "Stove"
+  ],
+  "steps": [
+   "Whisk the lime juice, fish sauce, soy sauce, sesame oil and chopped chili into a dressing in a large serving bowl.",
+   "Cook the noodles as the package says, drain them and add them to the dressing.",
+   "Peel the carrot into long ribbons with a vegetable peeler, and the cucumber too, stopping at the seeds.",
+   "Add the carrot and cucumber to the noodles with the cooked, shredded chicken, the sliced radishes and red onion and the mint leaves. Toss well and scatter with the peanuts."
+  ]
+ },
+ "53236": {
+  "servings": 4,
+  "prep": 5,
+  "cook": 20,
+  "cost": "$",
+  "appliances": [
+   "Stove"
+  ],
+  "amounts": {
+   "garlic": [
+    2,
+    "cloves"
+   ],
+   "jasmine rice": [
+    1,
+    "cup"
+   ]
+  },
+  "steps": [
+   "Heat the oil in a medium saucepan with a lid and stir-fry the shredded ginger and sliced garlic for about 5 minutes.",
+   "Add the squash, cut into chunks, the soy sauce, sugar and broth. Cover and simmer for 10 minutes.",
+   "Uncover, add the green beans and cook for 3 minutes more, until the squash and beans are tender.",
+   "Stir in the sliced green onions at the last minute, sprinkle with cilantro and serve with rice."
+  ]
+ },
+ "53250": {
+  "servings": 4,
+  "prep": 15,
+  "cook": 5,
+  "cost": "$",
+  "appliances": [
+   "Oven"
+  ],
+  "steps": [
+   "Toss the shredded vegetables with the vinegar, sugar and 1 tsp of salt and let them pickle while you make the rest.",
+   "Heat the oven to 350°F (180°C). Cut the baguette into 4 pieces and slice each in half lengthwise. Warm them in the oven for 5 minutes.",
+   "Spread each piece with hummus. Top 4 of them with slices of tempeh and the pickled vegetables.",
+   "Sprinkle with the herbs and some hot sauce and close the sandwiches."
+  ]
+ },
+ "53251": {
+  "servings": 4,
+  "prep": 60,
+  "cook": 15,
+  "cost": "$",
+  "appliances": [
+   "Oven"
+  ],
+  "rename": {
+   "cornstarch": "cornmeal"
+  },
+  "amounts": {
+   "cornstarch": [
+    2,
+    "tbsp"
+   ],
+   "ground cumin": [
+    1,
+    "tsp"
+   ]
+  },
+  "steps": [
+   "Put the flour in a large bowl, make a well in the middle and sprinkle in the yeast. Pour 1/2 cup (125 ml) of water over the yeast, cover it with a little of the flour and leave it in a warm place for 15 minutes, until the surface cracks.",
+   "Mix in 1 cup (250 ml) more water and 1 tsp of salt and knead for about 10 minutes, until elastic. Cover and let it rise for 30 minutes, until doubled.",
+   "Heat the oven as high as it goes (about 475°F/240°C) and sprinkle baking sheets with cornmeal.",
+   "Peel, seed and chop the tomatoes and finely dice the seeded chilies. Mix them with the green onions, half of the parsley (finely chopped), the beef, the spices, 1 tsp of salt and 1/2 tsp of pepper.",
+   "Divide the dough into 4 balls, roll each into a thin circle and spread with a thin layer of the meat.",
+   "Bake each for 10 to 15 minutes, until the edges darken. Top with the rest of the parsley, the sliced red onion and a squeeze of lemon, and serve right away."
+  ]
+ },
+ "53278": {
+  "servings": 4,
+  "prep": 15,
+  "cook": 20,
+  "cost": "$",
+  "appliances": [
+   "Oven"
+  ],
+  "amounts": {
+   "bread": [
+    3,
+    "slices"
+   ]
+  },
+  "steps": [
+   "Heat the broiler. Slice the eggplants, lay them in one layer on a large baking sheet, brush them lightly with the vegetable oil and season well.",
+   "Broil for about 15 minutes, turning twice and brushing with oil, until soft and cooked through. Meanwhile, blend the bread into crumbs, add 2 tsp of oil and pulse briefly to coat.",
+   "Spread a couple of teaspoons of hummus on each slice and press the hummus side into the crumbs. Broil crumb side up for about 3 minutes, until golden.",
+   "Toss the chopped walnuts, parsley and halved tomatoes with the lemon juice, olive oil and seasoning, and serve with the eggplant and more hummus."
+  ]
+ },
+ "53294": {
+  "servings": 4,
+  "prep": 20,
+  "cook": 30,
+  "cost": "$",
+  "appliances": [
+   "Oven",
+   "Stove"
+  ],
+  "rename": {
+   "fresh dill": "dill pickles"
+  },
+  "amounts": {
+   "fresh dill": [
+    2,
+    null
+   ]
+  },
+  "steps": [
+   "Heat the oven to 400°F (200°C). Bake the baguettes on a baking sheet for 8 to 10 minutes and let them cool.",
+   "Heat 2 tsp of the butter and 1 tsp of the oil in a pan over low heat and cook half of the onion, chopped, for 5 minutes. Add the sliced mushrooms, turn the heat to medium and cook for 5 to 10 minutes, until the liquid has gone. Add the garlic for 1 to 2 minutes, season and stir in the mayonnaise.",
+   "Halve the baguettes lengthwise, spread them with the mushroom mixture and sprinkle with the cheddar, ham, sliced sausage and mozzarella. Bake for 8 to 10 minutes, until golden.",
+   "Meanwhile, fry the rest of the onion, sliced, in the rest of the butter and oil for 5 minutes, until golden.",
+   "Top the baguettes with the onions, sliced pickles, chives and a drizzle of ketchup."
+  ]
+ },
+ "53318": {
+  "servings": 6,
+  "prep": 10,
+  "cook": 25,
+  "cost": "$",
+  "appliances": [
+   "Oven"
+  ],
+  "steps": [
+   "Heat the oven to 425°F (220°C). Line the bottom of an 8 to 9-inch springform pan with parchment, leaving some overhang. Grate the cheese.",
+   "Whisk the eggs, oil, milk, flour, baking powder, salt and a pinch of oregano for 1 to 2 minutes into a very runny batter.",
+   "Pour in half of the batter, lay the ham and cheese on top and pour over the rest.",
+   "Bake for 20 to 25 minutes, until golden on top. Let it rest for a few minutes before unmolding. Serve hot or cold."
+  ]
+ },
+ "53325": {
+  "servings": 4,
+  "prep": 20,
+  "cook": 25,
+  "cost": "$",
+  "appliances": [
+   "Stove",
+   "Oven"
+  ],
+  "steps": [
+   "Heat the oven to 400°F (210°C). Dissolve the salt in the room-temperature water in a large bowl.",
+   "Slowly add the precooked cornmeal while you stir, until smooth. Let the dough rest for 5 minutes. It should be firm but easy to shape.",
+   "Heat a griddle or non-stick pan over medium heat and oil it lightly.",
+   "With wet hands, shape about 2 tablespoons of dough into a ball, then flatten it into a disc about 3/4 inch thick and 4 inches wide, smoothing any cracks.",
+   "Cook the arepas in batches for 4 to 5 minutes on each side, until golden.",
+   "Bake them on a baking sheet for 10 minutes, until slightly puffy and they sound hollow when tapped. Serve hot, plain or filled."
+  ]
+ },
+ "53326": {
+  "servings": 6,
+  "prep": 20,
+  "cook": 80,
+  "cost": "$$",
+  "appliances": [
+   "Stove"
+  ],
+  "rename": {
+   "black pepper": "bell pepper"
+  },
+  "amounts": {
+   "black pepper": [
+    0.5,
+    null
+   ],
+   "corn": [
+    2,
+    "cobs"
+   ]
+  },
+  "steps": [
+   "Put the beef shank, half an onion, the half bell pepper, 4 whole garlic cloves, the dark green leek leaves and the broth in a large pot. Simmer for 45 to 60 minutes, until the meat is fork-tender.",
+   "Lift out and discard the large vegetable pieces and the bones.",
+   "Add the rest of the onion, diced, 2 minced garlic cloves, the chopped red pepper, the sliced light green leek, the green onions, the cassava and the corn, cut into rounds. Cover and simmer over medium heat for 5 to 8 minutes, until the cassava starts to soften.",
+   "Add the yautia, yam and squash, cut into chunks, and simmer covered for 5 to 6 minutes, until tender. Don't overcook them, or they fall apart.",
+   "Season with salt, add chopped cilantro and the last 2 garlic cloves, minced, and simmer for 2 minutes. Serve in large bowls with lime or hot sauce."
+  ]
+ },
+ "53327": {
+  "servings": 2,
+  "prep": 15,
+  "cook": 25,
+  "cost": "$$",
+  "appliances": [
+   "Stove"
+  ],
+  "amounts": {
+   "turmeric": [
+    0.5,
+    "tsp"
+   ],
+   "ground cumin": [
+    0.5,
+    "tsp"
+   ]
+  },
+  "steps": [
+   "Cut the chicken into bite-size pieces, slice the onions and mince the garlic.",
+   "Heat the oil in a frying pan over medium heat and cook the onions until translucent. Put them in a blender.",
+   "Add the tomatoes, garlic, turmeric, cumin, sugar, ginger paste, coconut milk and water and blend until smooth.",
+   "Brown the chicken on all sides in the same pan, about 3 minutes.",
+   "Add the blended sauce and the bay leaves, bring to a simmer and cook for 15 to 20 minutes, until the chicken is cooked and the sauce creamy. Remove the bay leaves, season and serve with white rice."
+  ]
+ },
+ "53416": {
+  "servings": 4,
+  "prep": 10,
+  "cook": 50,
+  "cost": "$",
+  "appliances": [
+   "Stove"
+  ],
+  "steps": [
+   "Boil the chopped cabbage and potatoes in salted water for 30 to 40 minutes, until tender. Drain very well, return them to the pot over low heat and let them steam dry.",
+   "Meanwhile, fry the bacon until crisp, keeping the fat, and chop it into small pieces.",
+   "Mash the potatoes and cabbage with the minced garlic and season.",
+   "Press the mash into a skillet with the bacon and the bacon fat and fry until golden brown underneath. Flip it and brown the other side.",
+   "Cut into servings and garnish with chopped parsley."
+  ]
+ }
+}

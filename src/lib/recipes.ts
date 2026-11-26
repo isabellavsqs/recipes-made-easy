@@ -32,6 +32,8 @@ export type Recipe = RecipeSummary & {
   source_type: string;
   source_url: string | null;
   image_credit: string | null;
+  // Set for the recipes imported from TheMealDB (TEAM-PLAN.md feature 1).
+  themealdb_id: string | null;
   created_by_user_id: string | null;
   ingredients: RecipeIngredient[];
   allergens: Option[];
@@ -100,7 +102,7 @@ export async function getRecipe(id: number): Promise<Recipe | null> {
   const { data, error } = await supabase
     .from("recipes")
     .select(
-      `${SUMMARY_COLUMNS}, instructions, source_type, source_url, image_credit, created_by_user_id,
+      `${SUMMARY_COLUMNS}, instructions, source_type, source_url, image_credit, themealdb_id, created_by_user_id,
        recipe_ingredients (quantity, unit, ingredients (name)),
        recipe_allergen_tags (allergies (id, name)),
        recipe_appliances (appliances (id, name))`,

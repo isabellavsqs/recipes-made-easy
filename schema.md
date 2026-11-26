@@ -109,7 +109,8 @@ Each row says "this user has this goal / allergy / appliance / dislike". The PK 
 | diet_tags | list of text | e.g. `{vegan, vegetarian}` |
 | source_type | text | `seed` (shared library), `user`, `instagram` |
 | source_url | text | where a seed recipe came from |
-| image_url, image_credit | text | Unsplash photo and photographer credit |
+| image_url, image_credit | text | Photo and its credit: Unsplash for the first 30 library recipes, TheMealDB for the imported ones |
+| themealdb_id | text | Unique. The TheMealDB recipe it was imported from (added in `006`, TEAM-PLAN.md feature 1). Empty for all other recipes, and stops the same recipe from being imported twice |
 | created_by_user_id | uuid | FK → users. Empty only for seed recipes |
 | created_at | date/time | used for "newest first" |
 

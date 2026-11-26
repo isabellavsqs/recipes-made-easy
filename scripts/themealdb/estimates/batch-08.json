@@ -1,0 +1,263 @@
+{
+ "53400": {
+  "servings": 4, "prep": 20, "cook": 150, "cost": "$$", "appliances": ["Stove"],
+  "steps": [
+   "Put the lamb, cut into pieces, in a large pan with the chopped onions and the turmeric, and add water to cover. Bring to a boil, then simmer gently for about 1 1/2 hours, until the meat comes off the bones easily.",
+   "Meanwhile, cut the orange peel into thin matchsticks, removing as much white pith as you can, and soak it in a bowl of water.",
+   "Lift out the meat, pull it off the bones in strips and return it to the pan.",
+   "Rinse the rice and add it with salt to taste. The liquid should cover the rice by about 3/4 inch, so add water if needed. Bring back to a boil and cook uncovered over medium heat, stirring now and then, until the rice is al dente and the liquid absorbed.",
+   "Carefully stir in the yogurt. Fry the crushed garlic in the oil and add it with the dill, pepper, drained chickpeas and drained orange peel. Season.",
+   "Cover the pan with a clean towel and the lid and leave on low heat for about 30 minutes. Serve with warm naan."
+  ]
+ },
+ "52865": {
+  "servings": 2, "prep": 15, "cook": 15, "cost": "$$", "appliances": ["Stove"],
+  "amounts": { "fresh ginger": [1, "inch"] },
+  "steps": [
+   "Heat the oil in a frying pan over high heat. Add the cubed paneer, lower the heat a little and brown it on all sides. It browns quickly, so don't walk away. Drain it on paper towels.",
+   "Fry the grated ginger, cumin, turmeric, coriander and chopped chili in the pan for 1 minute.",
+   "Add the chopped tomatoes, mash them with a spoon and simmer for 5 minutes, adding a splash of water if it's too thick. Season well.",
+   "Add the peas and simmer for 2 minutes, then stir in the paneer and sprinkle with the garam masala. Top with cilantro and serve with naan, roti or rice."
+  ]
+ },
+ "52968": {
+  "servings": 4, "prep": 15, "cook": 60, "cost": "$$$", "appliances": ["Oven", "Stove"],
+  "rename": { "cornstarch": "cornmeal" },
+  "amounts": { "cornstarch": [500, "g"] },
+  "steps": [
+   "Season the goat meat with salt and roast it over a medium charcoal fire for about 50 minutes, turning and salting it as you go. Without a grill, roast it in a 375°F (190°C) oven.",
+   "For the ugali, bring about 4 cups of water with a pinch of salt to a boil in a heavy saucepan. Slowly pour in the cornmeal, stirring.",
+   "Lower the heat to medium-low and keep stirring, pressing out any lumps, for about 10 minutes, until very thick and pulling away from the pan. Shape it into a ball with wet hands.",
+   "For the kachumbari, mix the chopped tomatoes, onion, chili and cilantro. Serve the goat with the ugali and the salad."
+  ]
+ },
+ "53423": {
+  "servings": 4, "prep": 30, "cook": 10, "cost": "$$", "appliances": ["Stove"],
+  "steps": [
+   "Rinse the rice, soak it for 10 minutes and drain well. Toast it in a dry wok over medium heat, stirring all the time, for about 5 minutes, until dark golden. Let it cool, then grind it finely and sift it.",
+   "Thinly slice the shallots and finely chop the galangal, pickled scallions, chilies and orange zest. Roast and coarsely grind the peanuts. Toast the coconut in a dry pan over low heat for 2 to 3 minutes.",
+   "Stir the lime juice, orange juice, palm sugar, pickling brine and fish sauce together until the sugar dissolves.",
+   "Mix the dried shrimp, toasted coconut, chopped aromatics and dressing, then stir in the rice powder. Top with the peanuts.",
+   "Serve on a large plate and let everyone wrap a little in lettuce leaves with fresh vegetables."
+  ]
+ },
+ "52777": {
+  "servings": 4, "prep": 40, "cook": 10, "cost": "$$", "appliances": ["Stove"],
+  "steps": [
+   "Cook the pasta in a large pan of salted boiling water for about 10 minutes, or as the package says.",
+   "Meanwhile, quarter the tomatoes and slice the olives. Put the tomatoes in a salad bowl, tear the basil over them and mix with 1 tbsp of the oil.",
+   "Drain the pasta and cool it under cold running water.",
+   "Toss it with the tomatoes, then add the olives, the drained mozzarella and the tuna in chunks. Mix and let it rest for at least 30 minutes.",
+   "Just before serving, add plenty of black pepper and drizzle with the rest of the oil."
+  ]
+ },
+ "53048": {
+  "servings": 4, "prep": 30, "cook": 20, "cost": "$", "appliances": ["Stove"],
+  "amounts": { "noodles": [400, "g"], "tofu": [200, "g"], "garlic": [4, "cloves"] },
+  "steps": [
+   "Fry the peanuts, dried chilies and dried shrimp in 1 tbsp of the oil over medium heat until fragrant. Blend them with the tamarind paste and the water until fine.",
+   "Cook this paste in 2 tbsp of the oil over low heat until the oil separates and it turns darker.",
+   "Boil the potatoes, cut into small chunks, until tender, and drain. Slice the onions and tofu, mince the garlic and cut up the cabbage and Chinese broccoli. If the noodles are dried, boil them to soften. Mix the soy sauce with a splash of water.",
+   "Cook one portion at a time: heat a little oil in a wok and add a quarter of the garlic, onion and paste. Cook until fragrant, then add a quarter of the tofu, potatoes and greens for 30 seconds.",
+   "Add a quarter of the noodles and 3 tbsp of the soy mixture and toss for 1 minute. Push the noodles aside, scramble in a quarter of the egg, then mix. Repeat for the other portions."
+  ]
+ },
+ "52927": {
+  "servings": 10, "prep": 60, "cook": 450, "cost": "$$", "appliances": ["Oven", "Stove"],
+  "amounts": { "beef brisket": [5, "lb"], "garlic": [1, "tbsp"], "onion": [1, "tbsp"] },
+  "rename": { "garlic": "garlic powder", "onion": "onion powder", "fresh dill": "dried dill" },
+  "steps": [
+   "For the cure, mix the salt with 3 tbsp of the pepper, 1 tbsp of the coriander, the sugar, bay leaf and cloves. Rub it all over the brisket, put it in a large zip-top bag and cure it in the coldest part of the fridge for 4 days, turning it twice a day.",
+   "Rinse off as much of the cure as you can and soak the brisket in cold water for 2 hours, changing the water every 30 minutes. Pat it dry.",
+   "For the rub, mix the rest of the pepper and coriander with the paprika, garlic powder, onion powder, dill, mustard, celery salt and pepper flakes. Coat the brisket all over.",
+   "Smoke it at 225°F (110°C), fat side up, for about 6 hours, until it reaches 165°F inside. Without a smoker, cook it on a rack in a 225°F oven.",
+   "Put the brisket on a rack in a roasting pan with 1 inch of water, cover with foil and steam it over two burners on medium heat for 1 to 2 hours, until it reaches 180°F, adding hot water as needed.",
+   "Let it cool slightly, then slice it and serve on rye bread with mustard."
+  ]
+ },
+ "53047": {
+  "servings": 4, "prep": 10, "cook": 25, "cost": "$", "appliances": ["Oven", "Stove"],
+  "amounts": { "garlic": [4, "cloves"] },
+  "steps": [
+   "Heat the oven to 350°F (180°C). Toss the chopped carrots, onion and garlic with the cumin, coriander, a pinch of salt and the oil, and spread them on a baking sheet.",
+   "Roast for 10 to 12 minutes, until the carrots soften. Let them cool.",
+   "Blend with a little water into a smooth purée and strain it into a pan.",
+   "Add 2 cups of water, bring to a boil and stir in the garam masala and salt to taste.",
+   "Take it off the heat, stir in the lemon juice and serve hot."
+  ]
+ },
+ "53006": {
+  "servings": 4, "prep": 10, "cook": 25, "cost": "$$", "appliances": ["Stove", "Microwave", "Oven"],
+  "steps": [
+   "Heat the broiler to high. Brown the beef in a deep ovenproof frying pan over high heat for 5 minutes.",
+   "Meanwhile, prick the eggplant with a fork and microwave it on high for 3 to 5 minutes, until soft. Mix the yogurt, egg and parmesan and season.",
+   "Stir the chopped tomatoes, tomato paste and diced cooked potatoes into the beef, season and heat through. Smooth the top.",
+   "Slice the eggplant and lay it on top, pour the yogurt mixture over it and spread it evenly.",
+   "Broil until the topping has set and turned golden."
+  ]
+ },
+ "53029": {
+  "servings": 4, "prep": 10, "cook": 60, "cost": "$$", "appliances": ["Stove"],
+  "amounts": { "garlic": [4, "cloves"] },
+  "steps": [
+   "Cook the chopped onion in 3 to 4 tbsp of the olive oil until soft.",
+   "Add the cubed beef and sear it for 3 to 4 minutes on each side.",
+   "Pour in the water, or just enough to cover, and cook over medium heat for about 45 minutes, until the meat is tender.",
+   "Add the frozen mulukhiyah and stir until it thaws and comes to a boil.",
+   "In another pan, warm the rest of the oil with the crushed garlic over medium-low heat until fragrant, without browning it. Stir it into the soup and simmer for 5 to 10 minutes. Add the salt and serve with lemon juice and rice or pita."
+  ]
+ },
+ "52864": {
+  "servings": 4, "prep": 60, "cook": 40, "cost": "$$", "appliances": ["Stove", "Oven"],
+  "amounts": { "fresh sage": [1, "handful"] },
+  "steps": [
+   "Soak the dried mushrooms in 1 1/2 cups (350 ml) of boiling water. Blend three quarters of the chestnuts with 2/3 cup (150 ml) of water until creamy, and chop the rest.",
+   "Heat 2 tbsp of olive oil in a large non-stick frying pan and fry the chopped shallots with a pinch of salt until soft. Add the garlic, chopped chestnuts and rosemary for 2 minutes, then the wild mushrooms with 2 more tbsp of oil, and cook for 3 minutes.",
+   "Drain and chop the soaked mushrooms, keeping the liquid, and add them with the soy sauce for 2 minutes more.",
+   "Whisk the wine, mushroom liquid and chestnut cream into a sauce and season. Add half of it to the pan and cook for 1 minute, until glossy. Remove the rosemary.",
+   "Heat the oven to 350°F (180°C). Cook the lasagne sheets in salted boiling water for 2 minutes, then plunge them into ice water and lay them on a towel. Spread the mushroom mixture over each, roll them up from the short end and cut each roll in half.",
+   "Stand the rolls cut side up in a baking dish, pour the rest of the sauce over and bake for 10 minutes. Toss the breadcrumbs with 2 tbsp of oil and the sage, scatter them over and bake for 10 minutes more, until golden. Drizzle with truffle oil if you like."
+  ]
+ },
+ "53059": {
+  "servings": 2, "prep": 10, "cook": 30, "cost": "$", "appliances": ["Stove"],
+  "add": [[1, "tbsp", "all-purpose flour"]],
+  "steps": [
+   "Chop the onion and garlic, slice the mushrooms and rinse the buckwheat.",
+   "Heat the oil and lightly fry the onion, then add the mushrooms and garlic and keep frying.",
+   "Add salt, the stock cube, the buckwheat and the bay leaf, cover with water and simmer gently for about 20 minutes.",
+   "Just before it's done, stir in the sour cream mixed with the flour, pepper, chopped parsley and vinegar to taste."
+  ]
+ },
+ "53038": {
+  "servings": 4, "prep": 10, "cook": 20, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Boil the potatoes for about 15 minutes, until tender. Drain and mash them.",
+   "Heat the milk and half of the butter in a corner of the pan, then beat them into the mash with the mustard.",
+   "Gently fry the sliced green onions in the rest of the butter for 2 minutes, until just soft but still bright green. Fold them into the mash and serve."
+  ]
+ },
+ "53223": {
+  "servings": 6, "prep": 25, "cook": 25, "cost": "$$", "appliances": ["Stove"],
+  "rename": { "mincemeat": "ground beef" },
+  "steps": [
+   "Heat a little oil in a frying pan and fry the crushed garlic and ginger, then add the ground beef and all the spices, the salt and the sugar. Cook until the meat is done, then let it cool.",
+   "Mix the meat with the egg, chopped tomato and chopped green onions.",
+   "Brush 2 sheets of filo with melted butter, put some filling in the middle, fold the pastry over it into a parcel and brush the seams with more butter. Repeat with the rest.",
+   "Fry the parcels in a little oil until golden on both sides and all the edges, or brush them with butter and bake at 350°F (180°C) for 10 to 15 minutes."
+  ]
+ },
+ "53051": {
+  "servings": 4, "prep": 15, "cook": 45, "cost": "$$", "appliances": ["Stove"],
+  "amounts": { "fresh ginger": [1, "inch"] },
+  "steps": [
+   "Put the coconut milk, water, ginger paste, sliced ginger, a pinch of salt, the bay leaf and the rice in a saucepan, cover and bring to a boil. Lower the heat and simmer for 20 to 30 minutes, until cooked.",
+   "Put the eggs in cold water, bring to a boil, take off the heat and leave them covered for 10 to 12 minutes. Cool, peel and halve them. Slice the cucumber.",
+   "Heat about 1 cup of oil in a wok over medium-high heat and fry the peanuts until lightly browned. Drain. Fry half of the anchovies until crisp and drain. Discard the oil.",
+   "Heat the 2 tbsp of oil and cook the chopped onion, garlic and shallots for 1 to 2 minutes. Add the chili powder mixed with a little water and cook for 10 minutes, stirring now and then.",
+   "Add the rest of the anchovies for 5 minutes, then the sugar, tamarind and a pinch of salt, and simmer for about 5 minutes, until thick.",
+   "Serve the sauce over the rice, topped with the peanuts, fried anchovies, cucumber and eggs."
+  ]
+ },
+ "53497": {
+  "servings": 4, "prep": 10, "cook": 40, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Heat the oil in a large pot over medium heat and fry the minced garlic for about 1 minute, until golden.",
+   "Add the chicken pieces and cook for about 5 minutes, until opaque on all sides.",
+   "Pour in the water and bring to a boil. Lower the heat, stir in the fish sauce, salt and sugar and simmer uncovered for 20 minutes.",
+   "Meanwhile, cook the noodles as the package says, drain and rinse them under cold water.",
+   "Divide the noodles between 4 bowls and ladle the broth and chicken over them. Top with bean sprouts, chopped mint and sliced chili, and serve with lime wedges."
+  ]
+ },
+ "53117": {
+  "servings": 4, "prep": 20, "cook": 15, "cost": "$$", "appliances": ["Stove", "Oven"],
+  "steps": [
+   "Mix the crème fraîche, grated horseradish, lemon juice, salt and pepper and chill.",
+   "Fry the sliced shallots in a little oil over medium heat until golden and crisp. Drain on paper towels and salt lightly.",
+   "Blanch half of the asparagus (4 white and 4 green) in salted boiling water for 2 to 3 minutes, then cool it in ice water. Slice the rest thinly lengthwise to serve raw.",
+   "Heat the broiler. Butter the rye bread and toast it until golden and crisp.",
+   "Top each slice with both kinds of asparagus, drizzle with the horseradish cream, and sprinkle with the grated cheese, the crispy shallots and dill."
+  ]
+ },
+ "52810": {
+  "servings": 4, "prep": 25, "cook": 165, "cost": "$$$", "appliances": ["Stove", "Oven"],
+  "amounts": { "orange zest": [2, "strips"] },
+  "steps": [
+   "Heat the oven to 300°F (150°C). Season the veal shanks and coat them in the flour, shaking off the extra.",
+   "Heat the oil and 1 tbsp of the butter in a wide, heavy ovenproof pot over medium-high heat. Brown the shanks for about 5 minutes on each flat side, in batches if needed. Set them aside and pour off the fat.",
+   "Melt the rest of the butter and cook the chopped onion, carrot, celery and fennel, seasoned, for about 6 minutes, until soft but not brown. Stir in 2 of the garlic cloves, the orange zest, marjoram and bay leaf for 1 to 2 minutes.",
+   "Add the wine and boil until reduced by half, about 5 minutes. Add the broth and tomatoes and boil until there's about 1 cup of liquid, about 10 minutes.",
+   "Stand the shanks in the pot bone side up, pour over their juices, cover with parchment and the lid and braise in the oven for about 2 hours, turning them after 40 minutes, until the meat falls off the bone.",
+   "For the gremolata, mix the last garlic clove, finely chopped, with the parsley and lemon zest. Sprinkle half over the veal and return it to the oven uncovered for 15 minutes. Skim the sauce, season and serve with the rest of the gremolata."
+  ]
+ },
+ "53487": {
+  "servings": 6, "prep": 10, "cook": 20, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Rinse and dry the mushrooms, remove the stems and cut them into thin strips.",
+   "Melt the butter in a small pot and cook the mushrooms for about 10 minutes, until they release their liquid.",
+   "Whisk the flour into the water until there are no lumps and add it to the pot with the salt and milk. Cook for 10 minutes more.",
+   "Mix the crushed garlic with the vinegar. Serve the soup with 1 to 2 tablespoons of the garlic vinegar and some pepper flakes."
+  ]
+ },
+ "53417": {
+  "servings": 6, "prep": 5, "cook": 5, "cost": "$", "appliances": ["Oven"],
+  "amounts": { "bread": [12, "slices"] },
+  "steps": [
+   "Toast the bread slices in a toaster or a 400°F (200°C) oven until crisp and golden.",
+   "Rub each slice with a cut clove of garlic, then with a cut tomato half.",
+   "Drizzle with a little olive oil, sprinkle with a pinch of salt and serve warm."
+  ]
+ },
+ "52774": {
+  "servings": 2, "prep": 15, "cook": 10, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Soak or cook the noodles as the package says. Mix the dark soy sauce, oyster sauce, soy sauce, vinegar, sugar and water in a small bowl.",
+   "Put the minced garlic and oil in a wok over high heat. When hot, add the sliced chicken and the Chinese broccoli stems and cook until the chicken is lightly golden.",
+   "Push everything to the side, crack in the egg and scramble it. It's fine if it sticks and chars a little.",
+   "Add the noodles, the broccoli leaves and the sauce and toss gently until the noodles are dark and the leaves have wilted. Serve right away."
+  ]
+ },
+ "53191": {
+  "servings": 2, "prep": 15, "cook": 10, "cost": "$$", "appliances": ["Stove"],
+  "steps": [
+   "Put the noodles in a large heatproof bowl, cover with boiling water for 4 minutes, then drain and rinse them under cold water.",
+   "Mix the juice of 4 of the limes with the cayenne, sugar and fish sauce.",
+   "Heat the oil and fry the shrimp until cooked. Add the sliced green onions and the noodles and toss.",
+   "Pour in the lime mixture, then stir in the bean sprouts and half of the chopped peanuts and cilantro. Cook for 1 minute, until hot.",
+   "Scatter with the rest of the peanuts and cilantro and serve with the last lime in wedges and sweet chili sauce."
+  ]
+ },
+ "53192": {
+  "servings": 2, "prep": 20, "cook": 15, "cost": "$$", "appliances": ["Stove"],
+  "amounts": { "jasmine rice": [1, "cup"], "garlic": [4, "cloves"] },
+  "steps": [
+   "For the curry paste, pound the dried and fresh chilies, shrimp paste, garlic, galangal, lemongrass, lime zest, coriander, cumin, nutmeg, peanuts and 1 tsp of salt into a rough paste. You can also pulse it in a food processor with 2 to 3 tbsp of the coconut milk. Keep any extra in the fridge for up to 2 weeks.",
+   "Heat 2 to 3 tbsp of the thick coconut milk in a saucepan over medium-high heat. When it bubbles, stir in 1 to 2 tbsp of the paste for about 1 minute, until fragrant.",
+   "Add the sliced chicken and cook for 3 to 4 minutes, until it starts to brown, then the trimmed green beans.",
+   "Season with the fish sauce and sugar, pour in the rest of the coconut milk, add 1 lime leaf and simmer for 3 to 5 minutes, until the chicken is cooked. Taste and adjust.",
+   "Stir in the basil, take it off the heat and serve with jasmine rice and the other lime leaf, finely sliced."
+  ]
+ },
+ "53520": {
+  "servings": 6, "prep": 25, "cook": 50, "cost": "$$", "appliances": ["Stove", "Oven"],
+  "steps": [
+   "Put the eggs in a saucepan of water, bring to a boil, take off the heat and leave for 15 minutes. Cool, peel and chop them.",
+   "Heat a little oil in a skillet over medium heat. Cook the chopped onions and garlic with a pinch of salt, half of the paprika and some pepper for about 2 minutes.",
+   "Add the beef, the rest of the salt and paprika and more pepper, and cook for about 5 minutes, until mostly browned. Add the cooked, shredded chicken, the raisins, olives and eggs.",
+   "Blend the drained corn with the basil until smooth. Cook it in a saucepan with the butter over medium heat for 7 to 10 minutes, stirring, until thick. Stir in the milk, 2 tsp of sugar and a pinch of salt and cook for about 15 minutes more, until it's a thick paste.",
+   "Heat the oven to 350°F (175°C). Spread the meat in a baking dish, cover it with the corn paste, sprinkle with a little sugar and bake for about 20 minutes, until golden."
+  ]
+ },
+ "53517": {
+  "servings": 6, "prep": 20, "cook": 70, "cost": "$$", "appliances": ["Stove", "Oven"],
+  "steps": [
+   "Cover the potatoes with salted water, bring to a boil and simmer for about 20 minutes, until tender.",
+   "Meanwhile, heat the oil in a large skillet over medium heat and cook the chopped onion for about 5 minutes, adding the garlic for the last minute. Stir in the chopped tomatoes and tomato paste and cook for 3 to 5 minutes.",
+   "Add the beef and cook for about 10 minutes, until browned. Stir in the cheese, parsley and cayenne and season.",
+   "Heat the oven to 350°F (175°C) and grease a 2-quart baking dish. Drain the potatoes, mash them with the butter and salt, let them cool a little and stir in the beaten eggs.",
+   "Spread half of the potatoes in the dish, cover with the meat, then the rest of the potatoes.",
+   "Bake for about 40 minutes, until hot and lightly browned."
+  ]
+ }
+}

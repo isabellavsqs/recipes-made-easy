@@ -1,0 +1,294 @@
+{
+ "53234": {
+  "servings": 4, "prep": 10, "cook": 20, "cost": "$$", "appliances": ["Stove"],
+  "amounts": { "salmon fillet": [2, "fillets"] },
+  "steps": [
+   "Bring the broth to a boil in a large pan and stir in the curry paste.",
+   "Add the noodles and cook for 8 minutes, then the sliced mushrooms and the corn for 2 minutes more.",
+   "Add the salmon, cut into chunks, and cook for about 3 minutes, until cooked through.",
+   "Take it off the heat and stir in the lime juice, soy sauce and a pinch of sugar. Ladle into 4 bowls and sprinkle with cilantro."
+  ]
+ },
+ "52823": {
+  "servings": 4, "prep": 10, "cook": 35, "cost": "$$$", "appliances": ["Stove", "Oven"],
+  "steps": [
+   "Melt the butter in a heavy pan and cook the chopped onion gently until soft, without browning.",
+   "Add the rice and stir to coat every grain. Pour in the wine and stir gently until absorbed.",
+   "Add the hot broth a ladle at a time, stirring until each addition is absorbed, for about 20 minutes, until the rice is tender.",
+   "Meanwhile, broil the salmon and cook the shrimp and the asparagus until just done.",
+   "Stir the lemon juice and zest and some pepper into the risotto (the salmon is usually salty enough). Serve topped with the salmon, shrimp and asparagus and scattered with parmesan."
+  ]
+ },
+ "52936": {
+  "servings": 4, "prep": 30, "cook": 40, "cost": "$$", "appliances": ["Stove"],
+  "rename": { "Jerusalem artichokes": "allspice" },
+  "amounts": { "Jerusalem artichokes": [2, "tsp"] },
+  "steps": [
+   "A day ahead, soak the salt cod overnight, changing the water a couple of times.",
+   "Drain it, cover with fresh water and bring to a boil. Drain again, add fresh water, bring to a boil and simmer for about 5 minutes. Drain and flake the fish, removing any skin or bones.",
+   "For the dumplings, mix the flour and suet with a pinch of salt and about 1 cup (250 ml) of water into a dough. Wrap and chill it.",
+   "Drain and rinse the ackee. Heat 1 tbsp of oil and fry the chopped onion until soft but not brown. Add the paprika, curry powder, allspice, hot sauce, salt, pepper and the sliced peppers and cook until the peppers are tender.",
+   "Add the chopped tomatoes and the cod, then gently stir in the ackee and simmer until you're ready to serve.",
+   "Heat about 1/2 inch of oil in a frying pan. Shape the dough into plum-size balls and fry them until golden brown. Drain and serve with the saltfish and ackee."
+  ]
+ },
+ "53443": {
+  "servings": 8, "prep": 30, "cook": 20, "cost": "$$", "appliances": ["Stove"],
+  "amounts": { "garlic": [2, "cloves"], "vegetable oil": [2, "cups"] },
+  "steps": [
+   "Blend the chopped onion, garlic, lemon juice, sugar, 3/4 cup of the soy sauce, the salt, coriander and 1 cup of the oil into a marinade.",
+   "Pour it over the cubed beef and marinate for a few hours (not overnight).",
+   "Thread the beef onto about 36 skewers.",
+   "Mix the rest of the oil and soy sauce in a shallow dish and roll each skewer in it.",
+   "Fry the skewers in a large pan, or cook them on a barbecue, turning them, until browned and cooked the way you like."
+  ]
+ },
+ "53577": {
+  "servings": 2, "prep": 15, "cook": 10, "cost": "$", "appliances": ["Stove"],
+  "amounts": { "vegetable oil": [3, "tbsp"], "rye bread": [2, "slices"], "honey": [1, "tsp"] },
+  "steps": [
+   "Hard-boil the egg, then peel and slice it. Toast the bread and cut it into pieces.",
+   "Whisk the oil with the honey and a pinch of salt into a dressing.",
+   "Mix the sauerkraut, egg, flaked fish and bread with the dressing and serve."
+  ]
+ },
+ "53296": {
+  "servings": 4, "prep": 75, "cook": 30, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "For the crispy shallots, slice 2 of the shallots, toss them in a little flour and deep-fry them in hot oil (350°F/180°C) for about 1 minute, until golden. Drain on paper towels.",
+   "For the filling, heat 1/2 tbsp of the oil in a frying pan and gently fry the other 2 shallots, chopped, for 10 minutes. Add the sauerkraut and shredded cabbage and cook for 5 to 10 minutes, until soft. Season and let it cool completely.",
+   "For the dough, mix the egg and the rest of the oil with 1/2 cup (125 ml) of water, then gradually work in the flour. Knead on a floured surface until it stops sticking, wrap and chill for at least 30 minutes.",
+   "Roll the dough out thinly on a well-floured surface and cut about 25 circles, 3 1/2 inches (9 cm) wide. Put 1 tsp of filling in the middle of each, fold into half-moons and pinch to seal.",
+   "Boil them in a large pan of salted water for about 2 minutes, until they float. Drain and serve with butter, sour cream and the crispy shallots."
+  ]
+ },
+ "52836": {
+  "servings": 6, "prep": 35, "cook": 25, "cost": "$$$", "appliances": ["Stove"],
+  "amounts": { "monkfish": [400, "g"], "squid": [300, "g"] },
+  "steps": [
+   "Scrub the mussels, throwing away any with broken shells or that stay open when tapped, and pull off the beards. Peel the body of each shrimp, leaving the head and tail, and remove the vein.",
+   "Soak the saffron in 3 1/2 tbsp of hot water for 10 minutes. Crush the vermicelli into short pieces.",
+   "Heat the oil in a large, deep frying pan or paella pan and cook the chopped onion for 5 minutes. Add the garlic for 1 minute, then the pasta, and cook for about 5 minutes, stirring, until toasted brown. Stir in the paprika.",
+   "Stir in the monkfish and squid, cut into pieces, and the saffron with its water, and season. Spread it out evenly, pour in the hot stock, scatter with the chopped tomatoes, bring to a simmer, cover tightly and cook over medium heat for 6 minutes.",
+   "Stir, then push the mussels into the pasta, hinge side down, and lay the shrimp on top. Cover and cook for 6 minutes more, until the mussels open, the shrimp are pink and the pasta is cooked. Simmer uncovered for 2 to 3 minutes to cook off most of the liquid.",
+   "Let it sit for 2 to 3 minutes, squeeze over the lemon and scatter with parsley."
+  ]
+ },
+ "53378": {
+  "servings": 4, "prep": 10, "cook": 0, "cost": "$", "appliances": [],
+  "amounts": { "fresh basil": [6, "leaves"] },
+  "steps": [
+   "Peel the cucumbers and cut them lengthwise into quarters. Scrape out the seeds if they're bitter, then cut them into 1/2-inch pieces.",
+   "Put them in a serving bowl, sprinkle with the salt and toss with the sesame oil, rice vinegar, torn basil and pepper flakes.",
+   "Sprinkle with toasted sesame seeds and serve."
+  ]
+ },
+ "52963": {
+  "servings": 2, "prep": 5, "cook": 20, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Heat the oil in a frying pan with a lid and soften the sliced onions, chili, garlic and chopped cilantro stalks for 5 minutes.",
+   "Stir in the tomatoes and sugar and let them bubble for 8 to 10 minutes, until thick.",
+   "Make 4 hollows in the sauce with a spoon and crack an egg into each one.",
+   "Cover and cook over low heat for 6 to 8 minutes, until the eggs are done the way you like. Scatter with the cilantro leaves and crumbled feta and serve with crusty bread."
+  ]
+ },
+ "53217": {
+  "servings": 6, "prep": 15, "cook": 210, "cost": "$$", "appliances": ["Oven", "Stove"],
+  "add": [[6, null, "pita bread"]],
+  "steps": [
+   "Heat the oven to 300°F (150°C). Stir all the spices, the salt, broth and lemon juice together in a heavy ovenproof pot.",
+   "Add the beef, turn it to coat and spoon some sauce over the top.",
+   "Cover and cook in the oven for about 3 1/2 hours, until very tender. (In a slow cooker, cook on low for 8 to 10 hours.)",
+   "Shred the beef with two forks, discarding any fat. Skim the fat off the sauce and mix the beef back in.",
+   "Fill the pitas with the beef and any toppings you like, fold them like a burrito and toast them in a hot grill pan."
+  ]
+ },
+ "52953": {
+  "servings": 2, "prep": 20, "cook": 15, "cost": "$$", "appliances": ["Stove"],
+  "amounts": { "rice noodles": [0.5, "lb"], "eggs": [1, null] },
+  "steps": [
+   "Soak the rice noodles until soft (or overnight for dried ones), then boil them as the package says and rinse them under cold water.",
+   "Mix the shrimp with the egg, a pinch of pepper, 1 tsp of the sesame oil, 1 tbsp of the cornstarch and 1 tbsp of the vegetable oil.",
+   "Heat 2 tbsp of the oil in a wok and stir-fry the shrimp until golden. Set them aside.",
+   "Add the last 1 tbsp of oil, the minced garlic and ginger, the sliced onion, bean sprouts and green onions, then the noodles.",
+   "Add the wine, oyster sauce, sugar, vinegar, the rest of the sesame oil, a pinch of pepper and the soy sauce, then return the shrimp.",
+   "Mix the rest of the cornstarch with 2 tbsp of water and stir in a little at a time until the sauce is as thick as you like."
+  ]
+ },
+ "53371": {
+  "servings": 2, "prep": 10, "cook": 10, "cost": "$", "appliances": ["Stove"],
+  "amounts": { "soy sauce": [1, "tsp"] },
+  "steps": [
+   "Trim the long beans and cut them into 3-inch pieces. Pat them dry.",
+   "Heat the peanut oil in a wok or large, deep pan over high heat. Stir-fry the beans for 5 to 7 minutes, until blistered and tender.",
+   "Push them to the side, add the dried chilies and Sichuan pepper and stir-fry for 30 seconds, until fragrant.",
+   "Toss everything with the salt, sugar, sesame oil and a splash of soy sauce and serve right away."
+  ]
+ },
+ "53369": {
+  "servings": 2, "prep": 10, "cook": 0, "cost": "$", "appliances": [],
+  "steps": [
+   "Drain the tofu and gently slide it out of the package onto a large plate.",
+   "Slice it into 1/2-inch slabs and gently push them so they fan out across the plate.",
+   "Drizzle with the soy sauce and the sesame paste, and garnish with the sliced green onion and sesame seeds."
+  ]
+ },
+ "53484": {
+  "servings": 6, "prep": 10, "cook": 0, "cost": "$", "appliances": [],
+  "steps": [
+   "Mix the sliced hearts of palm, halved tomatoes and sliced green onions.",
+   "Whisk the vinegar and olive oil together and drizzle it over the salad.",
+   "Sprinkle with chopped parsley, toss and serve."
+  ]
+ },
+ "52994": {
+  "servings": 2, "prep": 15, "cook": 30, "cost": "$$", "appliances": ["Oven", "Stove"],
+  "rename": { "potatoes": "sweet potatoes" },
+  "amounts": { "pork": [2, "pork chops"], "chicken broth": [0.5, "cup"], "garlic": [2, "cloves"] },
+  "steps": [
+   "Heat the oven to 450°F (230°C). Dice the sweet potatoes into 1/2-inch pieces, toss them on a baking sheet with a little oil, salt and pepper and roast on the top rack for 12 minutes.",
+   "Meanwhile, core and thinly slice the apple, chop the garlic and quarter the lemon. Cut the zucchini into 1/2-inch half-moons and toss them on a second sheet with oil, salt and pepper.",
+   "Season the pork chops and cook them in a little oil in a large pan over medium-high heat for 4 to 5 minutes on each side, until cooked through. Set them aside.",
+   "Put the zucchini on the middle rack and roast both sheets for 12 to 15 minutes more, until browned.",
+   "Melt 1 tbsp of the butter in the pork pan, add the apple, season and cook for 2 to 3 minutes, scraping up the browned bits. Add the garlic for 30 seconds, then the broth and sugar, and cook for 3 to 5 minutes, until thick and the apple is tender.",
+   "Take it off the heat and stir in the rest of the butter and a squeeze of lemon. Serve the pork with the apple sauce on top and the vegetables, with lemon squeezed over the zucchini."
+  ]
+ },
+ "53023": {
+  "servings": 4, "prep": 75, "cook": 0, "cost": "$", "appliances": [],
+  "steps": [
+   "Soak the salted herring in cold water for at least 1 hour, changing the water if they're very salty.",
+   "Drain them well and cut them into bite-size pieces.",
+   "Put them in a jar and cover with the oil, allspice, peppercorns and bay leaf. Close the jar.",
+   "Chill for 2 to 3 days before eating (it keeps for up to 2 weeks). Serve with finely chopped onion."
+  ]
+ },
+ "53432": {
+  "servings": 8, "prep": 20, "cook": 285, "cost": "$$", "appliances": ["Oven"],
+  "rename": { "ground coriander": "cilantro" },
+  "amounts": { "garlic": [40, "g"] },
+  "add": [[2, "kg", "pork belly"]],
+  "steps": [
+   "Blend the olive oil, cilantro, parsley, oregano, mint, chilies, the juice of the oranges, limes and grapefruit, the garlic, cumin, allspice, salt and pepper into a marinade.",
+   "Lay the pork belly in a large dish, pour the marinade over it and rub it in everywhere. Cover and chill overnight.",
+   "Heat the oven to 275°F (140°C). Lift the pork into a large roasting dish, leaving most of the marinade behind, cover with foil and roast for 4 1/2 hours, basting it 3 or 4 times.",
+   "Uncover, turn the oven up to 350°F (180°C) and roast for 15 to 20 minutes more, until colored and soft enough to cut with a spoon.",
+   "Pull the pork apart and serve topped with more chopped cilantro and parsley."
+  ]
+ },
+ "52784": {
+  "servings": 6, "prep": 20, "cook": 60, "cost": "$", "appliances": ["Oven", "Stove"],
+  "steps": [
+   "Heat the oven to 400°F (200°C). Slice the squash into thin crescents, drizzle with a little oil and salt and roast for 20 to 30 minutes, turning halfway, until soft. Cool and cube it.",
+   "Meanwhile, rinse the lentils, cover them with water, bring to a boil and simmer uncovered for 20 to 30 minutes, until tender. Drain.",
+   "Heat the oil in a medium pot over low heat and cook the chopped onion and leek for about 5 minutes. Add the garlic, cumin and coriander for a few minutes, then the paprika, cinnamon, chili powder, cocoa, salt and oregano.",
+   "Add the tomatoes, water and diced carrots and simmer, covered, for about 20 minutes, until the vegetables are tender, stirring and adding water if needed.",
+   "Add the lentils and squash and cook for 10 minutes more.",
+   "For the cashew cream, soak the cashews in boiling water for at least 4 hours, drain and blend with about 1/2 cup of fresh water, a pinch of salt and the vinegar until creamy. Serve it on the chili."
+  ]
+ },
+ "52770": {
+  "servings": 4, "prep": 10, "cook": 45, "cost": "$$", "appliances": ["Stove"],
+  "steps": [
+   "Fry the chopped onions in the oil over fairly high heat for 3 to 4 minutes. Add the garlic and beef and fry until browned.",
+   "Add the sliced mushrooms and oregano and cook for a couple of minutes more.",
+   "Stir in the tomatoes, broth, tomato paste, Worcestershire sauce and seasoning. Bring to a boil, then cover and simmer for 30 minutes, stirring now and then.",
+   "Meanwhile, cook the spaghetti in salted boiling water as the package says and drain it.",
+   "Stir the sauce into the spaghetti and serve with parmesan for sprinkling on top."
+  ]
+ },
+ "52872": {
+  "servings": 4, "prep": 15, "cook": 60, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Cook the sliced onion slowly in the oil and butter in a large non-stick frying pan over low heat for about 15 minutes, until soft but not brown.",
+   "Add the thinly sliced potatoes, cover and cook for 15 to 20 minutes more, stirring now and then, until soft.",
+   "Stir in 2 crushed garlic cloves, then the beaten eggs. Cover and cook gently for about 20 minutes, until the edges and bottom are golden and the top is set but still a little wobbly.",
+   "Slide it onto a plate, cover with another plate, flip it and slide it back into the pan for a few minutes to finish. Serve warm or cold, scattered with parsley.",
+   "On the side, toast slices of baguette, rub them with the rest of the garlic and top with grated tomato, a pinch of salt and a drizzle of olive oil."
+  ]
+ },
+ "53175": {
+  "servings": 8, "prep": 20, "cook": 225, "cost": "$$$", "appliances": ["Stove", "Oven"],
+  "amounts": { "garlic": [1, "head"] },
+  "steps": [
+   "Mix the smoked paprika, rosemary and a large pinch of salt. Cut slashes all over the lamb and rub the mix in. If you have time, marinate it for up to 24 hours.",
+   "Heat the oven to 300°F (150°C). Heat the oil in a large flameproof casserole over medium-high heat and cook the chopped onions and carrots and the garlic cloves for 5 minutes.",
+   "Pour in the broth and bring to a boil. Nestle the lamb in the pan, cover and roast for 2 hours.",
+   "Lift out the lamb, stir the drained beans, sliced peppers and olives into the pan, put the lamb back on top and roast uncovered for 1 1/2 hours more.",
+   "Shred the lamb with two forks and stir the parsley into the beans before serving."
+  ]
+ },
+ "53105": {
+  "servings": 6, "prep": 15, "cook": 40, "cost": "$$", "appliances": ["Oven"],
+  "amounts": { "garlic": [2, "cloves"] },
+  "steps": [
+   "Mash the garlic with a little salt, then mix in the lemon zest and juice, the curry powder, pepper flakes, oil and plenty of black pepper.",
+   "Toss the chicken in the marinade while the barbecue heats.",
+   "Lay the herb bunches on the hot grill and put the chicken on top, skin side up. Close the lid and cook for about 10 minutes, then turn and cook for 20 to 30 minutes more, until charred and cooked through.",
+   "Without a barbecue, roast the chicken on the herbs in a 400°F (200°C) oven for 35 to 40 minutes."
+  ]
+ },
+ "52771": {
+  "servings": 4, "prep": 5, "cook": 15, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Cook the pasta in a large pot of salted boiling water as the package says, about 9 minutes.",
+   "Meanwhile, heat the oil in a large skillet over medium-high heat and cook the garlic for 1 to 2 minutes, until fragrant.",
+   "Add the tomatoes, pepper flakes, Italian seasoning, salt and pepper. Bring to a boil and cook for 5 minutes, then stir in the chopped basil.",
+   "Drain the pasta and toss it in the sauce. Serve warm with parmesan and more basil."
+  ]
+ },
+ "52797": {
+  "servings": 4, "prep": 10, "cook": 20, "cost": "$", "appliances": ["Stove"],
+  "amounts": { "fresh mint": [20, "leaves"] },
+  "steps": [
+   "Put the potatoes in a pot of cold water, bring to a boil and cook for about 20 minutes, until a knife goes straight through.",
+   "Whisk the harissa, oil, lemon juice, salt and pepper.",
+   "Drain the potatoes, cut them in half and stir in the harissa dressing and the sliced green onions.",
+   "Spread the arugula in a large salad bowl, add the potatoes and toss. Top with the crumbled feta, mint and pine nuts and season."
+  ]
+ },
+ "52849": {
+  "servings": 10, "prep": 50, "cook": 40, "cost": "$$", "appliances": ["Stove", "Oven"],
+  "amounts": { "canned diced tomatoes": [3, "cans"], "mascarpone": [500, "g"], "mozzarella cheese": [2, "balls"], "ricotta": [750, "g"] },
+  "add": [[500, "g", "cannelloni tubes"]],
+  "steps": [
+   "For the tomato sauce, heat the oil in a large pan and fry the garlic for 1 minute. Add the sugar, vinegar, tomatoes and seasoning and simmer for 20 minutes, until thick. Stir in the basil and spread it in 2 shallow baking dishes.",
+   "Beat the mascarpone with the milk until smooth and season.",
+   "Wilt the spinach by pouring boiling water over it in a colander, in batches. When cool, squeeze it dry and chop it. Mix it with 100 g of the parmesan, the ricotta, salt, pepper and nutmeg.",
+   "Heat the oven to 400°F (200°C). Pipe the filling into the cannelloni tubes with a bag and lay them side by side on the tomato sauce.",
+   "Spoon the mascarpone sauce over them and top with the rest of the parmesan and the torn mozzarella.",
+   "Bake for 30 to 35 minutes, until golden and bubbling, and let it stand for 5 minutes before serving."
+  ]
+ },
+ "53040": {
+  "servings": 4, "prep": 50, "cook": 40, "cost": "$$", "appliances": ["Stove", "Oven"],
+  "steps": [
+   "For the dough, rub the butter into the flour, then add the egg white and half of the yolk (keep the rest), the vinegar, a pinch of salt and enough cold water to make a soft dough. Knead until smooth, wrap and rest for 30 minutes.",
+   "Heat the oven to 350°F (180°C). Slice the green onions and fry them gently in a little oil until soft. Add the chopped chili and garlic, then the shrimp, and cook until they're opaque. Season.",
+   "Lift out the shrimp, boil the juices until they thicken and put the shrimp back.",
+   "Divide the dough into 8 balls and roll each into a thin circle. Put some filling on one half, sprinkle with feta, fold over and crimp the edges to seal.",
+   "Put them on an oiled baking sheet, brush with the rest of the yolk mixed with a splash of water and bake for about 30 minutes, until golden."
+  ]
+ },
+ "52866": {
+  "servings": 4, "prep": 5, "cook": 50, "cost": "$", "appliances": ["Oven", "Stove"],
+  "amounts": { "garlic": [3, "cloves"], "fresh sage": [1, "handful"] },
+  "steps": [
+   "Heat the oven to 400°F (200°C). Put the cubed squash and the garlic on a baking sheet, drizzle with the oil and roast for 35 to 40 minutes, until soft. Season.",
+   "Cook the pasta as the package says. Drain it, keeping the water.",
+   "Blend the squash and garlic with about 1 2/3 cups (400 ml) of the pasta water into a sauce.",
+   "Fry the sage leaves in a little oil until crisp and drain them.",
+   "Tip the pasta and sauce into the pan and warm through. Scatter with the sage."
+  ]
+ },
+ "53102": {
+  "servings": 6, "prep": 20, "cook": 20, "cost": "$$", "appliances": ["Oven", "Stove"],
+  "amounts": { "chickpeas": [2, "cans"], "garlic": [2, "cloves"] },
+  "steps": [
+   "Broil or grill the whole peppers until charred all over. Cover them in a bowl until cool, then peel, seed and slice them.",
+   "Mix the peppers and their juices with the drained chickpeas, chopped parsley, chili and garlic.",
+   "Heat a large frying pan until smoking. Add a splash of the oil and the sliced squid and stir-fry for 30 seconds. Scatter in the diced chorizo and cook for 30 seconds more.",
+   "Tip it into the bowl, season, dress with the rest of the oil and the lemon juice and zest, and mix. Serve on a platter."
+  ]
+ }
+}

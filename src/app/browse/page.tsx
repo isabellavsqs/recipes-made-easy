@@ -8,6 +8,7 @@ import { setStarAction } from "../recipes/actions";
 import { NoMatches, ResultCount } from "../recipes/no-matches";
 import { RecipeCard } from "../recipes/recipe-card";
 import { RecipeFilters } from "../recipes/recipe-filters";
+import { EstimatesNote } from "../estimates-note";
 
 export const metadata: Metadata = { title: "Browse · Recipes Made Easy" };
 
@@ -35,6 +36,7 @@ export default async function BrowsePage(props: PageProps<"/browse">) {
             {allRecipes.length} recipes to get you started. Star the ones you want to keep close.
           </p>
         )}
+        <EstimatesNote className="mt-2" />
         {hiddenCount > 0 && (
           <p className="mt-2 text-sm text-muted">
             {hiddenCount} {hiddenCount === 1 ? "recipe is" : "recipes are"} hidden because{" "}
