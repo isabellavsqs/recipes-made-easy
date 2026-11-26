@@ -1,0 +1,261 @@
+{
+ "53012": {
+  "servings": 4, "prep": 20, "cook": 120, "cost": "$", "appliances": ["Stove", "Oven"],
+  "amounts": { "garlic": [2, "cloves"] },
+  "steps": [
+   "Soak the beans overnight in plenty of water. Drain, rinse, cover with fresh water and simmer for about 50 minutes, until slightly tender but not soft. Drain.",
+   "Heat the oven to 350°F (180°C). Heat the olive oil in a large frying pan and cook the chopped onion and garlic over medium heat for 10 minutes, until soft but not brown.",
+   "Stir in the tomato paste for 1 minute, then add the chopped tomatoes, sugar, oregano and a pinch of cinnamon and simmer for 2 to 3 minutes. Season well and stir in the beans.",
+   "Pour into a large baking dish and bake uncovered, without stirring, for about 1 hour, until the beans are tender and the sauce is thick.",
+   "Let it cool a little, then scatter with parsley and drizzle with olive oil."
+  ]
+ },
+ "53274": {
+  "servings": 6, "prep": 10, "cook": 20, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Slice the eggplants, brush the slices with oil and season.",
+   "Heat a grill pan until hot and cook the slices for 2 to 3 minutes on each side, until golden and tender. Work in batches.",
+   "Mix the yogurt with the tahini, crushed garlic, lemon juice and most of the chopped herbs, and season.",
+   "Spoon the dressing over the eggplant and scatter with the rest of the herbs."
+  ]
+ },
+ "53255": {
+  "servings": 2, "prep": 20, "cook": 30, "cost": "$", "appliances": ["Stove", "Oven"],
+  "amounts": { "garlic": [1, "cloves"] },
+  "steps": [
+   "Heat 2 tbsp of the oil in a pan and fry the chopped onion for about 10 minutes, until soft and lightly browned. Stir in the chopped chili, grated ginger and cumin.",
+   "Add the drained chickpeas, chopped tomatoes and 5 tbsp of water, bring to a boil and simmer for 10 minutes. Season and add the lemon juice.",
+   "Meanwhile, heat the broiler. Slice the eggplants lengthwise, brush them with oil, season and broil until golden. Turn them, brush again and broil until tender.",
+   "Mix the yogurt with the crushed garlic, most of the chopped walnuts and cilantro, and a little salt and pepper.",
+   "Arrange the eggplant on a warm plate, spoon the chickpeas over it, drizzle with the walnut sauce and scatter with the rest of the walnuts and cilantro."
+  ]
+ },
+ "53478": {
+  "servings": 6, "prep": 5, "cook": 15, "cost": "$", "appliances": ["Stove"],
+  "rename": { "ground coriander": "cilantro" },
+  "steps": [
+   "Boil the corn for 5 minutes and leave it in the water until you're ready to grill it.",
+   "Mix the crushed garlic with the mayonnaise.",
+   "Pat the corn dry, rub it with the garlic mayo and season.",
+   "Cook on a hot grill pan or barbecue for about 5 minutes, turning, until charred in places. Scatter with the parmesan and chopped cilantro and squeeze lime over the top."
+  ]
+ },
+ "53074": {
+  "servings": 3, "prep": 10, "cook": 20, "cost": "$", "appliances": ["Stove"],
+  "rename": { "onion": "green onions" },
+  "amounts": { "onion": [4, null] },
+  "steps": [
+   "Prick the eggplants all over with a fork so they don't burst.",
+   "Grill them over a gas flame or on a hot grill pan, turning often, until the skins are blackened and the flesh is soft.",
+   "Cool them in a bowl of water, peel off the skins and cut the flesh into bite-size pieces. Put them in a shallow dish.",
+   "Mix the coconut milk with the lemon juice, salt and pepper flakes, then taste and adjust. Pour it over the eggplant, sprinkle with sliced green onions and stir gently."
+  ]
+ },
+ "52829": {
+  "servings": 8, "prep": 90, "cook": 40, "cost": "$$", "appliances": ["Stove"],
+  "steps": [
+   "Cook the macaroni in well-salted boiling water for 8 to 10 minutes, until al dente, and drain. Mix the flour with the mustard powder, 1/2 tsp of the garlic powder, the salt, pepper and cayenne.",
+   "Melt 10 tbsp of the butter in the empty pan over low heat, whisk in the flour mixture and cook for about 1 minute, until nutty. Slowly whisk in the milk and cream and cook for about 2 minutes, until it starts to thicken.",
+   "Take it off the heat and stir in the grated Monterey Jack until melted, then the macaroni.",
+   "Spread it on a buttered, lined 9 x 13-inch baking sheet, cover with buttered parchment and chill for about 1 hour, until firm. Cut it into 8 pieces.",
+   "Mix the rest of the butter with the rest of the garlic powder and spread it on one side of each slice of bread.",
+   "Build each sandwich buttered side out: bread, a slice of cheddar, a piece of mac and cheese, a slice of Colby Jack, bread. Cook in a covered skillet over medium-low heat for about 4 minutes on each side, until browned and hot inside."
+  ]
+ },
+ "53041": {
+  "servings": 4, "prep": 10, "cook": 10, "cost": "$$", "appliances": ["Stove"],
+  "steps": [
+   "Mix the olive oil, crushed garlic, paprika, lemon juice, rosemary and chopped chili with some salt and pepper in a baking dish.",
+   "Add the sardines, toss well, cover and chill for a few hours.",
+   "Heat a grill pan or barbecue until hot and cook the sardines for 4 to 5 minutes on each side, until charred.",
+   "Drizzle with oil, sprinkle with a little more paprika and serve with lemon wedges."
+  ]
+ },
+ "53340": {
+  "servings": 6, "prep": 10, "cook": 30, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Bring a large pot of salted water to a boil. Cook the diced potatoes and carrots for about 5 minutes, until just tender, then add the green beans and peas for 1 minute. Drain.",
+   "Melt the butter in a heavy pot over medium heat and warm the vegetables in it.",
+   "Add the milk and cream and bring to a boil, then lower the heat and season with the salt and pepper.",
+   "Add the dill and chives and simmer for at least 10 minutes. Serve warm."
+  ]
+ },
+ "52993": {
+  "servings": 2, "prep": 10, "cook": 35, "cost": "$$", "appliances": ["Oven", "Stove"],
+  "amounts": { "balsamic vinegar": [3, "tbsp"], "honey": [2, "tbsp"], "chicken broth": [0.5, "cup"], "potatoes": [2, null] },
+  "steps": [
+   "Heat the oven to 425°F (220°C). Cut the potatoes into 1/2-inch wedges, toss them on one side of a baking sheet with a little oil, salt and pepper, and roast for 5 minutes.",
+   "Cut the broccoli into bite-size florets and chop the garlic. Warm the olive oil with half of the garlic in a small pan for 30 seconds.",
+   "Add the broccoli to the other side of the sheet, toss it with the garlic oil, salt and pepper, and roast for 15 to 20 minutes more, until browned and crisp.",
+   "Meanwhile, season the chicken and cook it in a little vegetable oil in a large pan over medium-high heat for 5 to 6 minutes on each side, until cooked through. Set it aside.",
+   "In the same pan, cook the rest of the garlic for 30 seconds, then add the vinegar, honey and broth and simmer for 2 to 3 minutes, until thick and glossy. Take it off the heat and stir in the butter.",
+   "Turn the chicken in the glaze and serve with the potatoes and broccoli."
+  ]
+ },
+ "52773": {
+  "servings": 2, "prep": 10, "cook": 15, "cost": "$$", "appliances": ["Stove"],
+  "steps": [
+   "Whisk the soy sauce and sake together and coat the salmon in it.",
+   "Heat the oil in a skillet over medium-low heat. Cook the salmon on both sides, adding the rest of the glaze, until it's cooked through and the glaze has thickened.",
+   "Sprinkle with the sesame seeds and serve right away."
+  ]
+ },
+ "53253": {
+  "servings": 6, "prep": 20, "cook": 75, "cost": "$$$", "appliances": ["Oven", "Stove"],
+  "steps": [
+   "Heat the oven to 375°F (190°C). Halve the eggplants lengthwise, score the flesh deeply, brush with plenty of olive oil and roast on a baking sheet for about 20 minutes, until soft.",
+   "Fry the chopped onion in a little oil until soft, then add the garlic and cinnamon for 1 minute.",
+   "Scoop out the middle of the eggplants, chop it and add it to the onions. Halve the tomatoes, scoop the seeds and juice into a sieve over a bowl, chop the flesh and add it to the pan. Cook for 10 minutes, until soft, and stir in most of the parsley.",
+   "Lay the eggplant halves in a baking dish, fill them with the tomato mixture, pour over the tomato juice, drizzle with oil and bake for 30 minutes.",
+   "For the tzatziki, mix the yogurt with the grated cucumber and chopped mint and season.",
+   "Season the lamb with salt, pepper and a pinch of paprika and cook on a hot grill pan for 3 minutes on each side. Squeeze lemon over it and serve with the eggplant, the rest of the parsley and the tzatziki."
+  ]
+ },
+ "52781": {
+  "servings": 8, "prep": 30, "cook": 150, "cost": "$$$", "appliances": ["Stove", "Oven"],
+  "rename": { "whole wheat flour": "wheat berries" },
+  "steps": [
+   "Soak the wheat berries overnight. Drain, cover with plenty of water and simmer for about 1 hour, until cooked. Drain.",
+   "Heat the oven to 350°F (180°C). Season the lamb with 1 tsp of salt and some pepper. Heat 1 tbsp of the oil in a large, deep pan with a lid and brown the lamb in batches, about 4 minutes on all sides. Set it aside.",
+   "Lower the heat to medium and fry the shallots in a little more oil for about 4 minutes, until caramelized. Then brown the carrots, turnips, celeriac and potatoes, cut into chunks, in batches, adding oil as needed.",
+   "Pour the wine into the pan with the sugar, herbs, 1 tsp of salt and plenty of pepper and boil for about 3 minutes.",
+   "Return the lamb, vegetables and wheat berries, add the broth, cover and boil for 5 minutes, then cook in the oven for 1 1/2 hours. If there's a lot of liquid, boil it uncovered for a few minutes before serving."
+  ]
+ },
+ "52938": {
+  "servings": 6, "prep": 50, "cook": 60, "cost": "$$", "appliances": ["Stove", "Oven"],
+  "rename": { "red bell pepper": "Scotch bonnet pepper" },
+  "amounts": { "red bell pepper": [1, null], "garlic": [2, "tsp"] },
+  "steps": [
+   "For the pastry, mix the flour with 1 tsp of the salt and the curry powder. Rub in the butter until it's in small pieces coated with flour.",
+   "Mix in about 1/2 cup of ice water, then 2 to 3 tbsp at a time until it forms a dough. Cut it into 12 pieces, cover and chill for 30 minutes.",
+   "For the filling, mix the beef with the allspice and black pepper. Heat the oil in a skillet and cook the chopped onion until translucent, then the chopped Scotch bonnet, garlic and thyme for 1 minute, with the rest of the salt.",
+   "Add the beef and cook until no longer pink, breaking up any clumps. Stir in the ketchup and about 2 cups of water, bring to a boil and simmer until the liquid has reduced to a thick sauce. Let it cool completely.",
+   "Heat the oven to 350°F (180°C). Roll each piece of dough into a 5-inch circle, put 3 heaped tablespoons of filling on one half, wet the edges, fold over and crimp with a fork.",
+   "Beat the egg with a splash of water, brush it over the patties and bake on lined sheets for about 30 minutes, until golden."
+  ]
+ },
+ "53354": {
+  "servings": 6, "prep": 20, "cook": 150, "cost": "$$$", "appliances": ["Stove"],
+  "amounts": { "garlic": [6, "cloves"] },
+  "steps": [
+   "Rinse the goat meat. Mix it with 1 1/2 tbsp of the curry powder, the all-purpose seasoning, ground ginger, allspice, sliced onion, garlic and thyme. Marinate in the fridge for at least 4 hours or overnight.",
+   "Pick out the onion and garlic and set them aside. Heat the oil in a heavy pot and brown the goat for 2 to 3 minutes on each side. Set it aside.",
+   "Add a little more oil and the rest of the curry powder for 10 seconds, then the onion and garlic for about 4 minutes, until soft, adding a little water if dry.",
+   "Return the goat with the water, cover and simmer over low heat for about 2 hours, until tender, adding water as needed. (In a pressure cooker, cook for 40 minutes on high.)",
+   "Add the cubed potato and the whole Scotch bonnet and cook for 15 minutes more, until the potato is soft. Remove the pepper, season and serve with rice."
+  ]
+ },
+ "53349": {
+  "servings": 4, "prep": 15, "cook": 10, "cost": "$$", "appliances": ["Stove"],
+  "steps": [
+   "Mix the shrimp with the minced Scotch bonnets, the all-purpose seasoning, annatto and allspice, and marinate for 10 minutes.",
+   "Bring the shrimp stock to a gentle simmer in a large pan over medium heat. Add the diced onion and garlic and cook for about 2 minutes.",
+   "Add the shrimp and thyme, cover and cook for 5 to 7 minutes, stirring now and then, until the shrimp are bright orange and cooked through.",
+   "Stir in the vinegar for 1 minute and add salt to taste. Serve hot with some of the cooking liquid."
+  ]
+ },
+ "53357": {
+  "servings": 6, "prep": 5, "cook": 25, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Put the rice, coconut milk, drained kidney beans, water, salt, allspice and pepper in a large pot and stir. Lay the green onions, thyme and whole Scotch bonnet on top.",
+   "Bring to a boil, then cover and cook over low heat for 18 minutes.",
+   "Take it off the heat and leave the lid on for 5 minutes more.",
+   "Remove the green onions, Scotch bonnet and thyme, fluff with a fork and serve."
+  ]
+ },
+ "53364": {
+  "servings": 6, "prep": 15, "cook": 15, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Shred the cabbage and slice the carrots, tomato, onion, garlic, green onions and Scotch bonnet.",
+   "Put everything in a large pan with the thyme, water, oil, butter, salt and pepper and cover.",
+   "Cook over medium heat for 10 minutes, stirring now and then, then lower the heat and cook for 5 minutes more, until the cabbage is tender. Remove the thyme stalks and serve."
+  ]
+ },
+ "53145": {
+  "servings": 6, "prep": 120, "cook": 20, "cost": "$$", "appliances": ["Stove"],
+  "steps": [
+   "Wash the wild garlic, pour boiling water over it until just wilted, rinse it under cold water, squeeze it dry and chop finely.",
+   "Warm the milk in a pan until steaming. In a second pan, warm the olive oil and stir in the flour for a couple of minutes, until lightly browned. Gradually add the milk until you have a thick, smooth sauce, and let it bubble for 1 to 2 minutes. Season.",
+   "Beat in the grated manchego, chopped ham and wild garlic. Spread it on an oiled plate, cover and chill for at least 1 hour.",
+   "With oiled hands, shape it into 18 to 20 balls and freeze them for 30 minutes to firm up.",
+   "Dip each ball in the beaten egg, then roll it in the breadcrumbs.",
+   "Heat the oil in a deep pan, no more than a third full, to 340°F (170°C). Fry the croquetas in batches for 2 to 3 minutes, until deep golden, and drain on paper towels. Serve warm."
+  ]
+ },
+ "52937": {
+  "servings": 6, "prep": 25, "cook": 45, "cost": "$$", "appliances": ["Oven", "Stove"],
+  "steps": [
+   "For the jerk marinade, blend the juice of 1 lime, the green onions, ginger, garlic, onion, chilies, dried thyme, soy sauce, oil, brown sugar, allspice and 1 tsp of salt into a thick paste. Don't add water. Taste and add more chili or sugar if needed.",
+   "Cut a few slashes in the chicken, rub the marinade in well, cover and marinate in the fridge overnight.",
+   "Heat the oven to 350°F (180°C). Roast the chicken in a roasting pan with the squeezed lime halves for about 45 minutes, until cooked through. (On a barbecue, cook it slowly over indirect heat for about 30 minutes.)",
+   "Meanwhile, rinse the rice and put it in a large saucepan with the coconut milk, thyme sprigs, a pinch of salt and 1 1/4 cups (300 ml) of cold water. Bring to a boil, then cover and cook over medium heat for 10 minutes.",
+   "Stir in the drained beans, cover and leave off the heat for 5 minutes, until the liquid is absorbed. Squeeze the roasted lime over the chicken and serve with the rice and peas."
+  ]
+ },
+ "53398": {
+  "servings": 4, "prep": 20, "cook": 40, "cost": "$", "appliances": ["Stove"],
+  "amounts": { "garlic": [1, "cloves"] },
+  "steps": [
+   "Peel the squash and cut it into 1/2-inch (1 cm) slices. Deep-fry them in oil until golden and set aside.",
+   "Deep-fry the sliced onions in the same oil until golden, then grind them with the garlic into a paste.",
+   "Heat a little oil in a pan over medium heat and add the turmeric. Dissolve the salt in 1 cup of the water and add it. Layer the squash and the onion paste in the pan until both are used up.",
+   "Add the sugar and the rest of the water, lower the heat and cook until the water has reduced.",
+   "Spread some yogurt on a plate, put the squash on top, cover with more yogurt and finish with sliced green chili."
+  ]
+ },
+ "52971": {
+  "servings": 4, "prep": 20, "cook": 50, "cost": "$", "appliances": ["Stove", "Oven"],
+  "amounts": { "eggs": [6, null] },
+  "steps": [
+   "Peel the potatoes and cut them into 2-inch cubes. Heat about 1/2 inch of olive oil in a large pan until very hot and fry them for about 20 minutes, turning now and then, until golden. Drain on paper towels.",
+   "Meanwhile, rub the halved, seeded pepper with oil and broil it cut side down until the skin is blackened. Put it in a sealed bag for 15 minutes, then peel it.",
+   "In another pan, fry the onions, sliced into thin rings, in more oil for about 15 minutes, until golden, and add the ras el hanout at the end.",
+   "Cut the pumpkin into 2-inch cubes and fry it in the potato pan for 10 to 15 minutes, until soft and browned. Drain.",
+   "Pour off the oil, put all the vegetables back in the pan and mix. Pour the beaten eggs over them, cover and cook until set.",
+   "Tip everything onto a large board, season and chop it all together with a big knife."
+  ]
+ },
+ "52769": {
+  "servings": 2, "prep": 10, "cook": 20, "cost": "$$", "appliances": ["Oven", "Stove"],
+  "amounts": { "cucumber": [0.5, null] },
+  "steps": [
+   "Bake the fries until golden, as the package says, and spread them over a baking dish.",
+   "Cut the doner meat into strips and fry them in a little oil for about 6 minutes.",
+   "Spread the meat over the fries and cover with the cheese. Put it in the oven for a few minutes, until the cheese melts.",
+   "Chop the lettuce, tomato and cucumber into a simple salad and spread it over the top. Serve with garlic sauce and hot sauce."
+  ]
+ },
+ "53125": {
+  "servings": 3, "prep": 10, "cook": 25, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Grate half an onion and slice the rest. Fry the sliced onions in 2 tbsp of the butter over low to medium heat until caramelized.",
+   "Mix the beef with the grated onion, salt, pepper, nutmeg, cornstarch and water.",
+   "Shape it into a log and cut it into 6 patties. Mark a light crisscross pattern on each with a knife.",
+   "Brown the patties on both sides in the rest of the butter over high heat, then lower the heat and cook for 2 to 3 minutes more.",
+   "Serve with the onions and boiled potatoes."
+  ]
+ },
+ "53445": {
+  "servings": 4, "prep": 25, "cook": 25, "cost": "$", "appliances": ["Stove"],
+  "steps": [
+   "Mix the cubed bread with the milk and a pinch of salt and let it soak for a while.",
+   "Add the grated potatoes, grated cheese, eggs and chopped parsley.",
+   "Fry the diced onion in a little butter until golden and add it to the mixture.",
+   "Add the flour and knead gently. Shape into round dumplings and press them flat.",
+   "Fry them in butter on both sides until golden brown. Serve in a clear broth or with a salad."
+  ]
+ },
+ "52820": {
+  "servings": 4, "prep": 15, "cook": 45, "cost": "$$", "appliances": ["Stove"],
+  "amounts": { "garlic": [5, "cloves"] },
+  "steps": [
+   "For the sauce, heat a little of the oil in a medium non-stick saucepan and cook the chopped onions and garlic until soft. Add the chopped carrots and cook over low heat for 10 to 12 minutes.",
+   "Stir in 1 tbsp of the flour and the curry powder for 1 minute. Gradually stir in the broth, then add the honey, soy sauce and bay leaf and slowly bring to a boil.",
+   "Simmer for about 20 minutes, until thickened but still pourable. Stir in the garam masala, strain the sauce and keep it warm.",
+   "Season the chicken. Coat each breast in the rest of the flour, then the beaten egg, then the breadcrumbs.",
+   "Heat the rest of the oil in a large frying pan over medium-high heat and fry the chicken for 3 to 4 minutes on each side, until golden and cooked through. Drain on paper towels.",
+   "Slice the chicken, pour the curry sauce over it and serve with white rice."
+  ]
+ }
+}

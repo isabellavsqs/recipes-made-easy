@@ -1,31 +1,22 @@
 import type { RecipeSummary } from "@/lib/recipes";
+import { RecipePhoto } from "./recipe-photo";
 
 // The recipe's photo, or a warm colored panel with its first letter when it
-// has none (recipes added by users don't have photos yet).
+// has none (recipes added by users don't have photos yet) or the photo can't
+// be loaded (for example, if TheMealDB is down).
+// Cards use TheMealDB's smaller photo; the recipe page uses the full one.
 export function RecipeImage({
   recipe,
   className = "",
+  full = false,
 }: {
   recipe: Pick<RecipeSummary, "title" | "image_url">;
   className?: string;
+  full?: boolean;
 }) {
-  if (recipe.image_url) {
-    return (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img
-        src={recipe.image_url}
-        alt=""
-        className={`w-full object-cover ${className}`}
-      />
-    );
-  }
-
-  return (
-    <div
-      aria-hidden
-      className={`flex w-full items-center justify-center bg-accent/10 font-serif text-5xl text-accent/60 ${className}`}
-    >
-      {recipe.title.trim()[0]?.toUpperCase() ?? "?"}
-    </div>
-  );
+  const src =
+    recipe.image_url && !full && recipe.image_url.startsWith("https://www.themealdb.com/")
+      ? `${recipe.image_url}/large`
+      : recipe.image_url;
+  return <RecipePhoto title={recipe.title} src={src} className={className} lazy={!full} />;
 }

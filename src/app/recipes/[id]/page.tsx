@@ -10,6 +10,7 @@ import { formatQuantity } from "../recipe-card";
 import { RecipeImage } from "../recipe-image";
 import { StarButton } from "../star-button";
 import { DeleteRecipeButton } from "./delete-recipe-button";
+import { EstimatesNote } from "../../estimates-note";
 
 export const metadata: Metadata = { title: "Recipe · Recipes Made Easy" };
 
@@ -39,7 +40,7 @@ export default async function RecipePage(props: PageProps<"/recipes/[id]">) {
       </Link>
 
       <article className="overflow-hidden rounded-2xl border border-line bg-white">
-        <RecipeImage recipe={recipe} className="h-56 sm:h-72" />
+        <RecipeImage recipe={recipe} full className="h-56 sm:h-72" />
 
         <div className="p-6 sm:p-8">
           <div className="mb-4 flex flex-wrap items-start justify-between gap-4">
@@ -128,12 +129,31 @@ export default async function RecipePage(props: PageProps<"/recipes/[id]">) {
             </div>
           )}
 
-          {recipe.source_url && (
-            <p className="mt-6 text-sm text-muted">
-              Adapted from{" "}
-              <a href={recipe.source_url} className="underline" target="_blank" rel="noreferrer">
-                the original recipe
-              </a>
+          <EstimatesNote className="mt-6" />
+
+          {(recipe.source_url || recipe.themealdb_id) && (
+            <p className="mt-2 text-sm text-muted">
+              {recipe.themealdb_id ? (
+                <>
+                  Recipe from{" "}
+                  <a
+                    href={`https://www.themealdb.com/meal/${recipe.themealdb_id}`}
+                    className="underline"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    TheMealDB
+                  </a>
+                  {recipe.source_url && <>, adapted from </>}
+                </>
+              ) : (
+                <>Adapted from </>
+              )}
+              {recipe.source_url && (
+                <a href={recipe.source_url} className="underline" target="_blank" rel="noreferrer">
+                  the original recipe
+                </a>
+              )}
               {recipe.image_credit && <> · {recipe.image_credit}</>}
             </p>
           )}

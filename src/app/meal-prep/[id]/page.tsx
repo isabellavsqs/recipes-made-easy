@@ -9,6 +9,7 @@ import { formatQuantity } from "../../recipes/recipe-card";
 import { RecipeImage } from "../../recipes/recipe-image";
 import { createPlanAction, deletePlanAction } from "../actions";
 import { PlanForm } from "../plan-form";
+import { EstimatesNote } from "../../estimates-note";
 
 export const metadata: Metadata = { title: "Meal prep plan · Recipes Made Easy" };
 
@@ -53,6 +54,7 @@ export default async function MealPlanPage(props: PageProps<"/meal-prep/[id]">) 
             {cooking > 0 && <> · about {formatMinutes(cooking)} of cooking</>}
             {plan.budget && <> · up to {costLabel(plan.budget)} {COST_NOTE}</>}
           </p>
+          <EstimatesNote className="mt-2" />
         </div>
         <div className="flex flex-wrap items-start gap-2">
           <PlanForm

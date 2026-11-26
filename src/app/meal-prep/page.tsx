@@ -4,6 +4,7 @@ import { listMealPlans } from "@/lib/meal-plans";
 import { getProfile } from "@/lib/profile";
 import { createPlanAction } from "./actions";
 import { PlanForm } from "./plan-form";
+import { EstimatesNote } from "../estimates-note";
 
 export const metadata: Metadata = { title: "Meal Prep · Recipes Made Easy" };
 
@@ -21,10 +22,11 @@ export default async function MealPrepPage(props: PageProps<"/meal-prep">) {
         </p>
       )}
       <h1 className="mb-2 font-serif text-3xl">Meal prep</h1>
-      <p className="mb-8 text-muted">
+      <p className="mb-2 text-muted">
         Cook once, eat well all week. Tell us how much you need and how long you can cook, and
         we&apos;ll pick the recipes, scale them and make your shopping list.
       </p>
+      <EstimatesNote className="mb-8" />
 
       <section className="mb-10 rounded-2xl border border-line bg-white p-6">
         <PlanForm

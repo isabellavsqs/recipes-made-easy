@@ -46,3 +46,6 @@ next-env.d.ts
 # Playwright test output
 /test-results/
 /playwright-report/
+
+# TheMealDB download (re-created by scripts/themealdb/fetch.ts)
+/scripts/themealdb/cache/

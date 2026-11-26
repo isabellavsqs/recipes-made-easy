@@ -6,6 +6,7 @@ import { getSuggestions, type SuggestCard } from "@/lib/suggest-recipes";
 import { cleanFridge, type Suggestion } from "@/lib/suggestion";
 import { RecipeImage } from "../recipes/recipe-image";
 import { FridgeForm } from "./fridge-form";
+import { EstimatesNote } from "../estimates-note";
 
 export const metadata: Metadata = { title: "Single Dish · Recipes Made Easy" };
 
@@ -34,9 +35,10 @@ export default async function SuggestPage(props: PageProps<"/suggest">) {
         </p>
       )}
       <h1 className="mb-2 font-serif text-3xl">What can I cook?</h1>
-      <p className="mb-8 text-muted">
+      <p className="mb-2 text-muted">
         Tell us what you already have and we&apos;ll find a recipe that uses it, so less goes to waste.
       </p>
+      <EstimatesNote className="mb-8" />
 
       <section className="mb-10 rounded-2xl border border-line bg-white p-6">
         <FridgeForm
@@ -114,7 +116,11 @@ function SuggestionCard({ suggestion, big = false }: { suggestion: Suggestion<Su
       className={`overflow-hidden rounded-2xl border bg-white ${big ? "border-primary" : "border-line"}`}
     >
       <div className={big ? "flex flex-col" : "flex flex-col sm:flex-row"}>
-        <RecipeImage recipe={recipe} className={big ? "h-48 sm:h-64" : "h-32 sm:h-auto sm:w-40 sm:shrink-0"} />
+        <RecipeImage
+          recipe={recipe}
+          full={big}
+          className={big ? "h-48 sm:h-64" : "h-32 sm:h-auto sm:w-40 sm:shrink-0"}
+        />
         <div className="flex flex-col gap-2 p-5">
           <h3 className={`font-serif leading-snug ${big ? "text-2xl" : "text-lg"}`}>
             <Link href={`/recipes/${recipe.id}`} className="hover:text-primary">
