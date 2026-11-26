@@ -45,7 +45,8 @@ The app changes: a `themealdb_id` column (unique, so running 006 twice adds noth
 
 - ~~Isabella: review the 26 flagged recipes and spot-check 22 others.~~ Done Nov 25 (prompt 3).
 - Isabella: run 006 in the Supabase SQL Editor before the review (reality log T2). Until then, recipe pages on this branch fail, because they read the new column.
-- Run all the tests after 006, check on a phone-sized screen, take screenshots, and have Bhavya review (main path and duplicates edge case).
+- ~~Run all the tests after 006, check on a phone-sized screen, take screenshots.~~ Done Nov 25 (`docs/screenshots/team-feature-1-*.png` and `docs/screenshots/tests/team-test1-*.png`).
+- A reviewer (Bhavya, or anyone on the team) checks the main path and the duplicates edge case.
 
 **Prompt 4**
 > I want to do everything on my side and then let bhavya review at the end (run supabase before her migration read), can we do that? and yes you can commit, push and open the PR. on the text, mention bhavya but leave it open to anyone on the team who could review it
