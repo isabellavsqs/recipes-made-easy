@@ -51,3 +51,15 @@ The app changes: a `themealdb_id` column (unique, so running 006 twice adds noth
 > I want to do everything on my side and then let bhavya review at the end (run supabase before her migration read), can we do that? and yes you can commit, push and open the PR. on the text, mention bhavya but leave it open to anyone on the team who could review it
 
 **Agent response (summary):** Yes. Running 006 before the review differs from TEAM-PLAN §4, so the agent logged it as reality log T2 (decided by me). It then committed, pushed and opened the PR, naming Bhavya as the planned reviewer but open to anyone on the team.
+
+**Prompt 5**
+> I ran. the count of recipes is 300 now! I did not understand the step 7, but everything from step 1 to 6 I finished
+
+> ran step 7 and everything looks good. only 300 recipes and 1 banana pancake recipe
+
+**Agent response (summary):** Migration 006 ran, and running it a second time kept 300 recipes and one Banana Pancakes (the duplicates edge case). Supabase warned that the query "creates a table without RLS" because of the short name `a` in `join public.allergies a`. No table is created, so "Run without RLS" was the right choice. The agent then ran all the tests:
+
+- **The new test failed twice, both test bugs, then passed.** The test file used `import.meta`, which Playwright's compiler doesn't allow. It also searched for a button named "Next", which also matched the "Open Next.js Dev Tools" button shown in development, so it now needs an exact match.
+- **Red, then green:** with the rule that tags cheeses with Milk switched off, the test fails (the Bolognese gets only Fish and Wheat). With it back, the test passes.
+- **11 of 12 other tests pass.** `fridge-photo.spec.ts` (feature 3) fails because each chip reads "onion✕" (the name plus its remove button). Those files are the same as on `main`, so it isn't caused by this branch. It's for Austin.
+- **Next.js security notice:** `npm run dev` also stops once on it, then starts when run again.

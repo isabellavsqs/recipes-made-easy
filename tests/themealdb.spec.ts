@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { expect, test } from "@playwright/test";
 import { convertMeal, type MealDbMeal } from "../scripts/themealdb/convert.mts";
 import { newEmail, signUp } from "./helpers";
@@ -39,7 +40,7 @@ const DAIRY_FREE: MealDbMeal = {
 
 // The recipes the migration loads (generated from the same import code).
 const seed: { themealdb_id: string; title: string; allergens: string[] }[] = JSON.parse(
-  readFileSync(new URL("../supabase/seed/themealdb.json", import.meta.url), "utf8"),
+  readFileSync(join(__dirname, "../supabase/seed/themealdb.json"), "utf8"),
 );
 
 test("A Milk allergy hides the TheMealDB recipe with parmesan, not the dairy-free one", async ({ page }) => {
@@ -59,12 +60,12 @@ test("A Milk allergy hides the TheMealDB recipe with parmesan, not the dairy-fre
 
   // 3. A new user with a Milk allergy (questionnaire: goals, diet, allergies…).
   await signUp(page, newEmail("themealdb"));
-  await page.getByRole("button", { name: "Next" }).click();
-  await page.getByRole("button", { name: "Next" }).click();
+  await page.getByRole("button", { name: "Next", exact: true }).click();
+  await page.getByRole("button", { name: "Next", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Any allergies?" })).toBeVisible();
   await page.getByText("Milk", { exact: true }).click();
   await expect(page.getByLabel("Milk")).toBeChecked();
-  for (let i = 0; i < 4; i++) await page.getByRole("button", { name: "Next" }).click();
+  for (let i = 0; i < 4; i++) await page.getByRole("button", { name: "Next", exact: true }).click();
   await page.getByRole("button", { name: "Finish" }).click();
   await expect(page).toHaveURL(/\/profile/);
 
